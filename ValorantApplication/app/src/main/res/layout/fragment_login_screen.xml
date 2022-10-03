@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        tools:context=".fragments.LoginScreenFragment">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewProfile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circular"
+            android:layout_width="@dimen/xxbig_width_height"
+            android:layout_height="@dimen/xxbig_width_height"
+            android:layout_marginTop="@dimen/xsmall_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_profile" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/large_margin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Contents"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_margin">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_background">
+
+                        <TextView
+                            android:id="@+id/profileInformation"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:paddingHorizontal="@dimen/text_size_small"
+                            android:singleLine="true"
+                            android:text="@string/information"
+                            android:textSize="@dimen/text_size_small"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/txtFullNameProfile"
+                            app:layout_constraintTop_toBottomOf="@id/profileInformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/medium_margin"
+                            android:drawablePadding="@dimen/medium_margin"
+                            android:singleLine="true"
+                            android:src="@drawable/ic_baseline_person"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/text_size_small"
+                            android:textStyle="italic"
+                            app:drawableStartCompat="@drawable/ic_baseline_person" />
+
+                        <TextView
+                            android:id="@+id/txtEmailProfile"
+                            app:layout_constraintTop_toBottomOf="@id/txtFullNameProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/medium_margin"
+                            android:drawablePadding="@dimen/medium_margin"
+                            android:singleLine="true"
+                            android:src="@drawable/ic_baseline_email"
+                            android:textSize="@dimen/text_size_small"
+                            app:drawableStartCompat="@drawable/ic_baseline_email" />
+
+                        <TextView
+                            android:id="@+id/txtSexProfile"
+                            app:layout_constraintTop_toBottomOf="@id/txtEmailProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/medium_margin"
+                            android:drawablePadding="@dimen/medium_margin"
+                            android:singleLine="true"
+                            android:src="@drawable/ic_baseline_gender_24"
+                            android:textSize="@dimen/text_size_small"
+                            app:drawableStartCompat="@drawable/ic_baseline_gender_24" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

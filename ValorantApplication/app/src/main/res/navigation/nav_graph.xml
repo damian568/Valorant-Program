@@ -7,7 +7,23 @@
 
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.valorantapplication.SplashScreenFragment"
+        android:name="com.example.valorantapplication.fragments.SplashScreenFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" />
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_registrationScreenFragment"
+            app:destination="@id/registrationScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationScreenFragment"
+        android:name="com.example.valorantapplication.fragments.RegistrationScreenFragment"
+        android:label="RegistrationScreen" >
+        <action
+            android:id="@+id/action_registrationScreenFragment_to_loginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.example.valorantapplication.fragments.LoginScreenFragment"
+        android:label="LoginScreen" />
 </navigation>

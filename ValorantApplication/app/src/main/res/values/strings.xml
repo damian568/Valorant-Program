@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">Valorant Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registration_screen">Registration Screen</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="information">Information</string>
+
+    <string name="return_text">Can\'t be empty!</string>
+    <string name="return_conpass_text">Password Not matching!</string>
+    <string name="return_email_text">Invalid Email Address!</string>
+    <string name="field_toast">Field is required!</string>
+
+    <string name="image_text">image/*</string>
 </resources>
