@@ -17,4 +17,11 @@
     <string name="field_toast">Field is required!</string>
 
     <string name="image_text">image/*</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log Out</string>
+
+    <string name="text_alert_dialog">Are you sure!</string>
+    <string name="question_alert_dialog">Do you want to close the app?</string>
+    <string name="yes_alert_dialog">Yes</string>
+    <string name="no_alert_dialog">No</string>
 </resources>

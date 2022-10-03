@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_registrationScreenFragment"
             app:destination="@id/registrationScreenFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationScreenFragment"
@@ -21,9 +24,21 @@
         <action
             android:id="@+id/action_registrationScreenFragment_to_loginScreenFragment"
             app:destination="@id/loginScreenFragment" />
+        <action
+            android:id="@+id/action_registrationScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginScreenFragment"
         android:name="com.example.valorantapplication.fragments.LoginScreenFragment"
         android:label="LoginScreen" />
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.valorantapplication.fragments.MainScreenFragment"
+        android:label="MainScreen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_loginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
 </navigation>

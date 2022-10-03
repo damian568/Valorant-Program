@@ -167,7 +167,7 @@ class RegistrationScreenFragment : Fragment() {
             showErrorToastVerification()
         } else {
             createUser()
-            goToLoginScreen()
+            goToMainScreen()
         }
     }
 
@@ -175,9 +175,9 @@ class RegistrationScreenFragment : Fragment() {
         Toast.makeText(this.context, getString(R.string.field_toast), Toast.LENGTH_SHORT).show()
     }
 
-    private fun goToLoginScreen() {
+    private fun goToMainScreen() {
         val action =
-            RegistrationScreenFragmentDirections.actionRegistrationScreenFragmentToLoginScreenFragment()
+            RegistrationScreenFragmentDirections.actionRegistrationScreenFragmentToMainScreenFragment()
         findNavController().navigate(action)
     }
 }
