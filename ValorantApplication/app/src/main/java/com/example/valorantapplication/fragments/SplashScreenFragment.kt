@@ -43,7 +43,8 @@ class SplashScreenFragment : Fragment() {
     }
 
     private fun goToMainScreen() {
-        val action = SplashScreenFragmentDirections.actionSplashScreenFragmentToMainScreenFragment()
+        val action =
+            SplashScreenFragmentDirections.actionSplashScreenFragmentToMainScreenFragment()
         findNavController().navigate(action)
     }
 

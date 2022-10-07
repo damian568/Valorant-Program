@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+        preferenceUntil = PreferenceUntil.getInstance(applicationContext)
         val navHostFragment =
             supportFragmentManager
                 .findFragmentById(R.id.navHostFragment) as NavHostFragment

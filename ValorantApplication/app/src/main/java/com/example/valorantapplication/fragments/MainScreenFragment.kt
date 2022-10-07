@@ -6,13 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentMainScreenBinding
+import com.example.valorantapplication.databinding.FragmentSplashScreenBinding
 
 class MainScreenFragment : Fragment() {
+
+    private lateinit var binding: FragmentMainScreenBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        return inflater.inflate(R.layout.fragment_main_screen, container, false)
+    ): View {
+        binding = FragmentMainScreenBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 }
