@@ -1,6 +1,5 @@
 package com.example.valorantapplication.data
 
-import android.media.Image
 import com.example.valorantapplication.enums.Gender
 import kotlinx.serialization.Serializable
 
