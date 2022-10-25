@@ -5,6 +5,7 @@ import android.content.DialogInterface
 import android.graphics.BlendMode
 import android.graphics.BlendModeColorFilter
 import android.graphics.PorterDuff
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         preferenceUntil = PreferenceUntil.getInstance(applicationContext)
+
         val navHostFragment =
             supportFragmentManager
                 .findFragmentById(R.id.navHostFragment) as NavHostFragment
