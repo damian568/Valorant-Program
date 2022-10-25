@@ -26,4 +26,6 @@
     <dimen name="xxbig_width_height">250dp</dimen>
 
     <dimen name="radius">50dp</dimen>
+    <dimen name="top_bot_radius">60dp</dimen>
+    <dimen name="btn_game_and_info_width">150dp</dimen>
 </resources>

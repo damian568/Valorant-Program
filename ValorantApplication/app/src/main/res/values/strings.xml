@@ -24,4 +24,6 @@
     <string name="question_alert_dialog">Do you want to close the app?</string>
     <string name="yes_alert_dialog">Yes</string>
     <string name="no_alert_dialog">No</string>
+    <string name="info">Info</string>
+    <string name="quiz">Quiz</string>
 </resources>
