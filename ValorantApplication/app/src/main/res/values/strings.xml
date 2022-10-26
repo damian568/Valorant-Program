@@ -24,6 +24,21 @@
     <string name="question_alert_dialog">Do you want to close the app?</string>
     <string name="yes_alert_dialog">Yes</string>
     <string name="no_alert_dialog">No</string>
+
     <string name="info">Info</string>
     <string name="quiz">Quiz</string>
+    <string name="start_game">Start Game</string>
+    <string name="name">Name</string>
+    <string name="please_enter_your_name">Please enter your name</string>
+    <string name="welcome">Welcome</string>
+
+    <string name="agents">Agents</string>
+    <string name="maps">Maps</string>
+    <string name="weapons">Weapons</string>
+    <string name="answer">Answer...</string>
+    <string name="send_answer">Send Answer</string>
+    <string name="first_question">First Question</string>
+    <string name="explanation_of_quest_1">You can hear only one time the voice line of the agent. Your question is:</string>
+    <string name="question_one_agents">Who is this Agent?</string>
+
 </resources>

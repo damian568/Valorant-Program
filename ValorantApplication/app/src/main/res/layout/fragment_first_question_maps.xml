@@ -5,13 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.SplashScreenFragment">
+        tools:context=".fragments.quiz.maps.FirstQuestionMapsFragment"
+        android:background="@drawable/quiz_gradient_background">
 
-        <ImageView
-            android:id="@+id/image_logo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/valorant_start_up" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

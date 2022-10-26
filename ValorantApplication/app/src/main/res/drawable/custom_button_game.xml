@@ -3,7 +3,7 @@
 
     <gradient android:startColor="@color/btn_game_end_color"
         android:endColor="@color/btn_game_start_color"
-        android:angle="360"/>
+        android:angle="@integer/angle"/>
     <corners android:topLeftRadius="@dimen/top_bot_radius"
         android:bottomRightRadius="@dimen/top_bot_radius"/>
 

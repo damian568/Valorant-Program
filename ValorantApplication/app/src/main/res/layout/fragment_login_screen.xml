@@ -10,25 +10,25 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageViewProfile"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/Circular"
             android:layout_width="@dimen/xxbig_width_height"
             android:layout_height="@dimen/xxbig_width_height"
             android:layout_marginTop="@dimen/xsmall_margin"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_baseline_profile" />
+            android:src="@drawable/ic_baseline_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circular" />
 
         <ScrollView
             android:id="@+id/scrollView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageViewProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/large_margin">
+            android:layout_marginVertical="@dimen/large_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewProfile">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -36,10 +36,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/Contents"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/small_margin">
+                    android:layout_margin="@dimen/small_margin"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -48,7 +48,6 @@
 
                         <TextView
                             android:id="@+id/profileInformation"
-                            app:layout_constraintTop_toTopOf="parent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="start"
@@ -56,11 +55,11 @@
                             android:singleLine="true"
                             android:text="@string/information"
                             android:textSize="@dimen/text_size_small"
-                            android:textStyle="italic" />
+                            android:textStyle="italic"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/txtFullNameProfile"
-                            app:layout_constraintTop_toBottomOf="@id/profileInformation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/medium_margin"
@@ -70,11 +69,11 @@
                             android:textAllCaps="true"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="italic"
-                            app:drawableStartCompat="@drawable/ic_baseline_person" />
+                            app:drawableStartCompat="@drawable/ic_baseline_person"
+                            app:layout_constraintTop_toBottomOf="@id/profileInformation" />
 
                         <TextView
                             android:id="@+id/txtEmailProfile"
-                            app:layout_constraintTop_toBottomOf="@id/txtFullNameProfile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/medium_margin"
@@ -82,11 +81,11 @@
                             android:singleLine="true"
                             android:src="@drawable/ic_baseline_email"
                             android:textSize="@dimen/text_size_small"
-                            app:drawableStartCompat="@drawable/ic_baseline_email" />
+                            app:drawableStartCompat="@drawable/ic_baseline_email"
+                            app:layout_constraintTop_toBottomOf="@id/txtFullNameProfile" />
 
                         <TextView
                             android:id="@+id/txtSexProfile"
-                            app:layout_constraintTop_toBottomOf="@id/txtEmailProfile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/medium_margin"
@@ -94,7 +93,8 @@
                             android:singleLine="true"
                             android:src="@drawable/ic_baseline_gender_24"
                             android:textSize="@dimen/text_size_small"
-                            app:drawableStartCompat="@drawable/ic_baseline_gender_24" />
+                            app:drawableStartCompat="@drawable/ic_baseline_gender_24"
+                            app:layout_constraintTop_toBottomOf="@id/txtEmailProfile" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

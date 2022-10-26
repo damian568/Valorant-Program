@@ -12,4 +12,7 @@
     <color name="blue">#0000FF</color>
     <color name="btn_game_start_color">#D01963</color>
     <color name="btn_game_end_color">#FF9431</color>
+    <color name="text_color_explanation_1_agents">#48515F</color>
+    <color name="text_color_quest_1_agents">#363A43</color>
+    <color name="text_color_quiz">#7A8089</color>
 </resources>

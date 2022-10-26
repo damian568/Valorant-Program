@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.databinding.FragmentMainScreenBinding
 
 open class MainScreenFragment : Fragment() {
@@ -24,6 +25,32 @@ open class MainScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setBackgroundVideo()
+        clickBtnInfo()
+        clickBtnQuiz()
+    }
+
+    private fun clickBtnInfo(){
+        binding.btnInfo.setOnClickListener {
+            goToInfoFragment()
+        }
+    }
+
+    private fun clickBtnQuiz(){
+        binding.btnGame.setOnClickListener {
+            goToQuizGameFragment()
+        }
+    }
+
+    private fun goToQuizGameFragment(){
+        val action =
+            MainScreenFragmentDirections.actionMainScreenFragmentToQuizFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun goToInfoFragment(){
+        val action =
+            MainScreenFragmentDirections.actionMainScreenFragmentToInfoFragment()
+        findNavController().navigate(action)
     }
 
     private fun setBackgroundVideo(){
