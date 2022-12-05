@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/quiz_gradient_background"
+        tools:context=".fragments.quiz.agents.FifthQuestionAgentsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/xxxsmall_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_quest_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxsmall_margin_bot"
+                android:gravity="center"
+                android:text="@string/fifth_question_agents"
+                android:textColor="@color/text_color_quest_agents"
+                android:textSize="@dimen/text_screen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center"
+                android:text="@string/explanation_of_quest_5_agents"
+                android:textColor="@color/text_color_explanation_agents"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center"
+                android:text="@string/question_fifth_agents"
+                android:textColor="@color/text_color_explanation_agents"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/medium_margin"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgSova"
+                    android:layout_width="@dimen/image_width_height"
+                    android:layout_height="@dimen/image_width_height"
+                    android:layout_marginRight="@dimen/xsmall_margin_image"
+                    android:src="@drawable/sova"
+                    app:shapeAppearanceOverlay="@style/custom_image_sova_viper" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgViper"
+                    android:layout_width="@dimen/image_width_height"
+                    android:layout_height="@dimen/image_width_height"
+                    android:src="@drawable/viper"
+                    app:shapeAppearanceOverlay="@style/custom_image_sova_viper" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

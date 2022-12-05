@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/quiz_gradient_background"
-        tools:context=".fragments.quiz.agents.FirstQuestionAgentsFragment">
+        tools:context=".fragments.quiz.maps.SecondQuestionMapsFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,12 +18,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/text_quest_1"
+                android:id="@+id/text_quest_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/xxsmall_margin_bot"
                 android:gravity="center"
-                android:text="@string/first_question_agents"
+                android:text="@string/second_question_maps"
                 android:textColor="@color/text_color_quest_agents"
                 android:textSize="@dimen/text_screen"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/small_margin"
                 android:gravity="center"
-                android:text="@string/explanation_of_quest_1_agents"
+                android:text="@string/explanation_of_quest_2_maps"
                 android:textColor="@color/text_color_explanation_agents"
                 android:textSize="@dimen/text_size_xsmall" />
 
@@ -43,59 +43,60 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/small_margin"
                 android:gravity="center"
-                android:text="@string/question_one_agents"
+                android:text="@string/question_second_maps"
                 android:textColor="@color/text_color_explanation_agents"
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/voiceLine"
-                android:layout_width="@dimen/xbig_width_height"
-                android:layout_height="@dimen/xbig_width_height"
+            <ImageView
+                android:id="@+id/image_agent"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/xxbig_height"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:focusable="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_baseline_play_circle"
-                app:shapeAppearanceOverlay="@style/Circular" />
+                android:src="@drawable/fracture" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtUsernameReg"
-                enableError=""
-                errorText=""
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/medium_margin"
-                app:counterEnabled="true"
-                app:counterMaxLength="10">
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/firstAnswer"
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/custom_edit_text"
-                    android:gravity="center"
-                    android:hint="@string/answer"
-                    android:inputType="text"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:paddingLeft="@dimen/large_padding_left"
-                    android:paddingTop="@dimen/xsmall_padding_top_bot"
-                    android:paddingBottom="@dimen/xsmall_padding_top_bot" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <RadioButton
+                        android:id="@+id/radiobtnFracture"
+                        android:layout_width="@dimen/no_dimen"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button"
+                        android:hint="@string/fracture" />
 
-            <Button
-                android:id="@+id/sendFirstAnswerAgents"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/large_margin"
-                android:background="@drawable/custom_button"
-                android:hint="@string/send_answer"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_small"
-                android:textStyle="bold" />
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/xbig_margin" />
+
+                    <RadioButton
+                        android:id="@+id/radiobtnIcebox"
+                        android:layout_width="@dimen/no_dimen"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button"
+                        android:hint="@string/icebox" />
+                </RadioGroup>
+            </LinearLayout>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/quiz_gradient_background"
-        tools:context=".fragments.quiz.maps.FirstQuestionMapsFragment">
+        tools:context=".fragments.quiz.agents.ThirdQuestionAgentsFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,12 +18,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/text_quest_1"
+                android:id="@+id/text_quest_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/xxsmall_margin_bot"
                 android:gravity="center"
-                android:text="@string/first_question_maps"
+                android:text="@string/third_question_agents"
                 android:textColor="@color/text_color_quest_agents"
                 android:textSize="@dimen/text_screen"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/small_margin"
                 android:gravity="center"
-                android:text="@string/explanation_of_quest_1_maps"
+                android:text="@string/explanation_of_quest_3_agents"
                 android:textColor="@color/text_color_explanation_agents"
                 android:textSize="@dimen/text_size_xsmall" />
 
@@ -43,56 +43,53 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/small_margin"
                 android:gravity="center"
-                android:text="@string/question_one_maps"
+                android:text="@string/question_third_agents"
                 android:textColor="@color/text_color_explanation_agents"
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <VideoView
+                android:id="@+id/videoOmen"
+                android:layout_width="@dimen/xlarge_width"
+                android:layout_height="@dimen/xbig_width_height"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/edit_chamber"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtUsernameReg"
+                enableError=""
+                errorText=""
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:background="@drawable/icebox">
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/medium_margin"
+                app:counterEnabled="true"
+                app:counterMaxLength="10">
 
-                <RadioGroup
-                    android:id="@+id/radioGroupGender"
+                <EditText
+                    android:id="@+id/thirdAnswer"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:orientation="vertical"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:weightSum="3">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_edit_text"
+                    android:gravity="center"
+                    android:hint="@string/answer"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/large_padding_left"
+                    android:paddingTop="@dimen/xsmall_padding_top_bot"
+                    android:paddingBottom="@dimen/xsmall_padding_top_bot" />
 
-                    <RadioButton
-                        android:id="@+id/btnRadioSnowman"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/no_dimen"
-                        android:layout_marginLeft="25dp"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:id="@+id/btnRadioSide"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/no_dimen"
-                        android:layout_marginLeft="55dp"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:id="@+id/btnRadioYellow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/no_dimen"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginBottom="55dp"
-                        android:layout_weight="1" />
-                </RadioGroup>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/sendFirstAnswerMaps"
+                android:id="@+id/sendThirdAnswerAgents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/large_margin"
-                android:layout_marginVertical="@dimen/medium_margin"
                 android:background="@drawable/custom_button"
                 android:hint="@string/send_answer"
                 android:textAllCaps="true"

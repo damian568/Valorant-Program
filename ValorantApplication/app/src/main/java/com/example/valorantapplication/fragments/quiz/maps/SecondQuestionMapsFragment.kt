@@ -1,4 +1,4 @@
-package com.example.valorantapplication.fragments.quiz.agents
+package com.example.valorantapplication.fragments.quiz.maps
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.valorantapplication.databinding.FragmentSecondQuestionAgentsBinding
+import com.example.valorantapplication.databinding.FragmentSecondQuestionMapsBinding
 
-class SecondQuestionAgentsFragment : Fragment() {
+class SecondQuestionMapsFragment : Fragment() {
 
-    private lateinit var binding: FragmentSecondQuestionAgentsBinding
+    private lateinit var binding: FragmentSecondQuestionMapsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentSecondQuestionAgentsBinding.inflate(layoutInflater, container, false)
+        binding = FragmentSecondQuestionMapsBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -26,26 +26,18 @@ class SecondQuestionAgentsFragment : Fragment() {
     }
 
     private fun clickButtons(){
-        binding.btnSova.setOnClickListener {
+        binding.radiobtnFracture.setOnClickListener {
             goToNextQuestion()
         }
 
-        binding.btnChamber.setOnClickListener {
-            goToNextQuestion()
-        }
-
-        binding.btnHarbor.setOnClickListener {
-            goToNextQuestion()
-        }
-
-        binding.btnBrim.setOnClickListener {
+        binding.radiobtnIcebox.setOnClickListener {
             goToNextQuestion()
         }
     }
 
     private fun goToNextQuestion(){
         val action =
-            SecondQuestionAgentsFragmentDirections.actionSecondQuestionAgentsFragmentToThirdQuestionAgentsFragment()
+            SecondQuestionMapsFragmentDirections.actionSecondQuestionMapsFragmentToThirdQuestionMapsFragment()
         findNavController().navigate(action)
     }
 }

@@ -95,7 +95,7 @@ class FirstQuestionAgentsFragment : Fragment() {
     }
 
     private fun sendAnswer(){
-        binding.sendFirstAnswer.setOnClickListener {
+        binding.sendFirstAnswerAgents.setOnClickListener {
             goToNextQuestion()
         }
     }

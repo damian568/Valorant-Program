@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.valorantapplication.databinding.FragmentFirstQuestionMapsBinding
+import com.example.valorantapplication.databinding.FragmentThirdQuestionMapsBinding
 
-class FirstQuestionMapsFragment : Fragment() {
+class ThirdQuestionMapsFragment : Fragment() {
 
-    private lateinit var binding: FragmentFirstQuestionMapsBinding
+    private lateinit var binding: FragmentThirdQuestionMapsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentFirstQuestionMapsBinding.inflate(layoutInflater, container, false)
+        binding = FragmentThirdQuestionMapsBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -26,14 +26,14 @@ class FirstQuestionMapsFragment : Fragment() {
     }
 
     private fun sendAnswer(){
-        binding.sendFirstAnswerMaps.setOnClickListener {
+        binding.sendThirdAnswerMaps.setOnClickListener {
             goToNextQuestion()
         }
     }
 
     private fun goToNextQuestion(){
         val action =
-            FirstQuestionMapsFragmentDirections.actionFirstQuestionMapsFragmentToSecondQuestionMapsFragment()
+            ThirdQuestionMapsFragmentDirections.actionThirdQuestionMapsFragmentToFourthQuestionMapsFragment()
         findNavController().navigate(action)
     }
 }

@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/welcome"
-                android:textColor="@color/text_color_quest_1_agents"
+                android:textColor="@color/text_color_quest_agents"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 

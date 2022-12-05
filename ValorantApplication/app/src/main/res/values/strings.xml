@@ -35,10 +35,51 @@
     <string name="agents">Agents</string>
     <string name="maps">Maps</string>
     <string name="weapons">Weapons</string>
+
     <string name="answer">Answer...</string>
     <string name="send_answer">Send Answer</string>
-    <string name="first_question">First Question</string>
-    <string name="explanation_of_quest_1">You can hear only one time the voice line of the agent. Your question is:</string>
+
+    //Agents
+    <string name="first_question_agents">First Question</string>
+    <string name="explanation_of_quest_1_agents">You can hear only one time the voice line of the agent. Your question is:</string>
     <string name="question_one_agents">Who is this Agent?</string>
+
+    <string name="second_question_agents">Second Question</string>
+    <string name="explanation_of_quest_2_agents">You have part of the picture of some agent. Your question is:</string>
+    <string name="question_second_agents">Who is this Agent?</string>
+    <string name="sova">Sova</string>
+    <string name="brimstone">Brimstone</string>
+    <string name="harbor">Harbor</string>
+    <string name="chamber">Chamber</string>
+
+    <string name="third_question_agents">Third Question</string>
+    <string name="explanation_of_quest_3_agents">You have video with a sound of ult on someone agent. Your question is:</string>
+    <string name="question_third_agents">Who is this Agent?</string>
+
+    <string name="fourth_question_agents">Fourth Question</string>
+    <string name="explanation_of_quest_4_agents">The agent is Sentinel.Can hold side alone. The agent have smoke and when you go in them they make a noise.Your question is:</string>
+    <string name="question_fourth_agents">Who is this Agent?</string>
+    <string name="phoenix">Phoenix</string>
+    <string name="killjoy">KillJoy</string>
+    <string name="cypher">Cypher</string>
+
+    <string name="fifth_question_agents">Fifth Question</string>
+    <string name="explanation_of_quest_5_agents">Raze: \"......, you listen to the weirdest music. Lots of duntz\-duntz\-duntz\-duntz\-duntz. How do you dance to it?\"</string>
+    <string name="question_fifth_agents">For which agent raze is saying that?</string>
+
+    //Maps
+    <string name="first_question_maps">First Question</string>
+    <string name="explanation_of_quest_1_maps">You have the map. Your question is:</string>
+    <string name="question_one_maps">Which point is calling Snowman?</string>
+
+    <string name="second_question_maps">Second Question</string>
+    <string name="explanation_of_quest_2_maps">You have picture of scheme of some map. Your question is:</string>
+    <string name="question_second_maps">Who is this Map?</string>
+    <string name="fracture">Fracture</string>
+    <string name="icebox">Icebox</string>
+
+    <string name="third_question_maps">Third Question</string>
+    <string name="explanation_of_quest_3_maps">You have a picture of the map. Your question is:</string>
+    <string name="question_third_maps">Who is this Maps?</string>
 
 </resources>
