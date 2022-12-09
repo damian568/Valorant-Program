@@ -2,11 +2,101 @@
 <layout>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/quiz_gradient_background"
         tools:context=".fragments.quiz.maps.FourthQuestionMapsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/xxxsmall_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_quest_3_maps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxsmall_margin_bot"
+                android:gravity="center"
+                android:text="@string/fourth_question_maps"
+                android:textColor="@color/text_color_quest_agents"
+                android:textSize="@dimen/text_screen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center"
+                android:text="@string/explanation_of_quest_4_maps"
+                android:textColor="@color/text_color_explanation_agents"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center"
+                android:text="@string/question_fourth_maps"
+                android:textColor="@color/text_color_explanation_agents"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image_maps"
+                android:layout_width="@dimen/xxbig_height"
+                android:layout_height="@dimen/image_height"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/valorant_four_maps"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtAnswer"
+                enableError=""
+                errorText=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/medium_margin"
+                app:counterEnabled="true"
+                app:counterMaxLength="10">
+
+                <EditText
+                    android:id="@+id/fourthAnswerMaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_edit_text"
+                    android:gravity="center"
+                    android:hint="@string/answer"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/large_padding_left"
+                    android:paddingTop="@dimen/xsmall_padding_top_bot"
+                    android:paddingBottom="@dimen/xsmall_padding_top_bot" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/sendFourThAnswerMaps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/large_margin"
+                android:background="@drawable/custom_button"
+                android:hint="@string/send_answer"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

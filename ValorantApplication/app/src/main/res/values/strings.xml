@@ -20,11 +20,13 @@
     <string name="profile">Profile</string>
     <string name="log_out">Log Out</string>
 
+    //Alert Dialog
     <string name="text_alert_dialog">Are you sure!</string>
     <string name="question_alert_dialog">Do you want to close the app?</string>
     <string name="yes_alert_dialog">Yes</string>
     <string name="no_alert_dialog">No</string>
 
+    //Quiz
     <string name="info">Info</string>
     <string name="quiz">Quiz</string>
     <string name="start_game">Start Game</string>
@@ -81,5 +83,9 @@
     <string name="third_question_maps">Third Question</string>
     <string name="explanation_of_quest_3_maps">You have a picture of the map. Your question is:</string>
     <string name="question_third_maps">Who is this Maps?</string>
+
+    <string name="fourth_question_maps">Fourth Question</string>
+    <string name="explanation_of_quest_4_maps">The agent is Sentinel.Can hold side alone. The agent have smoke and when you go in them they make a noise.Your question is:</string>
+    <string name="question_fourth_maps">Who is this Map?</string>
 
 </resources>
