@@ -85,7 +85,32 @@
     <string name="question_third_maps">Who is this Maps?</string>
 
     <string name="fourth_question_maps">Fourth Question</string>
-    <string name="explanation_of_quest_4_maps">The agent is Sentinel.Can hold side alone. The agent have smoke and when you go in them they make a noise.Your question is:</string>
-    <string name="question_fourth_maps">Who is this Map?</string>
+    <string name="explanation_of_quest_4_maps">You have a pictures of four maps. Your question is:</string>
+    <string name="question_fourth_maps">Which map was first add in the game?</string>
+
+    <string name="fifth_question_maps">Fifth Question</string>
+    <string name="explanation_of_quest_5_maps">You have part of drawing: Your question is:</string>
+    <string name="question_fifth_maps">From which map is the drawing?</string>
+
+    //Weapons
+    <string name="first_question_weapons">First Question</string>
+    <string name="explanation_of_quest_1_weapons">You have sound of weapon which is from shotguns. Your question is:</string>
+    <string name="question_one_weapons">Which is that weapon?</string>
+
+    <string name="second_question_weapons">Second Question</string>
+    <string name="explanation_of_quest_2_weapons">You have picture of scheme of some map. Your question is:</string>
+    <string name="question_second_weapons">Who is this Map?</string>
+
+    <string name="third_question_weapons">Third Question</string>
+    <string name="explanation_of_quest_3_weapons">You have a picture of the map. Your question is:</string>
+    <string name="question_third_weapons">Who is this Maps?</string>
+
+    <string name="fourth_question_weapons">Fourth Question</string>
+    <string name="explanation_of_quest_4_weapons">You have a pictures of four maps. Your question is:</string>
+    <string name="question_fourth_weapons">Which map was first add in the game?</string>
+
+    <string name="fifth_question_weapons">Fifth Question</string>
+    <string name="explanation_of_quest_5_weapons">You have part of drawing: Your question is:</string>
+    <string name="question_fifth_weapons">From which map is the drawing?</string>
 
 </resources>

@@ -89,7 +89,11 @@
         android:id="@+id/firstQuestionWeaponsFragment"
         android:name="com.example.valorantapplication.fragments.quiz.weapons.FirstQuestionWeaponsFragment"
         android:label="fragment_first_question_weapons"
-        tools:layout="@layout/fragment_first_question_weapons" />
+        tools:layout="@layout/fragment_first_question_weapons" >
+        <action
+            android:id="@+id/action_firstQuestionWeaponsFragment_to_secondQuestionWeaponsFragment"
+            app:destination="@id/secondQuestionWeaponsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/secondQuestionAgentsFragment"
         android:name="com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragment"
@@ -156,6 +160,38 @@
         android:label="FifthQuestionMapsFragment" >
         <action
             android:id="@+id/action_fifthQuestionMapsFragment_to_endOfQuizFragment"
+            app:destination="@id/endOfQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.SecondQuestionWeaponsFragment"
+        android:label="SecondQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_secondQuestionWeaponsFragment_to_thirdQuestionWeaponsFragment"
+            app:destination="@id/thirdQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.ThirdQuestionWeaponsFragment"
+        android:label="ThirdQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_thirdQuestionWeaponsFragment_to_fourthQuestionWeaponsFragment"
+            app:destination="@id/fourthQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.FourthQuestionWeaponsFragment"
+        android:label="FourthQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_fourthQuestionWeaponsFragment_to_fifthQuestionWeaponsFragment"
+            app:destination="@id/fifthQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.FifthQuestionWeaponsFragment"
+        android:label="FifthQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_fifthQuestionWeaponsFragment_to_endOfQuizFragment"
             app:destination="@id/endOfQuizFragment" />
     </fragment>
 </navigation>

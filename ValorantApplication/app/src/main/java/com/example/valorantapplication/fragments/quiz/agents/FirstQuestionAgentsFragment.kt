@@ -1,9 +1,8 @@
 package com.example.valorantapplication.fragments.quiz.agents
 
-import android.media.AudioAttributes
-import android.media.AudioManager
+import android.media.MediaPlayer
 import android.media.SoundPool
-import android.os.Build
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,15 +10,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.databinding.FragmentFirstQuestionAgentsBinding
-import kotlinx.android.synthetic.main.fragment_first_question_agents.view.*
-
 
 class FirstQuestionAgentsFragment : Fragment() {
 
     private lateinit var binding: FragmentFirstQuestionAgentsBinding
-//    private var mediaPlayer: MediaPlayer? = null
-    private var soundPool: SoundPool? = null
-    private var sound1 = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,58 +31,32 @@ class FirstQuestionAgentsFragment : Fragment() {
 
     private fun startVoiceLine(){
         binding.voiceLine.setOnClickListener {
-//            val uri = "android.resource://" + activity!!.packageName + "/" + com.example.valorantapplication.R.raw.reyna
-//            mediaPlayer = MediaPlayer()
-//            mediaPlayer?.setAudioStreamType(AudioManager.STREAM_MUSIC)
-//
-//            try {
-//                mediaPlayer?.setDataSource(uri)
-//                mediaPlayer?.stop()
-//            }
-//            catch (e: IOException){
-//                e.printStackTrace()
-//            }
-//
-//            Toast.makeText(this.context, "Audio started playing", Toast.LENGTH_SHORT).show()
-
-//            soundPool = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//                val audioAttributes = AudioAttributes.Builder()
-//                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-//                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-//                    .build()
-//                SoundPool.Builder()
-//                    .setMaxStreams(1)
-//                    .setAudioAttributes(audioAttributes)
-//                    .build()
-//            } else {
-//                SoundPool(1, AudioManager.STREAM_MUSIC, 0)
-//            }
-//
-//            sound1 = soundPool!!.load(this.context, com.example.valorantapplication.R.raw.reyna, 1)
+            playVideo()
             makeIconInvisible()
         }
     }
 
-//    fun playSound(v: View) {
-//        when (v.voiceLine) {
-//            binding.voiceLine -> {
-//                soundPool!!.play(sound1, 1f, 1f, 0, 0, 1f)
-//                soundPool!!.autoPause()
-//            }
-//        }
-//    }
+    private fun playVideo(){
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + com.example.valorantapplication.R.raw.reyna)
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        soundPool!!.release()
-//        soundPool = null
-//    }
+        binding.videoReyna.setVideoURI(uri)
+        binding.videoReyna.alpha = 0f
+        binding.videoReyna.start()
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        mediaPlayer?.release()
-//        mediaPlayer = null
-//    }
+        binding.videoReyna.setOnPreparedListener(MediaPlayer.OnPreparedListener { mp ->
+            mp.isLooping = false
+        })
+    }
+
+    override fun onPause() {
+        binding.videoReyna.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoReyna.stopPlayback()
+        super.onDestroy()
+    }
 
     private fun makeIconInvisible(){
         binding.voiceLine.visibility = View.INVISIBLE

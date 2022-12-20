@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.databinding.FragmentFourthQuestionMapsBinding
 
 class FourthQuestionMapsFragment : Fragment() {
@@ -21,5 +22,18 @@ class FourthQuestionMapsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        sendAnswer()
+    }
+
+    private fun sendAnswer(){
+        binding.sendFourThAnswerMaps.setOnClickListener {
+            goToNextQuestion()
+        }
+    }
+
+    private fun goToNextQuestion(){
+        val action =
+            FourthQuestionMapsFragmentDirections.actionFourthQuestionMapsFragmentToFifthQuestionMapsFragment()
+        findNavController().navigate(action)
     }
 }

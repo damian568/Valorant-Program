@@ -56,7 +56,6 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/edit_chamber"
                 app:shapeAppearanceOverlay="@style/Circular" />
 
             <com.google.android.material.textfield.TextInputLayout
