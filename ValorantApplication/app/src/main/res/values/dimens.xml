@@ -48,4 +48,5 @@
     <dimen name="image_height">250dp</dimen>
     <dimen name="image_width_height">150dp</dimen>
     <dimen name="image_width_xlarge">300dp</dimen>
+    <dimen name="xxbig_height_image">320dp</dimen>
 </resources>

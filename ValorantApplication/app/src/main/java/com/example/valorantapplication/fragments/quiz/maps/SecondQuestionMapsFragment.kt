@@ -26,11 +26,7 @@ class SecondQuestionMapsFragment : Fragment() {
     }
 
     private fun clickButtons(){
-        binding.radiobtnFracture.setOnClickListener {
-            goToNextQuestion()
-        }
-
-        binding.radiobtnIcebox.setOnClickListener {
+        binding.sendSecondThAnswerMaps.setOnClickListener {
             goToNextQuestion()
         }
     }

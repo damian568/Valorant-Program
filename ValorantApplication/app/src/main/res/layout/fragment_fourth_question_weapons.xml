@@ -2,11 +2,132 @@
 <layout>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/quiz_gradient_background"
         tools:context=".fragments.quiz.weapons.FourthQuestionWeaponsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/xxxsmall_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_quest_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxsmall_margin_bot"
+                android:gravity="center"
+                android:text="@string/fourth_question_weapons"
+                android:textColor="@color/text_color_quest_agents"
+                android:textSize="@dimen/text_screen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center"
+                android:text="@string/explanation_of_quest_4_weapons"
+                android:textColor="@color/text_color_explanation_agents"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:gravity="center"
+                android:text="@string/question_fourth_weapons"
+                android:textColor="@color/text_color_explanation_agents"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/soundOfElderFlameVandal"
+                android:layout_width="@dimen/xbig_width_height"
+                android:layout_height="@dimen/xbig_width_height"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_play_circle"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <VideoView
+                android:id="@+id/videoBundleVandal"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/medium_margin"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnElderFlameFrenzy"
+                    android:layout_width="@dimen/no_dimen"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button"
+                    android:hint="@string/elderFlame_frenzy" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xbig_margin" />
+
+                <Button
+                    android:id="@+id/btnSentinelVandal"
+                    android:layout_width="@dimen/no_dimen"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button"
+                    android:hint="@string/sentinel_vandal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRuinationPhantom"
+                    android:layout_width="@dimen/no_dimen"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button"
+                    android:hint="@string/ruination_phantom" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xbig_margin" />
+
+                <Button
+                    android:id="@+id/btnElderFlameVandal"
+                    android:layout_width="@dimen/no_dimen"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button"
+                    android:hint="@string/elderFlame_vandal" />
+            </LinearLayout>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

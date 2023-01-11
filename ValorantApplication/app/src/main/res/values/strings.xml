@@ -98,16 +98,22 @@
     <string name="question_one_weapons">Which is that weapon?</string>
 
     <string name="second_question_weapons">Second Question</string>
-    <string name="explanation_of_quest_2_weapons">You have picture of scheme of some map. Your question is:</string>
-    <string name="question_second_weapons">Who is this Map?</string>
+    <string name="explanation_of_quest_2_weapons">You have picture of weapon. Your question is:</string>
+    <string name="question_second_weapons">From which category is the weapon?</string>
+    <string name="rifles">RIFLES</string>
+    <string name="smgs">SMGS</string>
 
     <string name="third_question_weapons">Third Question</string>
-    <string name="explanation_of_quest_3_weapons">You have a picture of the map. Your question is:</string>
-    <string name="question_third_weapons">Who is this Maps?</string>
+    <string name="explanation_of_quest_3_weapons">You have a picture of bundle. Your question is:</string>
+    <string name="question_third_weapons">What are the names of this weapons?</string>
 
     <string name="fourth_question_weapons">Fourth Question</string>
-    <string name="explanation_of_quest_4_weapons">You have a pictures of four maps. Your question is:</string>
-    <string name="question_fourth_weapons">Which map was first add in the game?</string>
+    <string name="explanation_of_quest_4_weapons">You have sound of weapon (You can hear it only one time). Your question is:</string>
+    <string name="question_fourth_weapons">What is the Bundle and what is the Weapon?</string>
+    <string name="elderFlame_frenzy">ElderFlame - Frenzy</string>
+    <string name="elderFlame_vandal">ElderFlame - Vandal</string>
+    <string name="sentinel_vandal">Sentinel - Vandal</string>
+    <string name="ruination_phantom">Ruination - Phantom</string>
 
     <string name="fifth_question_weapons">Fifth Question</string>
     <string name="explanation_of_quest_5_weapons">You have part of drawing: Your question is:</string>

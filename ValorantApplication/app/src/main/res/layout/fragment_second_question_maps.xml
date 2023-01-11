@@ -51,7 +51,7 @@
             <ImageView
                 android:id="@+id/image_agent"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/xxbig_height"
+                android:layout_height="@dimen/xxbig_height_image"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:focusable="true"
@@ -97,6 +97,19 @@
                         android:hint="@string/icebox" />
                 </RadioGroup>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/sendSecondThAnswerMaps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/large_margin"
+                android:background="@drawable/custom_button"
+                android:hint="@string/send_answer"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
