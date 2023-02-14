@@ -48,10 +48,21 @@
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/soundOfJudge"
+                android:layout_width="@dimen/xbig_width_height"
+                android:layout_height="@dimen/xbig_width_height"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_play_circle"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
             <VideoView
                 android:id="@+id/videoJudge"
-                android:layout_width="@dimen/xlarge_width"
-                android:layout_height="@dimen/xbig_width_height"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:focusable="true"

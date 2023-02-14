@@ -116,7 +116,7 @@
     <string name="ruination_phantom">Ruination - Phantom</string>
 
     <string name="fifth_question_weapons">Fifth Question</string>
-    <string name="explanation_of_quest_5_weapons">You have part of drawing: Your question is:</string>
-    <string name="question_fifth_weapons">From which map is the drawing?</string>
+    <string name="explanation_of_quest_5_weapons">You have picture of agent and weapon which she is holding. Your question is:</string>
+    <string name="question_fifth_weapons">What is it the name of the weapon?</string>
 
 </resources>
