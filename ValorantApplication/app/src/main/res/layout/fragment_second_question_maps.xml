@@ -67,7 +67,7 @@
                 android:orientation="horizontal">
 
                 <RadioGroup
-                    android:id="@+id/radioGroupGender"
+                    android:id="@+id/radioGroupNameOfMap"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/medium_margin"
@@ -76,7 +76,7 @@
                     android:weightSum="2">
 
                     <RadioButton
-                        android:id="@+id/radiobtnFracture"
+                        android:id="@+id/radioBtnFracture"
                         android:layout_width="@dimen/no_dimen"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -89,7 +89,7 @@
                         android:layout_margin="@dimen/xbig_margin" />
 
                     <RadioButton
-                        android:id="@+id/radiobtnIcebox"
+                        android:id="@+id/radioBtnIcebox"
                         android:layout_width="@dimen/no_dimen"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

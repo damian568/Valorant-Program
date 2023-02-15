@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
 import com.example.valorantapplication.databinding.FragmentSecondQuestionAgentsBinding
 
 class SecondQuestionAgentsFragment : Fragment() {
@@ -27,18 +28,23 @@ class SecondQuestionAgentsFragment : Fragment() {
 
     private fun clickButtons(){
         binding.btnSova.setOnClickListener {
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
 
         binding.btnChamber.setOnClickListener {
+            Constants.AGENTS_QUIZ_POINTS++
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
 
         binding.btnHarbor.setOnClickListener {
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
 
         binding.btnBrim.setOnClickListener {
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
     }

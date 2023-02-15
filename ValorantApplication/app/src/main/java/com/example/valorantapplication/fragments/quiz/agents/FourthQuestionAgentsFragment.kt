@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
+import com.example.valorantapplication.R
 import com.example.valorantapplication.databinding.FragmentFourthQuestionAgentsBinding
+import com.example.valorantapplication.enums.FourthQuestionAgents
 
 class FourthQuestionAgentsFragment : Fragment() {
 
@@ -27,7 +30,28 @@ class FourthQuestionAgentsFragment : Fragment() {
 
     private fun sendAnswer(){
         binding.sendFourthAnswerAgents.setOnClickListener {
-            goToNextQuestion()
+            getSelectRadioBtnValue()
+        }
+    }
+
+    private fun getSelectRadioBtnValue(){
+        when(binding.radioGroupFourthAnswer.checkedRadioButtonId){
+            R.id.btnRadioPhoenix -> {
+                FourthQuestionAgents.Phoenix
+                Constants.NUMBER_OF_QUESTIONS_AGENTS++
+                goToNextQuestion()
+            }
+            R.id.btnRadioKillJoy -> {
+                FourthQuestionAgents.KillJoy
+                Constants.NUMBER_OF_QUESTIONS_AGENTS++
+                goToNextQuestion()
+            }
+            R.id.btnRadioCypher -> {
+                FourthQuestionAgents.Cypher
+                Constants.AGENTS_QUIZ_POINTS++
+                Constants.NUMBER_OF_QUESTIONS_AGENTS++
+                goToNextQuestion()
+            }
         }
     }
 

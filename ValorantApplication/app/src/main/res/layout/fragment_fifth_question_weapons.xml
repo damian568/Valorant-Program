@@ -59,7 +59,7 @@
                 app:shapeAppearanceOverlay="@style/custom_image_killjoy"/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtAnswer"
+                android:id="@+id/txtFifthAnswer"
                 enableError=""
                 errorText=""
                 android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                 app:counterMaxLength="7">
 
                 <EditText
-                    android:id="@+id/FifthAnswerWeapons"
+                    android:id="@+id/fifthAnswerWeapons"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/custom_edit_text"

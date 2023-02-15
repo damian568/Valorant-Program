@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/quiz_gradient_background"
@@ -56,8 +56,8 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="@dimen/image_width"
                     android:layout_height="@dimen/image_height"
-                    android:src="@drawable/phoenix"
                     android:layout_marginRight="@dimen/xxxsmall_margin_images"
+                    android:src="@drawable/phoenix"
                     app:shapeAppearanceOverlay="@style/custom_image_phoenix" />
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -76,7 +76,7 @@
             </LinearLayout>
 
             <RadioGroup
-                android:id="@+id/radioGroupGender"
+                android:id="@+id/radioGroupFourthAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -108,8 +108,8 @@
                 android:id="@+id/sendFourthAnswerAgents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/medium_margin"
                 android:layout_marginHorizontal="@dimen/large_margin"
+                android:layout_marginVertical="@dimen/medium_margin"
                 android:background="@drawable/custom_button"
                 android:hint="@string/send_answer"
                 android:textAllCaps="true"

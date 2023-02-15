@@ -59,7 +59,7 @@
                 app:shapeAppearanceOverlay="@style/Circular" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtUsernameReg"
+                android:id="@+id/txtThirdQuestion"
                 enableError=""
                 errorText=""
                 android:layout_width="match_parent"

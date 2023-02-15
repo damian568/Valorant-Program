@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
+import com.example.valorantapplication.ConstantsAnswers
 import com.example.valorantapplication.databinding.FragmentFifthQuestionMapsBinding
 
 class FifthQuestionMapsFragment : Fragment() {
@@ -27,6 +29,18 @@ class FifthQuestionMapsFragment : Fragment() {
 
     private fun sendAnswer(){
         binding.sendFifthThAnswerMaps.setOnClickListener {
+            checkingAnswer()
+        }
+    }
+
+    private fun checkingAnswer(){
+        if(binding.fifthAnswerMaps.text.toString() == ConstantsAnswers.ANSWER_OF_FIFTH_QUESTION_MAPS){
+            Constants.MAPS_QUIZ_POINTS++
+            Constants.NUMBER_OF_QUESTIONS_MAPS++
+            goToNextQuestion()
+        }
+        else{
+            Constants.NUMBER_OF_QUESTIONS_MAPS++
             goToNextQuestion()
         }
     }

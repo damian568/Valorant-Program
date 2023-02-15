@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
+import com.example.valorantapplication.ConstantsAnswers
 import com.example.valorantapplication.databinding.FragmentFirstQuestionWeaponsBinding
 
 class FirstQuestionWeaponsFragment : Fragment() {
@@ -52,6 +54,18 @@ class FirstQuestionWeaponsFragment : Fragment() {
 
     private fun sendAnswer(){
         binding.sendFirstAnswerWeapons.setOnClickListener {
+            checkingAnswer()
+        }
+    }
+
+    private fun checkingAnswer(){
+        if(binding.firstAnswerWeapons.text.toString() == ConstantsAnswers.ANSWER_OF_FIRST_QUESTION_WEAPONS){
+            Constants.WEAPONS_QUIZ_POINTS++
+            Constants.NUMBER_OF_QUESTIONS_WEAPONS++
+            goToNextQuestion()
+        }
+        else{
+            Constants.NUMBER_OF_QUESTIONS_WEAPONS++
             goToNextQuestion()
         }
     }

@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
+import com.example.valorantapplication.R
 import com.example.valorantapplication.databinding.FragmentSecondQuestionMapsBinding
+import com.example.valorantapplication.enums.SecondQuestionMaps
 
 class SecondQuestionMapsFragment : Fragment() {
 
@@ -27,7 +30,23 @@ class SecondQuestionMapsFragment : Fragment() {
 
     private fun clickButtons(){
         binding.sendSecondThAnswerMaps.setOnClickListener {
-            goToNextQuestion()
+            getSelectRadioBtnValue()
+        }
+    }
+
+    private fun getSelectRadioBtnValue(){
+        when(binding.radioGroupNameOfMap.checkedRadioButtonId){
+            R.id.radioBtnFracture -> {
+                SecondQuestionMaps.Fracture
+                Constants.NUMBER_OF_QUESTIONS_MAPS++
+                Constants.MAPS_QUIZ_POINTS++
+                goToNextQuestion()
+            }
+            R.id.radioBtnIcebox -> {
+                SecondQuestionMaps.Icebox
+                Constants.NUMBER_OF_QUESTIONS_MAPS++
+                goToNextQuestion()
+            }
         }
     }
 

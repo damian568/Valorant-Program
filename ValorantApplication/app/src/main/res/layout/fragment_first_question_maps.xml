@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/quiz_gradient_background"
@@ -54,14 +54,14 @@
                 android:background="@drawable/icebox">
 
                 <RadioGroup
-                    android:id="@+id/radioGroupGender"
+                    android:id="@+id/radioGroupPoints"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="vertical"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:weightSum="3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:weightSum="3">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <RadioButton
                         android:id="@+id/btnRadioSnowman"

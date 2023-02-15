@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
+import com.example.valorantapplication.R
 import com.example.valorantapplication.databinding.FragmentSecondQuestionWeaponsBinding
+import com.example.valorantapplication.enums.SecondQuestionMaps
+import com.example.valorantapplication.enums.SecondQuestionWeapons
 
 class SecondQuestionWeaponsFragment : Fragment() {
 
@@ -27,7 +31,23 @@ class SecondQuestionWeaponsFragment : Fragment() {
 
     private fun sendAnswer(){
         binding.sendSecondThAnswerWeapons.setOnClickListener {
-            goToNextQuestion()
+            getSelectRadioBtnValue()
+        }
+    }
+
+    private fun getSelectRadioBtnValue(){
+        when(binding.radioGroupCategory.checkedRadioButtonId){
+            R.id.btnRadioRIFLES -> {
+                SecondQuestionWeapons.Rifle
+                Constants.NUMBER_OF_QUESTIONS_WEAPONS++
+                goToNextQuestion()
+            }
+            R.id.btnRadioSMGS -> {
+                SecondQuestionWeapons.Smg
+                Constants.NUMBER_OF_QUESTIONS_WEAPONS++
+                Constants.WEAPONS_QUIZ_POINTS++
+                goToNextQuestion()
+            }
         }
     }
 

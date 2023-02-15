@@ -1,7 +1,6 @@
 package com.example.valorantapplication.fragments.quiz.agents
 
 import android.media.MediaPlayer
-import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
+import com.example.valorantapplication.ConstantsAnswers
 import com.example.valorantapplication.databinding.FragmentFirstQuestionAgentsBinding
 
 class FirstQuestionAgentsFragment : Fragment() {
@@ -64,6 +65,18 @@ class FirstQuestionAgentsFragment : Fragment() {
 
     private fun sendAnswer(){
         binding.sendFirstAnswerAgents.setOnClickListener {
+            checkingAnswer()
+        }
+    }
+
+    private fun checkingAnswer(){
+        if(binding.firstAnswer.text.toString() == ConstantsAnswers.ANSWER_OF_FIRST_QUESTION_AGENTS){
+            Constants.AGENTS_QUIZ_POINTS++
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
+            goToNextQuestion()
+        }
+        else{
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
     }

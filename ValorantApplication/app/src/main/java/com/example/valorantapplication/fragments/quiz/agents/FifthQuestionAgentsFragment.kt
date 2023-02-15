@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.Constants
 import com.example.valorantapplication.databinding.FragmentFifthQuestionAgentsBinding
 
 class FifthQuestionAgentsFragment : Fragment() {
@@ -27,10 +28,13 @@ class FifthQuestionAgentsFragment : Fragment() {
 
     private fun sendAnswer(){
         binding.imgSova.setOnClickListener {
+            Constants.AGENTS_QUIZ_POINTS++
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
 
         binding.imgViper.setOnClickListener {
+            Constants.NUMBER_OF_QUESTIONS_AGENTS++
             goToNextQuestion()
         }
     }
