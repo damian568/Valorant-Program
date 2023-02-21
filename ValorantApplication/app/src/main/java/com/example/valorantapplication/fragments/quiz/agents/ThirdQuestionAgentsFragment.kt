@@ -10,7 +10,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.ConstantsAnswers
+import com.example.valorantapplication.R
+import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentThirdQuestionAgentsBinding
+import com.example.valorantapplication.enums.FourthQuestionAgents
 
 class ThirdQuestionAgentsFragment : Fragment() {
 
@@ -26,6 +29,7 @@ class ThirdQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getArgs()
         playVideo()
         sendAnswer()
     }
@@ -61,17 +65,42 @@ class ThirdQuestionAgentsFragment : Fragment() {
         if(binding.thirdAnswer.text.toString() == ConstantsAnswers.ANSWER_OF_THIRD_QUESTION_AGENTS){
             Constants.NUMBER_OF_QUESTIONS_AGENTS++
             Constants.AGENTS_QUIZ_POINTS++
-            goToNextQuestion()
+            replaceFragment(FourthQuestionAgentsFragment())
         }
         else{
             Constants.NUMBER_OF_QUESTIONS_AGENTS++
-            goToNextQuestion()
+            replaceFragment(FourthQuestionAgentsFragment())
         }
     }
 
-    private fun goToNextQuestion(){
-        val action =
-            ThirdQuestionAgentsFragmentDirections.actionThirdQuestionAgentsFragmentToFourthQuestionAgentsFragment()
-        findNavController().navigate(action)
+    private fun putBundle(){
+        bundle.putInt(Constants.ARG_QUESTION, Constants.NUMBER_OF_QUESTIONS_AGENTS)
+        bundle.putInt(Constants.ARG_CORRECT_ANSWERS, Constants.AGENTS_QUIZ_POINTS)
+        val fragment = FourthQuestionAgentsFragment()
+        fragment.arguments = bundle
     }
+
+    private fun getArgs() {
+        val bundle = this.arguments
+        if (bundle != null) {
+            Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
+            Constants.NUMBER_OF_QUESTIONS_AGENTS = bundle.getInt(Constants.ARG_QUESTION)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        putBundle()
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.navHostFragment, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
+
+//    private fun goToNextQuestion(){
+//        putBundle()
+//        val action =
+//            ThirdQuestionAgentsFragmentDirections.actionThirdQuestionAgentsFragmentToFourthQuestionAgentsFragment()
+//        findNavController().navigate(action)
+//    }
 }

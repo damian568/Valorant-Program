@@ -8,4 +8,6 @@ object Constants {
     var AGENTS_QUIZ_POINTS = 0
     var MAPS_QUIZ_POINTS = 0
     var WEAPONS_QUIZ_POINTS = 0
+    const val ARG_CORRECT_ANSWERS = "arg_correct_quest"
+    const val ARG_QUESTION = "arg_question"
 }

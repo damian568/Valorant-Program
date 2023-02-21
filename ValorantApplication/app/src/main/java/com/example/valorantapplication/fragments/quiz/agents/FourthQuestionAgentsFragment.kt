@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.R
+import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFourthQuestionAgentsBinding
 import com.example.valorantapplication.enums.FourthQuestionAgents
 
@@ -25,6 +26,7 @@ class FourthQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getArgs()
         sendAnswer()
     }
 
@@ -39,25 +41,50 @@ class FourthQuestionAgentsFragment : Fragment() {
             R.id.btnRadioPhoenix -> {
                 FourthQuestionAgents.Phoenix
                 Constants.NUMBER_OF_QUESTIONS_AGENTS++
-                goToNextQuestion()
+                replaceFragment(FifthQuestionAgentsFragment())
             }
             R.id.btnRadioKillJoy -> {
                 FourthQuestionAgents.KillJoy
                 Constants.NUMBER_OF_QUESTIONS_AGENTS++
-                goToNextQuestion()
+                replaceFragment(FifthQuestionAgentsFragment())
             }
             R.id.btnRadioCypher -> {
                 FourthQuestionAgents.Cypher
                 Constants.AGENTS_QUIZ_POINTS++
                 Constants.NUMBER_OF_QUESTIONS_AGENTS++
-                goToNextQuestion()
+                replaceFragment(FifthQuestionAgentsFragment())
             }
         }
     }
 
-    private fun goToNextQuestion(){
-        val action =
-            FourthQuestionAgentsFragmentDirections.actionFourthQuestionAgentsFragmentToFifthQuestionAgentsFragment()
-        findNavController().navigate(action)
+    private fun putBundle(){
+        bundle.putInt(Constants.ARG_QUESTION, Constants.NUMBER_OF_QUESTIONS_AGENTS)
+        bundle.putInt(Constants.ARG_CORRECT_ANSWERS, Constants.AGENTS_QUIZ_POINTS)
+        val fragment = FifthQuestionAgentsFragment()
+        fragment.arguments = bundle
     }
+
+    private fun getArgs() {
+        val bundle = this.arguments
+        if (bundle != null) {
+            Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
+            Constants.NUMBER_OF_QUESTIONS_AGENTS = bundle.getInt(Constants.ARG_QUESTION)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        putBundle()
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.navHostFragment, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
+
+//    private fun goToNextQuestion(){
+//        putBundle()
+//        val action =
+//            FourthQuestionAgentsFragmentDirections.actionFourthQuestionAgentsFragmentToFifthQuestionAgentsFragment()
+//        findNavController().navigate(action)
+//    }
 }

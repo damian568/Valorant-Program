@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
+import com.example.valorantapplication.R
+import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFifthQuestionAgentsBinding
+import com.example.valorantapplication.fragments.EndOfQuizFragment
 
 class FifthQuestionAgentsFragment : Fragment() {
 
@@ -23,6 +26,7 @@ class FifthQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getArgs()
         sendAnswer()
     }
 
@@ -30,18 +34,43 @@ class FifthQuestionAgentsFragment : Fragment() {
         binding.imgSova.setOnClickListener {
             Constants.AGENTS_QUIZ_POINTS++
             Constants.NUMBER_OF_QUESTIONS_AGENTS++
-            goToNextQuestion()
+            replaceFragment(EndOfQuizFragment())
         }
 
         binding.imgViper.setOnClickListener {
             Constants.NUMBER_OF_QUESTIONS_AGENTS++
-            goToNextQuestion()
+            replaceFragment(EndOfQuizFragment())
         }
     }
 
-    private fun goToNextQuestion(){
-        val action =
-            FifthQuestionAgentsFragmentDirections.actionFifthQuestionAgentsFragmentToEndOfQuizFragment()
-        findNavController().navigate(action)
+    private fun putBundle(){
+        bundle.putInt(Constants.ARG_QUESTION, Constants.NUMBER_OF_QUESTIONS_AGENTS)
+        bundle.putInt(Constants.ARG_CORRECT_ANSWERS, Constants.AGENTS_QUIZ_POINTS)
+        val fragment = EndOfQuizFragment()
+        fragment.arguments = bundle
     }
+
+    private fun getArgs() {
+        val bundle = this.arguments
+        if (bundle != null) {
+            Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
+            Constants.NUMBER_OF_QUESTIONS_AGENTS = bundle.getInt(Constants.ARG_QUESTION)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        putBundle()
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.navHostFragment, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
+
+//    private fun goToNextQuestion(){
+//        putBundle()
+//        val action =
+//            FifthQuestionAgentsFragmentDirections.actionFifthQuestionAgentsFragmentToEndOfQuizFragment()
+//        findNavController().navigate(action)
+//    }
 }

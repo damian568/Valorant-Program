@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.ConstantsAnswers
+import com.example.valorantapplication.R
+import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFirstQuestionAgentsBinding
 
 class FirstQuestionAgentsFragment : Fragment() {
@@ -26,6 +28,7 @@ class FirstQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getArgs()
         startVoiceLine()
         sendAnswer()
     }
@@ -73,17 +76,42 @@ class FirstQuestionAgentsFragment : Fragment() {
         if(binding.firstAnswer.text.toString() == ConstantsAnswers.ANSWER_OF_FIRST_QUESTION_AGENTS){
             Constants.AGENTS_QUIZ_POINTS++
             Constants.NUMBER_OF_QUESTIONS_AGENTS++
-            goToNextQuestion()
+            replaceFragment(SecondQuestionAgentsFragment())
         }
         else{
             Constants.NUMBER_OF_QUESTIONS_AGENTS++
-            goToNextQuestion()
+            replaceFragment(SecondQuestionAgentsFragment())
         }
     }
 
-    private fun goToNextQuestion(){
-        val action =
-            FirstQuestionAgentsFragmentDirections.actionFirstQuestionAgentsFragmentToSecondQuestionAgentsFragment()
-        findNavController().navigate(action)
+    private fun putBundle(){
+        bundle.putInt(Constants.ARG_QUESTION, Constants.NUMBER_OF_QUESTIONS_AGENTS)
+        bundle.putInt(Constants.ARG_CORRECT_ANSWERS, Constants.AGENTS_QUIZ_POINTS)
+        val fragment = SecondQuestionAgentsFragment()
+        fragment.arguments = bundle
     }
+
+    private fun getArgs() {
+        val bundle = this.arguments
+        if (bundle != null) {
+            Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
+            Constants.NUMBER_OF_QUESTIONS_AGENTS = bundle.getInt(Constants.ARG_QUESTION)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        putBundle()
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.navHostFragment, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
+
+//    private fun goToNextQuestion(){
+//        putBundle()
+//        val action =
+//            FirstQuestionAgentsFragmentDirections.actionFirstQuestionAgentsFragmentToSecondQuestionAgentsFragment()
+//        findNavController().navigate(action)
+//    }
 }
