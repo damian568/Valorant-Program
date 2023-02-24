@@ -128,7 +128,7 @@
     </fragment>
     <fragment
         android:id="@+id/endOfQuizFragment"
-        android:name="com.example.valorantapplication.fragments.EndOfQuizFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.EndOfQuizFragment"
         android:label="EndOfQuizFragment" />
     <fragment
         android:id="@+id/secondQuestionMapsFragment"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <shape>
+
+            <gradient
+                android:angle="@integer/gradient_background"
+                android:endColor="#E84D4D"
+                android:startColor="#FFFF"
+                android:type="linear"/>
+
+            <corners android:radius="@dimen/card_corner_radius"/>
+
+        </shape>
+
+    </item>
+
+</selector>

@@ -7,13 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.ConstantsAnswers
 import com.example.valorantapplication.R
 import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentThirdQuestionAgentsBinding
-import com.example.valorantapplication.enums.FourthQuestionAgents
 
 class ThirdQuestionAgentsFragment : Fragment() {
 
@@ -29,7 +27,7 @@ class ThirdQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getArgs()
+        getArgsAgents()
         playVideo()
         sendAnswer()
     }
@@ -80,7 +78,7 @@ class ThirdQuestionAgentsFragment : Fragment() {
         fragment.arguments = bundle
     }
 
-    private fun getArgs() {
+    private fun getArgsAgents() {
         val bundle = this.arguments
         if (bundle != null) {
             Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
@@ -96,11 +94,4 @@ class ThirdQuestionAgentsFragment : Fragment() {
             ?.addToBackStack(null)
             ?.commit()
     }
-
-//    private fun goToNextQuestion(){
-//        putBundle()
-//        val action =
-//            ThirdQuestionAgentsFragmentDirections.actionThirdQuestionAgentsFragmentToFourthQuestionAgentsFragment()
-//        findNavController().navigate(action)
-//    }
 }

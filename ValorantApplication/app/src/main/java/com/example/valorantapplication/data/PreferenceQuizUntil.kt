@@ -2,7 +2,7 @@ package com.example.valorantapplication.data
 
 import android.content.Context
 import android.content.SharedPreferences
-import kotlinx.serialization.decodeFromString
+import com.google.gson.Gson
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
@@ -13,14 +13,14 @@ class PreferenceQuizUntil internal constructor(private val context: Context) {
     }
 
     fun getQuizUsernameData(): QuizUsername? {
-        val json: String =
-            sPrefUsername.getString(PREF_SERIALIZABLE_QUIZ_USERNAME, null) ?: return null
-        return Json.decodeFromString(json)
+        val gson = Gson()
+        val json = sPrefUsername.getString(PREF_SERIALIZABLE_QUIZ_USERNAME, "{}")
+        return gson.fromJson(json, QuizUsername::class.java)
     }
 
     fun saveQuizUsernameData(quiz: QuizUsername) {
         val json = Json.encodeToString(quiz)
-        sPrefUsername.edit().putString(PREF_FILE_NAME_QUIZ_USERNAME, json).apply()
+        sPrefUsername.edit().putString(PREF_SERIALIZABLE_QUIZ_USERNAME, json).apply()
     }
 
     fun deleteUser() {

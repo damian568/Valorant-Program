@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.ConstantsAnswers
 import com.example.valorantapplication.R
@@ -28,7 +27,7 @@ class FirstQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getArgs()
+        getArgsAgents()
         startVoiceLine()
         sendAnswer()
     }
@@ -91,7 +90,7 @@ class FirstQuestionAgentsFragment : Fragment() {
         fragment.arguments = bundle
     }
 
-    private fun getArgs() {
+    private fun getArgsAgents() {
         val bundle = this.arguments
         if (bundle != null) {
             Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
@@ -107,11 +106,4 @@ class FirstQuestionAgentsFragment : Fragment() {
             ?.addToBackStack(null)
             ?.commit()
     }
-
-//    private fun goToNextQuestion(){
-//        putBundle()
-//        val action =
-//            FirstQuestionAgentsFragmentDirections.actionFirstQuestionAgentsFragmentToSecondQuestionAgentsFragment()
-//        findNavController().navigate(action)
-//    }
 }

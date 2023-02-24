@@ -6,17 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.valorantapplication.Constants
 import com.example.valorantapplication.R
-import com.example.valorantapplication.bundle
 import com.example.valorantapplication.data.PreferenceQuizUntil
-import com.example.valorantapplication.data.PreferenceUntil
 import com.example.valorantapplication.data.QuizUsername
-import com.example.valorantapplication.data.User
 import com.example.valorantapplication.databinding.FragmentQuizBinding
 import com.example.valorantapplication.enums.QuizOn
-import com.example.valorantapplication.fragments.EndOfQuizFragment
-import com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragment
 
 class QuizFragment : Fragment() {
 
@@ -44,7 +38,7 @@ class QuizFragment : Fragment() {
     }
 
     private fun getSelectRadioBtnValue() =
-        when (binding.radioGroupGender.checkedRadioButtonId) {
+        when (binding.radioGroupCategory.checkedRadioButtonId) {
             R.id.btnRadioAgents -> QuizOn.Agents
             R.id.btnRadioMaps -> QuizOn.Maps
             R.id.btnRadioWeapons -> QuizOn.Weapons

@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.R
+import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentSecondQuestionMapsBinding
 import com.example.valorantapplication.enums.SecondQuestionMaps
+import com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragment
 
 class SecondQuestionMapsFragment : Fragment() {
 
@@ -25,6 +26,7 @@ class SecondQuestionMapsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getArgsMaps()
         clickButtons()
     }
 
@@ -40,19 +42,43 @@ class SecondQuestionMapsFragment : Fragment() {
                 SecondQuestionMaps.Fracture
                 Constants.NUMBER_OF_QUESTIONS_MAPS++
                 Constants.MAPS_QUIZ_POINTS++
-                goToNextQuestion()
+                replaceFragment(ThirdQuestionMapsFragment())
             }
             R.id.radioBtnIcebox -> {
                 SecondQuestionMaps.Icebox
                 Constants.NUMBER_OF_QUESTIONS_MAPS++
-                goToNextQuestion()
+                replaceFragment(ThirdQuestionMapsFragment())
             }
         }
     }
 
-    private fun goToNextQuestion(){
-        val action =
-            SecondQuestionMapsFragmentDirections.actionSecondQuestionMapsFragmentToThirdQuestionMapsFragment()
-        findNavController().navigate(action)
+    private fun putBundle(){
+        bundle.putInt(Constants.ARG_QUESTION, Constants.NUMBER_OF_QUESTIONS_MAPS)
+        bundle.putInt(Constants.ARG_CORRECT_ANSWERS, Constants.MAPS_QUIZ_POINTS)
+        val fragment = SecondQuestionAgentsFragment()
+        fragment.arguments = bundle
     }
+
+    private fun getArgsMaps() {
+        val bundle = this.arguments
+        if (bundle != null) {
+            Constants.MAPS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
+            Constants.NUMBER_OF_QUESTIONS_MAPS = bundle.getInt(Constants.ARG_QUESTION)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        putBundle()
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.navHostFragment, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
+
+//    private fun goToNextQuestion(){
+//        val action =
+//            SecondQuestionMapsFragmentDirections.actionSecondQuestionMapsFragmentToThirdQuestionMapsFragment()
+//        findNavController().navigate(action)
+//    }
 }

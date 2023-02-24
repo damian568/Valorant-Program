@@ -9,7 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
+import com.example.valorantapplication.R
+import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFourthQuestionWeaponsBinding
+import com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragment
 
 class FourthQuestionWeaponsFragment : Fragment() {
 
@@ -25,6 +28,7 @@ class FourthQuestionWeaponsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getArgsWeapons()
         startSound()
         sendAnswer()
     }
@@ -65,26 +69,50 @@ class FourthQuestionWeaponsFragment : Fragment() {
     private fun sendAnswer(){
         binding.btnElderFlameFrenzy.setOnClickListener {
             Constants.NUMBER_OF_QUESTIONS_WEAPONS++
-            goToNextQuestion()
+            replaceFragment(FifthQuestionWeaponsFragment())
         }
         binding.btnSentinelVandal.setOnClickListener {
             Constants.NUMBER_OF_QUESTIONS_WEAPONS++
-            goToNextQuestion()
+            replaceFragment(FifthQuestionWeaponsFragment())
         }
         binding.btnRuinationPhantom.setOnClickListener {
             Constants.NUMBER_OF_QUESTIONS_WEAPONS++
-            goToNextQuestion()
+            replaceFragment(FifthQuestionWeaponsFragment())
         }
         binding.btnElderFlameVandal.setOnClickListener {
             Constants.WEAPONS_QUIZ_POINTS++
             Constants.NUMBER_OF_QUESTIONS_WEAPONS++
-            goToNextQuestion()
+            replaceFragment(FifthQuestionWeaponsFragment())
         }
     }
 
-    private fun goToNextQuestion(){
-        val action =
-            FourthQuestionWeaponsFragmentDirections.actionFourthQuestionWeaponsFragmentToFifthQuestionWeaponsFragment()
-        findNavController().navigate(action)
+    private fun putBundle(){
+        bundle.putInt(Constants.ARG_QUESTION, Constants.NUMBER_OF_QUESTIONS_WEAPONS)
+        bundle.putInt(Constants.ARG_CORRECT_ANSWERS, Constants.WEAPONS_QUIZ_POINTS)
+        val fragment = SecondQuestionAgentsFragment()
+        fragment.arguments = bundle
     }
+
+    private fun getArgsWeapons() {
+        val bundle = this.arguments
+        if (bundle != null) {
+            Constants.WEAPONS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
+            Constants.NUMBER_OF_QUESTIONS_WEAPONS = bundle.getInt(Constants.ARG_QUESTION)
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        putBundle()
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.navHostFragment, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
+
+//    private fun goToNextQuestion(){
+//        val action =
+//            FourthQuestionWeaponsFragmentDirections.actionFourthQuestionWeaponsFragmentToFifthQuestionWeaponsFragment()
+//        findNavController().navigate(action)
+//    }
 }

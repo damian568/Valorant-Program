@@ -5,12 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.R
 import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFifthQuestionAgentsBinding
-import com.example.valorantapplication.fragments.EndOfQuizFragment
+import com.example.valorantapplication.fragments.quiz.EndOfQuizFragment
 
 class FifthQuestionAgentsFragment : Fragment() {
 
@@ -26,7 +25,7 @@ class FifthQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getArgs()
+        getArgsAgents()
         sendAnswer()
     }
 
@@ -50,7 +49,7 @@ class FifthQuestionAgentsFragment : Fragment() {
         fragment.arguments = bundle
     }
 
-    private fun getArgs() {
+    private fun getArgsAgents() {
         val bundle = this.arguments
         if (bundle != null) {
             Constants.AGENTS_QUIZ_POINTS = bundle.getInt(Constants.ARG_CORRECT_ANSWERS)
@@ -66,11 +65,4 @@ class FifthQuestionAgentsFragment : Fragment() {
             ?.addToBackStack(null)
             ?.commit()
     }
-
-//    private fun goToNextQuestion(){
-//        putBundle()
-//        val action =
-//            FifthQuestionAgentsFragmentDirections.actionFifthQuestionAgentsFragmentToEndOfQuizFragment()
-//        findNavController().navigate(action)
-//    }
 }
