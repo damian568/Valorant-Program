@@ -11,7 +11,7 @@
             android:id="@+id/image_logo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/valorant_start_up"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/valorant_start_up" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

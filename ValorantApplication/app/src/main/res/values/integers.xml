@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="angle">360</integer>
+    <integer name="gradient_background">90</integer>
+
+</resources>

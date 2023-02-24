@@ -4,6 +4,7 @@
     <dimen name="no_dimen">0dp</dimen>
     <dimen name="large_margin">20dp</dimen>
 
+    //margin and padding
     <dimen name="xsmall_margin">10dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="xsmall_padding">8dp</dimen>
@@ -15,17 +16,47 @@
     <dimen name="xxsmall_margin_layout">5dp</dimen>
     <dimen name="medium_margin">16dp</dimen>
     <dimen name="xxxxl_margin">180dp</dimen>
-    <dimen name="text_size_xxlarge">80sp</dimen>
-    <dimen name="text_size_xlarge">40sp</dimen>
+    <dimen name="xxsmall_margin_bot">30dp</dimen>
     <dimen name="xlarge_margin">60dp</dimen>
+    <dimen name="xbig_margin">20dp</dimen>
+    <dimen name="xxxsmall_margin_images">2dp</dimen>
+    <dimen name="xsmall_margin_image">25dp</dimen>
+    <dimen name="xxxsmall_padding">16dp</dimen>
+    <dimen name="xsmal_padding_top_bot">25dp</dimen>
 
+    //size
     <dimen name="text_size_small">20sp</dimen>
     <dimen name="splash_text_size_large">30sp</dimen>
+    <dimen name="text_size_xsmall">18sp</dimen>
+    <dimen name="text_size_large">25sp</dimen>
+    <dimen name="text_size_xxlarge">80sp</dimen>
+    <dimen name="text_size_xlarge">40sp</dimen>
+    <dimen name="text_size_xxbig">60sp</dimen>
+    <dimen name="text_size_xbig">50sp</dimen>
+    <dimen name="text_size_medium">35sp</dimen>
 
+    //height and width
     <dimen name="xxxbig_height">650dp</dimen>
+    <dimen name="xxbig_height">350dp</dimen>
     <dimen name="xxbig_width_height">250dp</dimen>
+    <dimen name="xbig_width_height">150dp</dimen>
+    <dimen name="xlarge_width">310dp</dimen>
+    <dimen name="xxlarge_width_height">350dp</dimen>
 
+    //radius and buttons
     <dimen name="radius">50dp</dimen>
     <dimen name="top_bot_radius">60dp</dimen>
     <dimen name="btn_game_and_info_width">150dp</dimen>
+
+    //image
+    <dimen name="image_width">110dp</dimen>
+    <dimen name="image_height">250dp</dimen>
+    <dimen name="image_width_height">150dp</dimen>
+    <dimen name="image_width_xlarge">300dp</dimen>
+    <dimen name="xxbig_height_image">320dp</dimen>
+
+    //cardView
+    <dimen name="card_corner_radius">25dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="content_padding">4dp</dimen>
 </resources>

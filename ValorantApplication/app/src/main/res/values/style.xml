@@ -14,4 +14,30 @@
 
     </style>
 
+    <style name="custom_image_phoenix">
+
+        <item name="cornerSizeBottomLeft">60dp</item>
+        <item name="cornerSizeTopRight">60dp</item>
+
+    </style>
+
+    <style name="custom_image_killjoy">
+
+        <item name="cornerSize">60dp</item>
+
+    </style>
+
+    <style name="custom_image_cypher">
+
+        <item name="cornerSizeBottomRight">60dp</item>
+        <item name="cornerSizeTopLeft">60dp</item>
+
+    </style>
+
+    <style name="custom_image_sova_viper">
+
+        <item name="cornerSize">60dp</item>
+
+    </style>
+
 </resources>

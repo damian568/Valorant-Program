@@ -23,6 +23,8 @@ import com.example.valorantapplication.data.PreferenceUntil
 import com.example.valorantapplication.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
+val bundle = Bundle()
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

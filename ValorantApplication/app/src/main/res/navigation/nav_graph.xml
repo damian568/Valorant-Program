@@ -40,5 +40,158 @@
         <action
             android:id="@+id/action_mainScreenFragment_to_loginScreenFragment"
             app:destination="@id/loginScreenFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.valorantapplication.fragments.info.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.QuizFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_firstQuestionAgentsFragment"
+            app:destination="@id/firstQuestionAgentsFragment" />
+        <action
+            android:id="@+id/action_quizFragment_to_firstQuestionMapsFragment"
+            app:destination="@id/firstQuestionMapsFragment" />
+        <action
+            android:id="@+id/action_quizFragment_to_firstQuestionWeaponsFragment"
+            app:destination="@id/firstQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstQuestionAgentsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.agents.FirstQuestionAgentsFragment"
+        android:label="fragment_first_question"
+        tools:layout="@layout/fragment_first_question_agents" >
+        <action
+            android:id="@+id/action_firstQuestionAgentsFragment_to_secondQuestionAgentsFragment"
+            app:destination="@id/secondQuestionAgentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstQuestionMapsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.maps.FirstQuestionMapsFragment"
+        android:label="fragment_first_question_maps"
+        tools:layout="@layout/fragment_first_question_maps" >
+        <action
+            android:id="@+id/action_firstQuestionMapsFragment_to_secondQuestionMapsFragment"
+            app:destination="@id/secondQuestionMapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.FirstQuestionWeaponsFragment"
+        android:label="fragment_first_question_weapons"
+        tools:layout="@layout/fragment_first_question_weapons" >
+        <action
+            android:id="@+id/action_firstQuestionWeaponsFragment_to_secondQuestionWeaponsFragment"
+            app:destination="@id/secondQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondQuestionAgentsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragment"
+        android:label="SecondQuestionAgentsFragment" >
+        <action
+            android:id="@+id/action_secondQuestionAgentsFragment_to_thirdQuestionAgentsFragment"
+            app:destination="@id/thirdQuestionAgentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestionAgentsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.agents.ThirdQuestionAgentsFragment"
+        android:label="ThirdQuestionAgentsFragment" >
+        <action
+            android:id="@+id/action_thirdQuestionAgentsFragment_to_fourthQuestionAgentsFragment"
+            app:destination="@id/fourthQuestionAgentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthQuestionAgentsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.agents.FourthQuestionAgentsFragment"
+        android:label="FourthQuestionAgentsFragment" >
+        <action
+            android:id="@+id/action_fourthQuestionAgentsFragment_to_fifthQuestionAgentsFragment"
+            app:destination="@id/fifthQuestionAgentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthQuestionAgentsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.agents.FifthQuestionAgentsFragment"
+        android:label="FifthQuestionAgentsFragment" >
+        <action
+            android:id="@+id/action_fifthQuestionAgentsFragment_to_endOfQuizFragment"
+            app:destination="@id/endOfQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endOfQuizFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.EndOfQuizFragment"
+        android:label="EndOfQuizFragment" />
+    <fragment
+        android:id="@+id/secondQuestionMapsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.maps.SecondQuestionMapsFragment"
+        android:label="SecondQuestionMapsFragment" >
+        <action
+            android:id="@+id/action_secondQuestionMapsFragment_to_thirdQuestionMapsFragment"
+            app:destination="@id/thirdQuestionMapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestionMapsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.maps.ThirdQuestionMapsFragment"
+        android:label="ThirdQuestionMapsFragment" >
+        <action
+            android:id="@+id/action_thirdQuestionMapsFragment_to_fourthQuestionMapsFragment"
+            app:destination="@id/fourthQuestionMapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthQuestionMapsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.maps.FourthQuestionMapsFragment"
+        android:label="FourthQuestionMapsFragment" >
+        <action
+            android:id="@+id/action_fourthQuestionMapsFragment_to_fifthQuestionMapsFragment"
+            app:destination="@id/fifthQuestionMapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthQuestionMapsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.maps.FifthQuestionMapsFragment"
+        android:label="FifthQuestionMapsFragment" >
+        <action
+            android:id="@+id/action_fifthQuestionMapsFragment_to_endOfQuizFragment"
+            app:destination="@id/endOfQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.SecondQuestionWeaponsFragment"
+        android:label="SecondQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_secondQuestionWeaponsFragment_to_thirdQuestionWeaponsFragment"
+            app:destination="@id/thirdQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.ThirdQuestionWeaponsFragment"
+        android:label="ThirdQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_thirdQuestionWeaponsFragment_to_fourthQuestionWeaponsFragment"
+            app:destination="@id/fourthQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.FourthQuestionWeaponsFragment"
+        android:label="FourthQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_fourthQuestionWeaponsFragment_to_fifthQuestionWeaponsFragment"
+            app:destination="@id/fifthQuestionWeaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthQuestionWeaponsFragment"
+        android:name="com.example.valorantapplication.fragments.quiz.weapons.FifthQuestionWeaponsFragment"
+        android:label="FifthQuestionWeaponsFragment" >
+        <action
+            android:id="@+id/action_fifthQuestionWeaponsFragment_to_endOfQuizFragment"
+            app:destination="@id/endOfQuizFragment" />
     </fragment>
 </navigation>

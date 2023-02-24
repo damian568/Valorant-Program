@@ -62,8 +62,9 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    // CardView
-    implementation "androidx.cardview:cardview:1.0.0"
+    // RecycleView & CardView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
 
     // Email
     implementation 'com.sun.mail:android-mail:1.6.0'
