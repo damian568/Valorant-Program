@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.ConstantsAnswers
@@ -27,6 +28,7 @@ class FirstQuestionAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        hideToolbar()
         getArgsAgents()
         startVoiceLine()
         sendAnswer()
@@ -37,6 +39,10 @@ class FirstQuestionAgentsFragment : Fragment() {
             playVideo()
             makeIconInvisible()
         }
+    }
+
+    private fun hideToolbar(){
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
     }
 
     private fun playVideo(){

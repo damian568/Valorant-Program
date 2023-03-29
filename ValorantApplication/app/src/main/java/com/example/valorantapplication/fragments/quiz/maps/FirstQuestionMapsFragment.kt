@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.R
 import com.example.valorantapplication.bundle
@@ -80,10 +81,4 @@ class FirstQuestionMapsFragment : Fragment() {
             ?.addToBackStack(null)
             ?.commit()
     }
-
-//    private fun goToNextQuestion(){
-//        val action =
-//            FirstQuestionMapsFragmentDirections.actionFirstQuestionMapsFragmentToSecondQuestionMapsFragment()
-//        findNavController().navigate(action)
-//    }
 }

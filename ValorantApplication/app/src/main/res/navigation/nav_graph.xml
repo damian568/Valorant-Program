@@ -22,9 +22,6 @@
         android:name="com.example.valorantapplication.fragments.RegistrationScreenFragment"
         android:label="RegistrationScreen" >
         <action
-            android:id="@+id/action_registrationScreenFragment_to_loginScreenFragment"
-            app:destination="@id/loginScreenFragment" />
-        <action
             android:id="@+id/action_registrationScreenFragment_to_mainScreenFragment"
             app:destination="@id/mainScreenFragment" />
     </fragment>
@@ -37,9 +34,6 @@
         android:name="com.example.valorantapplication.fragments.MainScreenFragment"
         android:label="MainScreen"
         tools:layout="@layout/fragment_main_screen" >
-        <action
-            android:id="@+id/action_mainScreenFragment_to_loginScreenFragment"
-            app:destination="@id/loginScreenFragment" />
         <action
             android:id="@+id/action_mainScreenFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
@@ -194,4 +188,20 @@
             android:id="@+id/action_fifthQuestionWeaponsFragment_to_endOfQuizFragment"
             app:destination="@id/endOfQuizFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/agentsFragment"
+        android:name="com.example.valorantapplication.fragments.info.AgentsFragment"
+        android:label="@string/agents"
+        tools:layout="@layout/fragment_agents" >
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.valorantapplication.fragments.info.MapsFragment"
+        android:label="@string/maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/weaponsFragment"
+        android:name="com.example.valorantapplication.fragments.info.WeaponsFragment"
+        android:label="@string/weapons"
+        tools:layout="@layout/fragment_weapons" />
 </navigation>

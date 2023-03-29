@@ -3,9 +3,7 @@ package com.example.valorantapplication.fragments
 import android.media.MediaPlayer.OnPreparedListener
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.databinding.FragmentMainScreenBinding
