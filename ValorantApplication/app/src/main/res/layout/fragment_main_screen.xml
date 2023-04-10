@@ -6,13 +6,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         tools:context=".fragments.MainScreenFragment">
 
         <VideoView
             android:id="@+id/video"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true" />
 
         <Button

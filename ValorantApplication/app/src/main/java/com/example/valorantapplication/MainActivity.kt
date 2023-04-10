@@ -1,27 +1,20 @@
 package com.example.valorantapplication
 
-import android.annotation.SuppressLint
 import android.content.DialogInterface
-import android.graphics.BlendMode
-import android.graphics.BlendModeColorFilter
-import android.graphics.PorterDuff
-import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.*
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.view.menu.MenuBuilder
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.onNavDestinationSelected
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.*
 import com.example.valorantapplication.data.PreferenceUntil
+import com.example.valorantapplication.data.User
 import com.example.valorantapplication.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.nav_header.view.*
 
 val bundle = Bundle()
 
@@ -29,66 +22,79 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var preferenceUntil: PreferenceUntil
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         preferenceUntil = PreferenceUntil.getInstance(applicationContext)
+        val user = preferenceUntil.getUserData()
+        user?.let { setNavHeader(it) }
 
         val navHostFragment =
             supportFragmentManager
                 .findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.findNavController()
 
+        setAppBar()
+
         setSupportActionBar(toolbar)
-        setupActionBarWithNavController(navController)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+        setLogOutFromMenu()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-        setIconInMenu(menu)
-        setColorOnIcon(menu)
-        return true
+    private fun setAppBar(){
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.infoFragment,
+                R.id.agentsFragment,
+                R.id.mapsFragment,
+                R.id.weaponsFragment,
+                R.id.loginScreenFragment,
+                R.id.logOut,
+                R.id.mediaFragment,
+                R.id.leaderBoardsFragment,
+                R.id.specsFragment,
+                R.id.communityCodeFragment,
+                R.id.twitterFragment,
+                R.id.youTubeFragment,
+                R.id.instagramFragment,
+                R.id.facebookFragment,
+                R.id.discordFragment,
+            ),
+            drawer_layout
+        )
     }
 
-    @SuppressLint("RestrictedApi")
-    private fun setIconInMenu(menu: Menu?) {
-        if (menu is MenuBuilder) {
-            menu.setOptionalIconsVisible(true)
+    private fun setLogOutFromMenu(){
+        navView.menu.findItem(R.id.logOut).setOnMenuItemClickListener {
+            closingAppQuestion()
+            true
         }
     }
 
-    private fun setColorOnIcon(menu: Menu?) {
-        menu?.apply {
-            for (index in 0 until this.size()) {
-                val item = this.getItem(index)
-                setColorItem(item)
+    private fun setNavHeader(user: User?){
+        navView.getHeaderView(0).nameHeader.text = user?.username
+        navView.getHeaderView(0).emailHeader.text = user?.email
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.logOut -> {
+                true
+            }
+            else -> {
+                item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
             }
         }
     }
 
-    private fun setColorItem(item: MenuItem) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            item.icon.colorFilter = BlendModeColorFilter(
-                getColor(R.color.blue), BlendMode.SRC_IN
-            )
-        } else {
-            item.icon.setColorFilter(getColor(R.color.blue), PorterDuff.Mode.SRC_IN)
-        }
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.logOut) {
-            closingAppQuestion()
-            true
-        } else {
-            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
-        }
-    }
-
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     private fun closingAppQuestion() {

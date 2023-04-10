@@ -23,6 +23,7 @@
     <dimen name="xsmall_margin_image">25dp</dimen>
     <dimen name="xxxsmall_padding">16dp</dimen>
     <dimen name="xsmal_padding_top_bot">25dp</dimen>
+    <dimen name="xxbig_margin">55dp</dimen>
 
     //size
     <dimen name="text_size_small">20sp</dimen>
@@ -42,6 +43,7 @@
     <dimen name="xbig_width_height">150dp</dimen>
     <dimen name="xlarge_width">310dp</dimen>
     <dimen name="xxlarge_width_height">350dp</dimen>
+    <dimen name="big_height">170dp</dimen>
 
     //radius and buttons
     <dimen name="radius">50dp</dimen>

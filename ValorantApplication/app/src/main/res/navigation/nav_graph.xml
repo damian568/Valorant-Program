@@ -22,24 +22,18 @@
         android:name="com.example.valorantapplication.fragments.RegistrationScreenFragment"
         android:label="RegistrationScreen" >
         <action
-            android:id="@+id/action_registrationScreenFragment_to_loginScreenFragment"
-            app:destination="@id/loginScreenFragment" />
-        <action
             android:id="@+id/action_registrationScreenFragment_to_mainScreenFragment"
             app:destination="@id/mainScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginScreenFragment"
         android:name="com.example.valorantapplication.fragments.LoginScreenFragment"
-        android:label="LoginScreen" />
+        android:label="Profile" />
     <fragment
         android:id="@+id/mainScreenFragment"
         android:name="com.example.valorantapplication.fragments.MainScreenFragment"
         android:label="MainScreen"
         tools:layout="@layout/fragment_main_screen" >
-        <action
-            android:id="@+id/action_mainScreenFragment_to_loginScreenFragment"
-            app:destination="@id/loginScreenFragment" />
         <action
             android:id="@+id/action_mainScreenFragment_to_infoFragment"
             app:destination="@id/infoFragment" />
@@ -51,7 +45,11 @@
         android:id="@+id/infoFragment"
         android:name="com.example.valorantapplication.fragments.info.InfoFragment"
         android:label="Info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_beginnerFragment"
+            app:destination="@id/beginnerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.example.valorantapplication.fragments.quiz.QuizFragment"
@@ -194,4 +192,69 @@
             android:id="@+id/action_fifthQuestionWeaponsFragment_to_endOfQuizFragment"
             app:destination="@id/endOfQuizFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/agentsFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.AgentsFragment"
+        android:label="@string/agents"
+        tools:layout="@layout/fragment_agents" >
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.MapsFragment"
+        android:label="@string/maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/weaponsFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.WeaponsFragment"
+        android:label="@string/weapons"
+        tools:layout="@layout/fragment_weapons" />
+    <fragment
+        android:id="@+id/mediaFragment"
+        android:name="com.example.valorantapplication.fragments.info.others.MediaFragment"
+        android:label="fragment_media"
+        tools:layout="@layout/fragment_media" />
+    <fragment
+        android:id="@+id/leaderBoardsFragment"
+        android:name="com.example.valorantapplication.fragments.info.others.LeaderBoardsFragment"
+        android:label="fragment_leader_boards"
+        tools:layout="@layout/fragment_leader_boards" />
+    <fragment
+        android:id="@+id/specsFragment"
+        android:name="com.example.valorantapplication.fragments.info.support.SpecsFragment"
+        android:label="fragment_specs"
+        tools:layout="@layout/fragment_specs" />
+    <fragment
+        android:id="@+id/communityCodeFragment"
+        android:name="com.example.valorantapplication.fragments.info.support.CommunityCodeFragment"
+        android:label="fragment_community_code"
+        tools:layout="@layout/fragment_community_code" />
+    <fragment
+        android:id="@+id/twitterFragment"
+        android:name="com.example.valorantapplication.fragments.info.social.TwitterFragment"
+        android:label="fragment_twitter"
+        tools:layout="@layout/fragment_twitter" />
+    <fragment
+        android:id="@+id/youTubeFragment"
+        android:name="com.example.valorantapplication.fragments.info.social.YouTubeFragment"
+        android:label="fragment_you_tube"
+        tools:layout="@layout/fragment_you_tube" />
+    <fragment
+        android:id="@+id/instagramFragment"
+        android:name="com.example.valorantapplication.fragments.info.social.InstagramFragment"
+        android:label="fragment_instagram"
+        tools:layout="@layout/fragment_instagram" />
+    <fragment
+        android:id="@+id/facebookFragment"
+        android:name="com.example.valorantapplication.fragments.info.social.FacebookFragment"
+        android:label="fragment_facebook"
+        tools:layout="@layout/fragment_facebook" />
+    <fragment
+        android:id="@+id/discordFragment"
+        android:name="com.example.valorantapplication.fragments.info.social.DiscordFragment"
+        android:label="fragment_discord"
+        tools:layout="@layout/fragment_discord" />
+    <fragment
+        android:id="@+id/beginnerFragment"
+        android:name="com.example.valorantapplication.fragments.info.BeginnerFragment"
+        android:label="Beginner" />
 </navigation>

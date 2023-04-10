@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.valorantapplication.Constants
 import com.example.valorantapplication.data.PreferenceUntil
@@ -28,7 +30,20 @@ class SplashScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         preferencesUntil = PreferenceUntil.getInstance(view.context)
+        showFullScreen()
+        hideToolbar()
         slowedFragment()
+    }
+
+    private fun hideToolbar(){
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
+
+    private fun showFullScreen(){
+        activity?.window?.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
     }
 
     private fun slowedFragment() {
