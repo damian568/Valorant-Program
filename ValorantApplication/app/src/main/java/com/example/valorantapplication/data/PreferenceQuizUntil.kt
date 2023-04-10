@@ -23,10 +23,6 @@ class PreferenceQuizUntil internal constructor(private val context: Context) {
         sPrefUsername.edit().putString(PREF_SERIALIZABLE_QUIZ_USERNAME, json).apply()
     }
 
-    fun deleteUser() {
-        sPrefUsername.edit().clear().apply()
-    }
-
     companion object {
 
         private lateinit var sPrefUsername: SharedPreferences

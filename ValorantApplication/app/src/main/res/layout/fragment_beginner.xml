@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/xxbig_margin"
+        android:background="#ece8e1"
+        tools:context=".fragments.info.BeginnerFragment">
+
+        <ScrollView
+            android:id="@+id/scrollBeginner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/txtH1Beginner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/beginner_s_guide"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtBeginner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/txt_beginner1"
+                    app:layout_constraintTop_toBottomOf="@id/txtH1Beginner" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner1"
+                    app:layout_constraintTop_toBottomOf="@id/txtBeginner1" />
+
+                <TextView
+                    android:id="@+id/txtBeginner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_beginner2"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner1" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner2"
+                    app:layout_constraintTop_toBottomOf="@id/txtBeginner2" />
+
+                <TextView
+                    android:id="@+id/txtBeginner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_beginner3"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner2" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner3"
+                    app:layout_constraintTop_toBottomOf="@id/txtBeginner3" />
+
+                <TextView
+                    android:id="@+id/txtBeginner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_beginner4"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner3" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner2"
+                    app:layout_constraintTop_toBottomOf="@id/txtBeginner4" />
+
+                <TextView
+                    android:id="@+id/txtBeginner5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_beginner5"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner4" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner2"
+                    app:layout_constraintTop_toBottomOf="@id/txtBeginner5" />
+
+                <TextView
+                    android:id="@+id/txtBeginner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_beginner6"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner5" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner2"
+                    app:layout_constraintTop_toBottomOf="@id/txtBeginner6" />
+
+                <ImageView
+                    android:id="@+id/imgBeginner7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beginner2"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner6" />
+
+                <TextView
+                    android:id="@+id/txtBeginner7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_beginner7"
+                    app:layout_constraintBottom_toTopOf="@id/spaceBeginner"
+                    app:layout_constraintTop_toBottomOf="@id/imgBeginner7" />
+
+                <Space
+                    android:id="@+id/spaceBeginner"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

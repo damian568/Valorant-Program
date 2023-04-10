@@ -17,4 +17,5 @@
     <color name="text_color_quiz">#7A8089</color>
     <color name="text_color_win">#418C8C</color>
     <color name="text_color_lose">#9D3737</color>
+    <color name="lavender">#8692f7</color>
 </resources>

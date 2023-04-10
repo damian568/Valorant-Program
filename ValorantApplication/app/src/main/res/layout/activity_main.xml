@@ -14,24 +14,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/navHostFragment"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:background="@color/purple_500"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lavender"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintBottom_toTopOf="@+id/navHostFragment"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/navHostFragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:navGraph="@navigation/nav_graph"
-            tools:layout_editor_absoluteX="@dimen/no_dimen" />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/navHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:navGraph="@navigation/nav_graph"
+                tools:layout_editor_absoluteX="@dimen/no_dimen" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -40,8 +40,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
+            android:background="@color/white"
             android:fitsSystemWindows="true"
-            app:menu="@menu/drawer_menu"/>
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@color/lavender"
+            app:itemTextColor="@color/lavender"
+            app:menu="@menu/menu" />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

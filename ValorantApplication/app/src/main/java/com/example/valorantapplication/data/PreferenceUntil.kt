@@ -2,6 +2,7 @@ package com.example.valorantapplication.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.google.gson.Gson
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json

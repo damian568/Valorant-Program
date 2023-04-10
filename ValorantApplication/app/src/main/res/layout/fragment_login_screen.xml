@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/xxbig_margin"
         android:background="@drawable/gradient_background"
         tools:context=".fragments.LoginScreenFragment">
 
@@ -43,7 +45,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/big_height"
                         android:background="@drawable/gradient_background">
 
                         <TextView
@@ -66,7 +68,6 @@
                             android:drawablePadding="@dimen/medium_margin"
                             android:singleLine="true"
                             android:src="@drawable/ic_baseline_person"
-                            android:textAllCaps="true"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="italic"
                             app:drawableStartCompat="@drawable/ic_baseline_person"

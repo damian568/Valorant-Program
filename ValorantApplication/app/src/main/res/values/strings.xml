@@ -17,8 +17,6 @@
     <string name="field_toast">Field is required!</string>
 
     <string name="image_text">image/*</string>
-    <string name="profile">Profile</string>
-    <string name="log_out">Log Out</string>
 
     //Alert Dialog
     <string name="text_alert_dialog">Are you sure!</string>
@@ -118,5 +116,38 @@
     <string name="fifth_question_weapons">Fifth Question</string>
     <string name="explanation_of_quest_5_weapons">You have picture of agent and weapon which she is holding. Your question is:</string>
     <string name="question_fifth_weapons">What is it the name of the weapon?</string>
+
+    //Toolbar
+    <string name="others">Others</string>
+    <string name="media">Media</string>
+    <string name="leaderboards">LeaderBoards</string>
+    <string name="support">Support</string>
+    <string name="specs">Specs</string>
+    <string name="community_code">Community code</string>
+    <string name="social">Social</string>
+    <string name="twitter">Twitter</string>
+    <string name="youtube">YouTube</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="discord">Discord</string>
+    <string name="game_info">Game Info</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log Out</string>
+
+    //Info
+    <string name="we_are_valorant">WE ARE VALORANT</string>
+    <string name="defy_the_limits">DEFY THE LIMITS</string>
+    <string name="text_info">Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you\'ll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.</string>
+    <string name="learn_the_game">Learn The Game</string>
+
+    //Beginner
+    <string name="beginner_s_guide">BEGINNER’S GUIDE</string>
+    <string name="txt_beginner1">Straight from the files of Brimstone, this is the VALORANT Beginner’s Guide. Whether this is your first rotation or you\'re needing a refresher, we figure it’s best you take it from the Agent who’s seen it all before.\n \nBelow is what to know before your first game. Pay attention. Might learn something.</string>
+    <string name="txt_beginner2">Before you enter your first round, you get to pick from a group of Agents, each with their own role and special skills designed to work alongside each other toward a win. You can dig into the specifics of each Agent on our Agents page.</string>
+    <string name="txt_beginner3">After everyone selects their Agent (oh, you picked that one), you’ll jump into a random map and formally enter the first round.\n \nStart a round as either attacker or defender and switch sides in between. Before you do either, you’ll need to navigate the buy phase, which lets you purchase weapons and abilities. What you buy shapes how you can win. Let style or matchups guide your choices.</string>
+    <string name="txt_beginner4">No one’s going to tell you how to spend your money, but you’re going to have to pull the trigger at some point.\n \nThere’s a gun for every situation and you can comb the details of each weapon on our dedicated arsenal page. When in doubt, try buying based on a weapon’s type and see how it fits your style, expertise, and your team’s strategy.</string>
+    <string name="txt_beginner5">Each map is a different stage to style on your enemies. Flex your creative skills and savvy gunplay for different encounters.\n \nBelow are the basics and you can plot your route using our detailed maps page.</string>
+    <string name="txt_beginner6">Yeah, you might already know how to frag an enemy six ways from Sunday, but Brimstone will tell you, most of those ways are pretty noisy.</string>
+    <string name="txt_beginner7">No more doubts, you’re ready. But like you, we’re just getting started.\n \nWe’ll keep you updated on the latest Agents, Maps, and more on our news page. You can always keep in touch with us on social for everything else.</string>
 
 </resources>
