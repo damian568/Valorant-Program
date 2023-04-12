@@ -150,4 +150,10 @@
     <string name="txt_beginner6">Yeah, you might already know how to frag an enemy six ways from Sunday, but Brimstone will tell you, most of those ways are pretty noisy.</string>
     <string name="txt_beginner7">No more doubts, you’re ready. But like you, we’re just getting started.\n \nWe’ll keep you updated on the latest Agents, Maps, and more on our news page. You can always keep in touch with us on social for everything else.</string>
 
+    //Agent Roles
+    <string name="duelist">Duelist</string>
+    <string name="controller">Controller</string>
+    <string name="sentinel">Sentinel</string>
+    <string name="initiator">Initiator</string>
+
 </resources>

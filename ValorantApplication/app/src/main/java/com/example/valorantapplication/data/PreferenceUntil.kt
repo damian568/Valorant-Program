@@ -2,6 +2,7 @@ package com.example.valorantapplication.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragmentDirections
 import com.google.gson.Gson
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
@@ -27,11 +28,22 @@ class PreferenceUntil internal constructor(private val context: Context) {
         sPref.edit().clear().apply()
     }
 
+    fun getAgents(): List<Agents> {
+        val json: String = sPref.getString(PREF_SERIALIZABLE_AGENTS, null) ?: return listOf()
+        return Json.decodeFromString(json)
+    }
+
+    fun setAgents(agent: List<Agents>) {
+        val json = Json.encodeToString(agent)
+        sPref.edit().putString(PREF_SERIALIZABLE_AGENTS, json).apply()
+    }
+
     companion object {
 
         private lateinit var sPref: SharedPreferences
         private const val PREF_FILE_NAME = "com.example.valorantapplication.data"
         private const val PREF_SERIALIZABLE_USER = "com.example.valorantapplication.data.local.PREF_USER"
+        private const val PREF_SERIALIZABLE_AGENTS = "com.example.valorantapplication.data.local.PREF_AGENTS"
         private var instance: PreferenceUntil? = null
         fun getInstance(context: Context): PreferenceUntil {
             if (instance == null) {

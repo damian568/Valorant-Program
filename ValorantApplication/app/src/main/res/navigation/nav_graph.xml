@@ -197,6 +197,69 @@
         android:name="com.example.valorantapplication.fragments.info.gameInfo.AgentsFragment"
         android:label="@string/agents"
         tools:layout="@layout/fragment_agents" >
+        <action
+            android:id="@+id/action_agentsFragment_to_breachFragment"
+            app:destination="@id/breachFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_brimstoneFragment"
+            app:destination="@id/brimstoneFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_reynaFragment"
+            app:destination="@id/reynaFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_sageFragment"
+            app:destination="@id/sageFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_sovaFragment"
+            app:destination="@id/sovaFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_viperFragment"
+            app:destination="@id/viperFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_skyeFragment"
+            app:destination="@id/skyeFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_yoruFragment"
+            app:destination="@id/yoruFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_cypherFragment"
+            app:destination="@id/cypherFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_gekkoFragment"
+            app:destination="@id/gekkoFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_omenFragment"
+            app:destination="@id/omenFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_astraFragment"
+            app:destination="@id/astraFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_chamberFragment"
+            app:destination="@id/chamberFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_fadeFragment"
+            app:destination="@id/fadeFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_harborFragment"
+            app:destination="@id/harborFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_phoenixFragment"
+            app:destination="@id/phoenixFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_jettFragment"
+            app:destination="@id/jettFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_kayoFragment"
+            app:destination="@id/kayoFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_killjoyFragment"
+            app:destination="@id/killjoyFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_neonFragment"
+            app:destination="@id/neonFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_razeFragment"
+            app:destination="@id/razeFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
@@ -257,4 +320,109 @@
         android:id="@+id/beginnerFragment"
         android:name="com.example.valorantapplication.fragments.info.BeginnerFragment"
         android:label="Beginner" />
+    <fragment
+        android:id="@+id/brimstoneFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.BrimstoneFragment"
+        android:label="Brimstone"
+        tools:layout="@layout/fragment_brimstone" />
+    <fragment
+        android:id="@+id/breachFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.BreachFragment"
+        android:label="Breach"
+        tools:layout="@layout/fragment_breach" />
+    <fragment
+        android:id="@+id/astraFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.AstraFragment"
+        android:label="Astra"
+        tools:layout="@layout/fragment_astra" />
+    <fragment
+        android:id="@+id/chamberFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.ChamberFragment"
+        android:label="Chamber"
+        tools:layout="@layout/fragment_chamber" />
+    <fragment
+        android:id="@+id/cypherFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.CypherFragment"
+        android:label="Cypher"
+        tools:layout="@layout/fragment_cypher" />
+    <fragment
+        android:id="@+id/fadeFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.FadeFragment"
+        android:label="Fade"
+        tools:layout="@layout/fragment_fade" />
+    <fragment
+        android:id="@+id/gekkoFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.GekkoFragment"
+        android:label="Gekko"
+        tools:layout="@layout/fragment_gekko" />
+    <fragment
+        android:id="@+id/harborFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.HarborFragment"
+        android:label="Harbor"
+        tools:layout="@layout/fragment_harbor" />
+    <fragment
+        android:id="@+id/jettFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.JettFragment"
+        android:label="Jett"
+        tools:layout="@layout/fragment_jett" />
+    <fragment
+        android:id="@+id/kayoFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.KayoFragment"
+        android:label="Kayo"
+        tools:layout="@layout/fragment_kayo" />
+    <fragment
+        android:id="@+id/killjoyFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.KilljoyFragment"
+        android:label="Killjoy"
+        tools:layout="@layout/fragment_killjoy" />
+    <fragment
+        android:id="@+id/neonFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.NeonFragment"
+        android:label="Neon"
+        tools:layout="@layout/fragment_neon" />
+    <fragment
+        android:id="@+id/omenFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.OmenFragment"
+        android:label="Omen"
+        tools:layout="@layout/fragment_omen" />
+    <fragment
+        android:id="@+id/phoenixFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.PhoenixFragment"
+        android:label="Phoenix"
+        tools:layout="@layout/fragment_phoenix" />
+    <fragment
+        android:id="@+id/razeFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.RazeFragment"
+        android:label="Raze"
+        tools:layout="@layout/fragment_raze" />
+    <fragment
+        android:id="@+id/reynaFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.ReynaFragment"
+        android:label="Reyna"
+        tools:layout="@layout/fragment_reyna" />
+    <fragment
+        android:id="@+id/sageFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.SageFragment"
+        android:label="Sage"
+        tools:layout="@layout/fragment_sage" />
+    <fragment
+        android:id="@+id/skyeFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.SkyeFragment"
+        android:label="Skye"
+        tools:layout="@layout/fragment_skye" />
+    <fragment
+        android:id="@+id/sovaFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.SovaFragment"
+        android:label="Sova"
+        tools:layout="@layout/fragment_sova" />
+    <fragment
+        android:id="@+id/viperFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.ViperFragment"
+        android:label="Viper"
+        tools:layout="@layout/fragment_viper" />
+    <fragment
+        android:id="@+id/yoruFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.YoruFragment"
+        android:label="Yoru"
+        tools:layout="@layout/fragment_yoru" />
 </navigation>
