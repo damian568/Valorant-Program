@@ -29,16 +29,16 @@ class PhoenixFragment : Fragment() {
 
     private fun clickPhoenixAbility(){
         binding.abilityQPhoenix.setOnClickListener {
-            setPhoenixAbilityVideo("Q - INCENDIARY", getString(R.string.phoenix_ability_q), R.raw.agent_phoenix_q)
+            setPhoenixAbilityVideo("Q - CURVEBALL", getString(R.string.phoenix_ability_q), R.raw.agent_phoenix_q)
         }
         binding.abilityEPhoenix.setOnClickListener {
-            setPhoenixAbilityVideo("E - SKY SMOKE", getString(R.string.phoenix_ability_e), R.raw.agent_phoenix_e)
+            setPhoenixAbilityVideo("E - HOT HANDS", getString(R.string.phoenix_ability_e), R.raw.agent_phoenix_e)
         }
         binding.abilityCPhoenix.setOnClickListener {
-            setPhoenixAbilityVideo("C - STIM BEACON", getString(R.string.phoenix_ability_c), R.raw.agent_phoenix_c)
+            setPhoenixAbilityVideo("C - BLAZE", getString(R.string.phoenix_ability_c), R.raw.agent_phoenix_c)
         }
         binding.abilityXPhoenix.setOnClickListener {
-            setPhoenixAbilityVideo("X - ORBITAL STRIKE", getString(R.string.phoenix_ability_x), R.raw.agent_phoenix_x)
+            setPhoenixAbilityVideo("X - RUN IT BACK", getString(R.string.phoenix_ability_x), R.raw.agent_phoenix_x)
         }
     }
 

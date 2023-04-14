@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.info.gameInfo.agents.SovaFragment">
+<layout>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="@dimen/xxbig_margin"
+        android:background="#ece8e1"
+        tools:context=".fragments.info.gameInfo.agents.SovaFragment">
 
-</FrameLayout>
+        <ScrollView
+            android:id="@+id/scrollSova"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/imageSova"
+                    android:layout_width="150dp"
+                    android:layout_height="280dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/agent_sova"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/agentSova"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@id/imageSova"
+                    android:text="@string/sova"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/imageSova"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/roleSova"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentSova"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/imageSova"
+                    android:text="@string/role_sentinel"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageSova"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agentSova" />
+
+                <TextView
+                    android:id="@+id/biographySova"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/roleSova"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/imageSova"
+                    android:text="@string/biography_sova"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageSova"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/roleSova" />
+
+                <TextView
+                    android:id="@+id/specialAbilitySova"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/special_abilities"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imageSova" />
+
+                <ImageView
+                    android:id="@+id/abilityQSova"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/sova_q"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilitySova" />
+
+                <ImageView
+                    android:id="@+id/abilityESova"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/sova_e"
+                    app:layout_constraintLeft_toRightOf="@id/abilityQSova"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilitySova" />
+
+                <ImageView
+                    android:id="@+id/abilityCSova"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/sova_c"
+                    app:layout_constraintLeft_toRightOf="@id/abilityESova"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilitySova" />
+
+                <ImageView
+                    android:id="@+id/abilityXSova"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/sova_x"
+                    app:layout_constraintLeft_toRightOf="@id/abilityCSova"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilitySova" />
+
+                <TextView
+                    android:id="@+id/txtNameAbilitySova"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/abilityESova" />
+
+                <TextView
+                    android:id="@+id/txtAbilitySova"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtNameAbilitySova" />
+
+                <VideoView
+                    android:id="@+id/videoSovaAbilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtAbilitySova" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/videoSovaAbilities" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,60 +1,72 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentSovaBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [SovaFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class SovaFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentSovaBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sova, container, false)
+    ): View {
+        binding = FragmentSovaBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SovaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SovaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        clickSovaAbility()
+    }
+
+    private fun clickSovaAbility(){
+        binding.abilityQSova.setOnClickListener {
+            setSovaAbilityVideo("Q - SHOCK BOLT", getString(R.string.sage_ability_q), R.raw.agent_sova_q)
+        }
+        binding.abilityESova.setOnClickListener {
+            setSovaAbilityVideo("E - RECON BOLT", getString(R.string.sage_ability_e), R.raw.agent_sova_e)
+        }
+        binding.abilityCSova.setOnClickListener {
+            setSovaAbilityVideo("C - OWL DRONE", getString(R.string.sage_ability_c), R.raw.agent_sova_c)
+        }
+        binding.abilityXSova.setOnClickListener {
+            setSovaAbilityVideo("X - HUNTER’S FURY", getString(R.string.sage_ability_x), R.raw.agent_sova_x)
+        }
+    }
+
+    private fun setSovaAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilitySova.text = textName
+        binding.txtAbilitySova.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoSovaAbilities.setVideoURI(uri)
+        binding.videoSovaAbilities.start()
+
+        binding.videoSovaAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoSovaAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoSovaAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoSovaAbilities.stopPlayback()
+        super.onDestroy()
     }
 }

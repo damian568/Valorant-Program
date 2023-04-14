@@ -162,9 +162,11 @@
 
     //Agent
     <string name="special_abilities">SPECIAL ABILITIES</string>
+    <string name="role_controller">//Role: CONTROLLER</string>
+    <string name="role_duelist">//Role: DUELIST</string>
+    <string name="role_sentinel">//Role: SENTINEL</string>
 
     //Brimstone
-    <string name="role_controller">//Role: CONTROLLER</string>
     <string name="biography_brimstone">// BIOGRAPHY \n \nJoining from the USA, Brimstone\'s orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him an unmatched boots-on-the-ground commander.</string>
     <string name="brim_ability_q">EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</string>
     <string name="brim_ability_e">EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</string>
@@ -172,11 +174,34 @@
     <string name="brim_ability_x">EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</string>
 
     //Phoenix
-    <string name="role_duelist">//Role: DUELIST</string>
     <string name="biography_phoenix">// BIOGRAPHY \n \nHailing from the U.K., Phoenix\'s star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he\'s got backup or not, he\'ll rush into a fight on his own terms.</string>
     <string name="phoenix_ability_q">EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.</string>
     <string name="phoenix_ability_e">EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.</string>
     <string name="phoenix_ability_c">EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.</string>
     <string name="phoenix_ability_x">INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.</string>
+
+    //Sage
+    <string name="sage">Sage</string>
+    <string name="biography_sage">// BIOGRAPHY \n \nThe stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.</string>
+    <string name="sage_ability_q">EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it.</string>
+    <string name="sage_ability_e">EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.</string>
+    <string name="sage_ability_c">EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.</string>
+    <string name="sage_ability_x">EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.</string>
+    
+    //Sova
+    <string name="role_initiator">INITIATOR</string>
+    <string name="biography_sova">// BIOGRAPHY \n \nBorn from the eternal winter of Russia\'s tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.</string>
+    <string name="sova_ability_q">EQUIP a bow with a shock bolt. FIRE to send the explosive forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.</string>
+    <string name="sova_ability_e">EQUIP a bow with a recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.</string>
+    <string name="sova_ability_c">EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.</string>
+    <string name="sova_ability_x">EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.</string>
+
+    //Viper
+    <string name="viper">Viper</string>
+    <string name="biography_viper">// BIOGRAPHY \n \nThe American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy\'s vision. If the toxins don\'t kill her prey, her mind games surely will.</string>
+    <string name="viper_ability_q">EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked up to be REDEPLOYED.</string>
+    <string name="viper_ability_e">EQUIP a gas emitter launcher. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once.</string>
+    <string name="viper_ability_c">EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.</string>
+    <string name="viper_ability_x">EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.</string>
 
 </resources>
