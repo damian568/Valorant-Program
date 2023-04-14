@@ -150,10 +150,33 @@
     <string name="txt_beginner6">Yeah, you might already know how to frag an enemy six ways from Sunday, but Brimstone will tell you, most of those ways are pretty noisy.</string>
     <string name="txt_beginner7">No more doubts, you’re ready. But like you, we’re just getting started.\n \nWe’ll keep you updated on the latest Agents, Maps, and more on our news page. You can always keep in touch with us on social for everything else.</string>
 
+    //Game Info Fragment - Agents
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
     //Agent Roles
     <string name="duelist">Duelist</string>
     <string name="controller">Controller</string>
     <string name="sentinel">Sentinel</string>
     <string name="initiator">Initiator</string>
+
+    //Agent
+    <string name="special_abilities">SPECIAL ABILITIES</string>
+
+    //Brimstone
+    <string name="role_controller">//Role: CONTROLLER</string>
+    <string name="biography_brimstone">// BIOGRAPHY \n \nJoining from the USA, Brimstone\'s orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him an unmatched boots-on-the-ground commander.</string>
+    <string name="brim_ability_q">EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</string>
+    <string name="brim_ability_e">EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</string>
+    <string name="brim_ability_c">EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</string>
+    <string name="brim_ability_x">EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</string>
+
+    //Phoenix
+    <string name="role_duelist">//Role: DUELIST</string>
+    <string name="biography_phoenix">// BIOGRAPHY \n \nHailing from the U.K., Phoenix\'s star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he\'s got backup or not, he\'ll rush into a fight on his own terms.</string>
+    <string name="phoenix_ability_q">EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.</string>
+    <string name="phoenix_ability_e">EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.</string>
+    <string name="phoenix_ability_c">EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.</string>
+    <string name="phoenix_ability_x">INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.</string>
 
 </resources>

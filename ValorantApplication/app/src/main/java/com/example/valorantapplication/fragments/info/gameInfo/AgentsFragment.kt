@@ -31,6 +31,7 @@ class AgentsFragment : Fragment() {
         preferencesUntil = PreferenceUntil.getInstance(view.context)
         agentsGenerator = AgentsGenerator(requireContext())
         clickButtonNextAgent()
+        clickButtonPreviousAgent()
         clickCardView()
     }
 
@@ -113,6 +114,23 @@ class AgentsFragment : Fragment() {
         binding.btnNextAgent.setOnClickListener {
             getAgents()
         }
+    }
+
+    private fun clickButtonPreviousAgent(){
+        binding.btnPreviousAgent.setOnClickListener {
+            getPreviousAgent()
+        }
+    }
+
+    private fun getPreviousAgent() : Agents {
+        setAgents()
+        val agentsList = preferencesUntil.getAgents()
+        agentIndex = (agentIndex - 1) % agentsList.size
+        val agent = agentsList[agentIndex]
+        binding.imageViewAgent.setImageResource(agent.imageResourceAgent)
+        binding.agentName.text = agent.nameAgent
+        binding.agentRole.text = agent.roleAgent
+        return agent
     }
 
     private fun getAgents(): Agents {

@@ -69,9 +69,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:background="@drawable/custom_button"
-            android:text="Next"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/next"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnPreviousAgent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewAgent" />
+
+        <Button
+            android:id="@+id/btnPreviousAgent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button"
+            android:text="@string/previous"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextAgent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardViewAgent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

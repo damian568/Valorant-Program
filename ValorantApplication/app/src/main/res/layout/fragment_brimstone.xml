@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.info.gameInfo.agents.BrimstoneFragment">
+<layout>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="@dimen/xxbig_margin"
+        android:background="#ece8e1"
+        tools:context=".fragments.info.gameInfo.agents.BrimstoneFragment">
 
-</FrameLayout>
+        <ScrollView
+            android:id="@+id/scrollBrimstone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/imageBrimstone"
+                    android:layout_width="150dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/agent_brim"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/agentBrimstone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@id/imageBrimstone"
+                    android:text="@string/brimstone"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/imageBrimstone"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/roleBrimstone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentBrimstone"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/imageBrimstone"
+                    android:text="@string/role_controller"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageBrimstone"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agentBrimstone" />
+
+                <TextView
+                    android:id="@+id/biographyBrimstone"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/roleBrimstone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/imageBrimstone"
+                    android:text="@string/biography_brimstone"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageBrimstone"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/roleBrimstone" />
+
+                <TextView
+                    android:id="@+id/specialAbilityBrim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/special_abilities"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imageBrimstone" />
+
+                <ImageView
+                    android:id="@+id/abilityQBrim"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_q"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilityBrim" />
+
+                <ImageView
+                    android:id="@+id/abilityEBrim"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_e"
+                    app:layout_constraintLeft_toRightOf="@id/abilityQBrim"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilityBrim" />
+
+                <ImageView
+                    android:id="@+id/abilityCBrim"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_c"
+                    app:layout_constraintLeft_toRightOf="@id/abilityEBrim"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilityBrim" />
+
+                <ImageView
+                    android:id="@+id/abilityXBrim"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_x"
+                    app:layout_constraintLeft_toRightOf="@id/abilityCBrim"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbilityBrim" />
+
+                <TextView
+                    android:id="@+id/txtNameAbilityBrim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/abilityEBrim" />
+
+                <TextView
+                    android:id="@+id/txtAbilityBrim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtNameAbilityBrim" />
+
+                <VideoView
+                    android:id="@+id/videoBrimAbilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtAbilityBrim" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/videoBrimAbilities" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
