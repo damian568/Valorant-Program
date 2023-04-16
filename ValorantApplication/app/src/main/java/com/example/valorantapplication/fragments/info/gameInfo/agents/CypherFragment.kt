@@ -1,60 +1,72 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentCypherBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CypherFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CypherFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentCypherBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cypher, container, false)
+    ): View {
+        binding = FragmentCypherBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CypherFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CypherFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        clickCypherAbility()
+    }
+
+    private fun clickCypherAbility(){
+        binding.abilityQCypher.setOnClickListener {
+            setCypherAbilityVideo("Q - CYBER CAGE", getString(R.string.cypher_ability_q), R.raw.agent_cypher_q)
+        }
+        binding.abilityECypher.setOnClickListener {
+            setCypherAbilityVideo("E - SPYCAM", getString(R.string.cypher_ability_e), R.raw.agent_cypher_e)
+        }
+        binding.abilityCCypher.setOnClickListener {
+            setCypherAbilityVideo("C - TRAPWIRE", getString(R.string.cypher_ability_c), R.raw.agent_cypher_c)
+        }
+        binding.abilityXCypher.setOnClickListener {
+            setCypherAbilityVideo("X - NEURAL THEFT", getString(R.string.cypher_ability_x), R.raw.agent_cypher_x)
+        }
+    }
+
+    private fun setCypherAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilityCypher.text = textName
+        binding.txtAbilityCypher.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoCypherAbilities.setVideoURI(uri)
+        binding.videoCypherAbilities.start()
+
+        binding.videoCypherAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoCypherAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoCypherAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoCypherAbilities.stopPlayback()
+        super.onDestroy()
     }
 }

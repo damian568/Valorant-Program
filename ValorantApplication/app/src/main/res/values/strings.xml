@@ -165,6 +165,7 @@
     <string name="role_controller">//Role: CONTROLLER</string>
     <string name="role_duelist">//Role: DUELIST</string>
     <string name="role_sentinel">//Role: SENTINEL</string>
+    <string name="role_initiator">//Role: INITIATOR</string>
 
     //Brimstone
     <string name="biography_brimstone">// BIOGRAPHY \n \nJoining from the USA, Brimstone\'s orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him an unmatched boots-on-the-ground commander.</string>
@@ -189,7 +190,6 @@
     <string name="sage_ability_x">EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.</string>
     
     //Sova
-    <string name="role_initiator">INITIATOR</string>
     <string name="biography_sova">// BIOGRAPHY \n \nBorn from the eternal winter of Russia\'s tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.</string>
     <string name="sova_ability_q">EQUIP a bow with a shock bolt. FIRE to send the explosive forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.</string>
     <string name="sova_ability_e">EQUIP a bow with a recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.</string>
@@ -203,5 +203,85 @@
     <string name="viper_ability_e">EQUIP a gas emitter launcher. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once.</string>
     <string name="viper_ability_c">EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.</string>
     <string name="viper_ability_x">EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.</string>
+
+    //Cypher
+    <string name="biography_cypher">// BIOGRAPHY \n \nThe Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy\'s every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</string>
+    <string name="cypher_ability_q">INSTANTLY toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it.</string>
+    <string name="cypher_ability_e">EQUIP a spycam. FIRE to place the spycam at the targeted location. RE-USE this ability to take control of the camera’s view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.</string>
+    <string name="cypher_ability_c">EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.</string>
+    <string name="cypher_ability_x">INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.</string>
+
+    //Reyna
+    <string name="reyna">Reyna</string>
+    <string name="biography_reyna">// BIOGRAPHY \n \nForged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.</string>
+    <string name="reyna_ability_q">Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the orb.</string>
+    <string name="reyna_ability_e">INSTANTLY consume a nearby soul orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible.</string>
+    <string name="reyna_ability_c">EQUIP an ethereal destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it.</string>
+    <string name="reyna_ability_x">INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.</string>
+
+    //Killjoy
+    <string name="biography_killjoy"></string>
+    <string name="killjoy_ability_q"></string>
+    <string name="killjoy_ability_e"></string>
+    <string name="killjoy_ability_c"></string>
+    <string name="killjoy_ability_x"></string>
+
+    //Breach
+    <string name="biography_breach"></string>
+    <string name="breach_ability_q"></string>
+    <string name="breach_ability_e"></string>
+    <string name="breach_ability_c"></string>
+    <string name="breach_ability_x"></string>
+
+    //Omen
+    <string name="biography_omen"></string>
+    <string name="omen_ability_q"></string>
+    <string name="omen_ability_e"></string>
+    <string name="omen_ability_c"></string>
+    <string name="omen_ability_x"></string>
+
+    //Specs
+    <string name="text_specs_h1">PC HARDWARE REQUIREMENTS</string>
+    <string name="text_windows_specs">Windows // 10(Build 17134+)/11 64-bit</string>
+    <string name="text_ram_specs">RAM // 4GB</string>
+    <string name="text_vram_specs">VRAM // 1GB</string>
+    <string name="min_speed_specs">MINIMUM SPECS /\n 30 FPS</string>
+    <string name="average_speed_specs">RECOMMENDED \n SPECS / 60 FPS</string>
+    <string name="max_speed_specs">HIGH-END SPECS /\n 144+ FPS</string>
+    <string name="gpu">GPU</string>
+    <string name="intel2">Intel Core 2 Duo E8400 (Intel), Athlon \n200GE (AMD)</string>
+    <string name="intel3">Intel i3-4150 (Intel), Ryzen 3 1200 \n (AMD)</string>
+    <string name="intel5">Intel i5-9400F 2.90GHz (Intel), Ryzen\n 5 2600X (AMD)</string>
+    <string name="intel_hd">Intel HD 4000, Radeon R5 200</string>
+    <string name="geforce_gt">Geforce GT 730, Radeon R7 240</string>
+    <string name="gtx">GTX 1050 Ti, Radeon R7 370</string>
+    <string name="windows11">On Windows 11 we also require \"TPM 2.0 and UEFI Secure Boot.\"</string>
+
+    //Community Code
+    <string name="txt_community_code">VALORANT COMMUNITY CODE</string>
+    <string name="txt_community_code1">Before queueing up for your first match, we ask players to agree to the expectations outlined here. We encourage everyone to give the full document a read, and we hope this helps you calibrate on the community we look forward to building together in VALORANT. Please be aware that this Code of Conduct for VALORANT is supplemental to the Riot Games Terms of Service, which you must agree to before being allowed into any of our games.</string>
+    <string name="txt_community_code2">VALUES</string>
+    <string name="txt_community_code3">TRIUMPHANT THROUGH TEAMWORK</string>
+    <string name="txt_community_code4">The best experiences in VALORANT come from teamwork. We believe that coordination with teammates is part of an individual’s expression of skill, and that everyone plays their best when they’re playing together. \n \nWe celebrate the teammate who clutches the round, but we recognize that these moments have the greatest impact when you’re working together to set each other up every round. We intend to deliver experiences, tools and content that enable teams to play cohesively, whether they’ve had five or five hundred rounds to get to know one another.</string>
+    <string name="txt_community_code5">FAIRNESS IN EVERY MATCH</string>
+    <string name="txt_community_code6">To have meaningful stakes in every match, the conditions for that match must be fair for all players. We believe that fairness means games are free from cheating, misuse of game systems, and all forms of harassment. \n \nWe aim to uphold competitive integrity, and to ensure that all players are treated with respect in our ecosystem. When addressing disruptive behavior, we believe that penalties should reflect the standards and needs of the community, and that they should address the specifics of the disruptive behaviour rather than being overly punitive.</string>
+    <string name="txt_community_code7">A GAME WHERE PLAYERS THRIVE</string>
+    <string name="txt_community_code8">It’s up to us to set the conditions for VALORANT that enable every player to play their best. That means ensuring safety, fairness, and agency over experiences on our platform. We strive to give players the tools they need to protect themselves and their account, and we trust them to use them to curate their experience. \n \nWe believe in giving players control over how they interact with their peers, and in providing meaningful options for exercising that control - options that don’t compromise their ability to compete and coordinate with their team. Even with many options, we intend to protect every player’s right to choose how they coordinate and to prevent players from being forced out of channels due to fear or abuse.</string>
+    <string name="txt_community_code9">EXPECTATIONS</string>
+    <string name="txt_community_code10">Every VALORANT player deserves an opportunity to be themselves and play their best. You deserve to be able to play each match free from harassment, hatred, and abuse; so do your teammates and your opponents. \n \nTo create a game that lives up to our values above, we need your help. When you play VALORANT, we both ask and expect you to commit to the following:</string>
+    <string name="txt_community_code11">COMPETE TO WIN, TOGETHER</string>
+    <string name="txt_community_code12">Teamwork wins games. Recognize that you can only win WITH teammates, not in spite of them.</string>
+    <string name="txt_community_code13">For example, we expect and encourage you to: \n \n✓ Stay focused on strategy. If you can’t agree, pick something and commit. You’re better off working together on a questionable plan than not working together at all.\n✓ Leverage your team’s strengths and help cover their weaknesses. They’ll cover yours too!\n✓ Celebrate the plays of your teammates. You set them up, help them shine in the moment!\n✓ Bring your best self to every match. Everyone has bad games - we understand! But don’t queue up if you’re not in it to win.\n \n✗ Don’t give up on teammates, even if they’re having a bad game.\n✗ Never sabotage your team or try to ruin the game, even if you’re not having fun.\n✗ Please don’t tell teammates how they should be playing. If they’re open to it, constructive feedback is great! But don’t order people around, even if you’re frustrated.\n✗ Avoid spending more time arguing than collaborating. If you’re out for the round, focus on helping your team finish strong rather than arguing with them while they close it out.</string>
+    <string name="txt_community_code14">COMMIT TO RESPECT AND EMPATHY</string>
+    <string name="txt_community_code15">We ask that you treat others with dignity and respect. Exercise empathy and seek to build trust with teammates so that they can perform their best.</string>
+    <string name="txt_community_code16">For example, we expect and encourage you to:\n\n✓ Obey the platinum rule - Treat others as they wish to be treated. If you don’t know, ask.\n✓ Respect individual differences and experiences. VALORANT is a global community.\n✓ Treat everyone like they can teach you something - they might just broaden your worldview.\n✓ Use spicy language with caution. If you’ve just met, don’t assume everyone will understand your meaning or intent. If someone asks you not to use a term, stop - even if you don’t think it’s offensive.\n✓ Communication channels are a shared space! Keep comms focused on coordination, even if you’re waiting to respawn.\n\n✗ Never use hateful or abusive language. We do not tolerate derogatory comments on any player\'s gender, race, sexual orientation, age, mental or physical abilities, religious affiliations, or country of origin.\n✗ Don’t make jokes about people. People aren’t punchlines.\n✗ Threats of any kind are unacceptable in VALORANT. Intent doesn’t matter here, and it’s on you to know your audience if you think it’s “just a joke.”\n✗ Don’t expect someone to “toughen up” over your language. If you upset someone, own it and do better next time. Respect people’s boundaries.\n✗ Avoid blasting comms channels with background noise, music, or spam.</string>
+    <string name="txt_community_code17">PROTECT YOUR TEAM AND YOUR COMMUNITY</string>
+    <string name="txt_community_code18">Build the community you want to play in, one match at a time. Use tools and good judgement to protect yourself and your peers, and support others when they need your help.</string>
+    <string name="txt_community_code19">For example, we expect and encourage you to:\n\n✓ Use settings and systems to manage the experience you want to have. Opt out of communication channels you don’t want to be in. Turn on language filters, use mutes, and report behavior that isn’t okay.\n✓ If someone is harassing a teammate, speak up if you’re able. Take care not to make the situation worse, but sometimes a little support can mean a lot to your teammate.\n✓ Help keep games free from cheating or glitch abuse; if you think someone else is doing it, report it so we can take care of it.\n\n✗ Don’t call for mass reports or pull teammates into an argument. One report is enough to let us know something’s happening.\n✗ Don’t let someone bring you down to their level. If a player is harassing you, often it’s better to disengage than to “fire back.” It takes two to keep a fight going.</string>
+    <string name="txt_community_code20">BE YOUR OWN LAST LINE OF DEFENSE</string>
+    <string name="txt_community_code21">Help Riot keep you safe. Be responsible with your account, devices, personal information, and conduct.</string>
+    <string name="txt_community_code22">For example, we expect and encourage you to:\n\n✓ Use strong passwords and keep all your devices secure.\n✓ Let us know as soon as possible if you think your account has been hacked.\n✓ Accounts have a one-person maximum. We expect you to keep your account secure and not to let anyone else use it. If you want to rank up, play with your friends; Don’t ask your friends to play for you.\n✓ Play responsibly. Practice self care so you can bring your best to every game you play.\n\n✗ Never run third-party programs that interfere with gameplay. We expect you to exercise caution and good judgment here.\n✗ Don’t share personal information with strangers. Also, don’t share anyone else’s information. We have a zero tolerance policy for doxxing on our platform.\n✗ Do not impersonate anyone. In particular, don’t impersonate Rioters or highly visible players.\n✗ Avoid queueing up for one more when you know you’re tilted. Take breaks, and recognize when you’re getting frustrated.</string>
+    <string name="txt_community_code23">CONSEQUENCES</string>
+    <string name="txt_community_code24">If you violate the expectations described here, we may restrict your privileges or access to features in our games. Restrictions serve to shield the community from future disruption, and provide an opportunity to reflect on the behavior that led to the restriction. We strive to provide a path to reform, but not at the expense protecting the rest of the community. We also strive to restrict based on the disruption caused, and to avoid action that is needlessly punitive or harsh.\n\n Restrictions for violating the expectations above can include (but are not limited to):\n\n./ Loss of the ability to use in-game communication systems.\n./ Restrictions or additional requirements to access experiences such as Ranked queues.\n./ Restricted access to social systems and features in any of Riot’s games.\n./ Removal of content found to be obtained inappropriately.\n./ Temporary or indefinite suspension from VALORANT, or all of Riot’s games.</string>
 
 </resources>

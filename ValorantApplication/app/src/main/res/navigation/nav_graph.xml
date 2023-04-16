@@ -274,22 +274,22 @@
     <fragment
         android:id="@+id/mediaFragment"
         android:name="com.example.valorantapplication.fragments.info.others.MediaFragment"
-        android:label="fragment_media"
+        android:label="@string/media"
         tools:layout="@layout/fragment_media" />
     <fragment
         android:id="@+id/leaderBoardsFragment"
         android:name="com.example.valorantapplication.fragments.info.others.LeaderBoardsFragment"
-        android:label="fragment_leader_boards"
+        android:label="@string/leaderboards"
         tools:layout="@layout/fragment_leader_boards" />
     <fragment
         android:id="@+id/specsFragment"
         android:name="com.example.valorantapplication.fragments.info.support.SpecsFragment"
-        android:label="fragment_specs"
+        android:label="@string/specs"
         tools:layout="@layout/fragment_specs" />
     <fragment
         android:id="@+id/communityCodeFragment"
         android:name="com.example.valorantapplication.fragments.info.support.CommunityCodeFragment"
-        android:label="fragment_community_code"
+        android:label="@string/community_code"
         tools:layout="@layout/fragment_community_code" />
     <fragment
         android:id="@+id/twitterFragment"

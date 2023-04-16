@@ -52,7 +52,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/imageSova"
-                    android:text="@string/role_sentinel"
+                    android:text="@string/role_initiator"
                     android:textSize="20sp"
                     app:layout_constraintLeft_toRightOf="@id/imageSova"
                     app:layout_constraintRight_toRightOf="parent"
