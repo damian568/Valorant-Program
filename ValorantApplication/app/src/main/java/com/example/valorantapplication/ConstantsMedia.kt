@@ -1,0 +1,46 @@
+package com.example.valorantapplication
+
+object ConstantsMedia {
+    var currentImageIndex = 0
+    var images = listOf<String>(
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltbece2a183375a964/61fc3b9a2feb6a1bad2bc866/LNY_Sage-Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte8963f2e2d64c158/64223b04c8e64e0404191fdc/Gekko_Dark_1.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltcab091e37632e83d/6350404cd27c4a22ea5bcaf9/3_NightMode_Harbor_thmb.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt0a76a9ed3d86adc9/5fd2a2c7e5f85744d50f33c5/VALORANT_VIPER_2.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt0c305a0019127894/5fd2a2d415555a337d774815/VALORANT_Sova_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt432e7ad41b33d09b/5fd2a2c7d5cc7947663410f9/Skye_KeyArt_PR_4.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4e01c3210f631495/5fd2a2dc90483e3eb51c3057/VALORANT_Sage_Light.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt7f334f50f559c4b5/5fd2a2d…/VALORANT_Reyna_Dark_2.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt24b827486453f3ff/5fd2a2d…/VALORANT_Raze_Dark.jpg)",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt09869f2f690f132b/5fd1773…/VALORANT_phx_jett_2_galleryiamge.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt438ed7337d802260/5fd2a2d…/VALORANT_Phoenix_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4f20a7ce76b0ef58/5fd2a2d…/KillJoy_Wallpapers_blue1.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltca6ea6b077533429/5fd2a2c…/VALORANT_Omen_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt90da44b1a3809ba3/5fd2a2d…/VALORANT_Jett_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3dfe862d19874ebf/5fd2a7e…/ValorantWallpaper_Ascent.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltbe08684abd48fe97/5fd2a7e…/ValorantWallpaper_Icebox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt48babe650c37dd95/5fd2a7e…/ValorantWallpaper_SplitMap.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt113dffe00e904ffa/5fd2a7f…/ValorantWallpaper_Bind.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf5db2e52934a300b/5fd2a7f…/ValorantWallpaper_Haven.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3b9d019e6a99c32a/5fd2c35…/ValorantWallpaper_Oni.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt2d9820182260cced/5fd2c36…/ValorantWallpaper_Prime.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4220117842e45159/5fd2c36…/ValorantWallpaper_Reaver.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5ada7412fb682aba/5fd2c35…/ValorantWallpaper_Singularity.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt853e0eb619ddd610/5fd2c3a…/Wallpaper_Schematic_Weapons.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd25ebffc80a86b5a/5fd2c35…/Elderflame_Dragon.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3fe38c1879a453ed/5fd2d14…/FFA_Deathmatch_Desktop.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltaf4dae47b30c2172/5fd2d14…/VALORANT_Logo_V.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt1fae9fc87b7abca7/5fd2d14…/Valorant_Wallpaper_Killbanners.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt1a0638fb60929838/5fd2a2e…/ValorantWallpaper_johnslatte3.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt888afed54b6fbf9f/5fd2a2e…/VALORANT_Breach_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte2dfb783bbf65282/5fd2a32…/VALORANT_Brimm_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta252b8345194dcfb/5fd2a2c…/VALORANT_Cypher_Dark.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt55fbf1ac6e2d0111/5ece163…/VALORANT_Viper_Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4de49ee60d73ae5d/5ece16f…/VALORANT_Jett_Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd7a2df054884b9ee/5ece18f…/FirstLook_KingdomConcept_VALORANT_Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3d9bf296c46d42d2/5ece177…/Beta_Key_Art_VALORANT_Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8db44310874cc981/5ece182…/FirstLook_JettCharacter_Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta73c882a72c618e3/5ed4150…/VALORANT_Logo_V_Lightbox.jpg",
+        "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5d2b48df73249fc5/5ed416b…/Overlays_Reference.png"
+    )
+}

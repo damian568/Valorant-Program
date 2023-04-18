@@ -284,4 +284,7 @@
     <string name="txt_community_code23">CONSEQUENCES</string>
     <string name="txt_community_code24">If you violate the expectations described here, we may restrict your privileges or access to features in our games. Restrictions serve to shield the community from future disruption, and provide an opportunity to reflect on the behavior that led to the restriction. We strive to provide a path to reform, but not at the expense protecting the rest of the community. We also strive to restrict based on the disruption caused, and to avoid action that is needlessly punitive or harsh.\n\n Restrictions for violating the expectations above can include (but are not limited to):\n\n./ Loss of the ability to use in-game communication systems.\n./ Restrictions or additional requirements to access experiences such as Ranked queues.\n./ Restricted access to social systems and features in any of Riot’s games.\n./ Removal of content found to be obtained inappropriately.\n./ Temporary or indefinite suspension from VALORANT, or all of Riot’s games.</string>
 
+    //Media
+    <string name="media_text">Our work is your play. Whether you\'re press, a content creator or something in between, if you see it here it\'s yours to use. \n\nDon’t forget, if you create something with these files, tag @PlayVALORANT on social media. We cannot wait to see what you make, just remember to keep in mind our Legal Jibber Jabber.</string>
+
 </resources>
