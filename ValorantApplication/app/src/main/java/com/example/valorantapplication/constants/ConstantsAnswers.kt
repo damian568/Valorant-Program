@@ -1,4 +1,4 @@
-package com.example.valorantapplication
+package com.example.valorantapplication.constants
 
 object ConstantsAnswers {
     const val ANSWER_OF_FIRST_QUESTION_AGENTS = "Reyna"

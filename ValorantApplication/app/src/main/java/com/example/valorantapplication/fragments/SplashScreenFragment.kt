@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
-import com.example.valorantapplication.Constants
+import com.example.valorantapplication.constants.Constants
 import com.example.valorantapplication.data.PreferenceUntil
 import com.example.valorantapplication.databinding.FragmentSplashScreenBinding
 

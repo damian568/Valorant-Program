@@ -21,4 +21,6 @@
     <color name="light_black">#2C2E40</color>
     <color name="background_windows_icon_specs">#ff4655</color>
     <color name="background_gpu_icon_specs">#8b978f</color>
+    <color name="background_leader_boards">#0f1923</color>
+    <color name="background_leader_boards_rating">#dbd9d2</color>
 </resources>

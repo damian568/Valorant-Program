@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.example.valorantapplication.Constants
-import com.example.valorantapplication.ConstantsMedia
+import com.example.valorantapplication.constants.Constants
+import com.example.valorantapplication.constants.ConstantsMedia
 import com.example.valorantapplication.R
 import com.example.valorantapplication.databinding.FragmentMediaBinding
 import com.squareup.picasso.Picasso

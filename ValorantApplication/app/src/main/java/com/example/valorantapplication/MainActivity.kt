@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         preferenceUntil = PreferenceUntil.getInstance(applicationContext)
         val user = preferenceUntil.getUserData()
         user?.let { setNavHeader(it) }
+//        setNavHeaderImage()
 
         val navHostFragment =
             supportFragmentManager
@@ -81,6 +82,12 @@ class MainActivity : AppCompatActivity() {
         navView.getHeaderView(0).nameHeader.text = user?.username
         navView.getHeaderView(0).emailHeader.text = user?.email
     }
+
+//    private fun setNavHeaderImage(){
+//        val userImage = preferenceUntil.getUserImage()
+//        val imageId = userImage?.image
+//        imageId?.let { navView.getHeaderView(0).imageHeader.setImageResource(it) }
+//    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {

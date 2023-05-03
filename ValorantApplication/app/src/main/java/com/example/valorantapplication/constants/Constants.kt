@@ -1,4 +1,4 @@
-package com.example.valorantapplication
+package com.example.valorantapplication.constants
 
 object Constants {
     const val DELAY_MILLS = 3000

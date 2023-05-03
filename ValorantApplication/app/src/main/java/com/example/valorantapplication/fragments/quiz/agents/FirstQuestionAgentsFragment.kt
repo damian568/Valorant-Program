@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.valorantapplication.Constants
-import com.example.valorantapplication.ConstantsAnswers
+import com.example.valorantapplication.constants.Constants
+import com.example.valorantapplication.constants.ConstantsAnswers
 import com.example.valorantapplication.R
 import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFirstQuestionAgentsBinding

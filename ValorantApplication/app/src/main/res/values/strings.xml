@@ -9,6 +9,7 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="information">Information</string>
 
     <string name="return_text">Can\'t be empty!</string>

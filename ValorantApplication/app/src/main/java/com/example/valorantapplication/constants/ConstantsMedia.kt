@@ -1,4 +1,4 @@
-package com.example.valorantapplication
+package com.example.valorantapplication.constants
 
 object ConstantsMedia {
     var currentImageIndex = 0

@@ -5,12 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.valorantapplication.Constants
+import com.example.valorantapplication.constants.Constants
 import com.example.valorantapplication.R
 import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentSecondQuestionWeaponsBinding
-import com.example.valorantapplication.enums.SecondQuestionMaps
 import com.example.valorantapplication.enums.SecondQuestionWeapons
 import com.example.valorantapplication.fragments.quiz.agents.SecondQuestionAgentsFragment
 
