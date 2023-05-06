@@ -2,6 +2,7 @@ package com.example.valorantapplication.fragments
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -34,8 +35,9 @@ class LoginScreenFragment : Fragment() {
         preferencesUntil = PreferenceUntil.getInstance(view.context)
         val user = preferencesUntil.getUserData()
         user?.let { printUserInfo(it) }
+
         changeImage()
-        showUserImage()
+//        showUserImage()
     }
 
     private fun printUserInfo(user: User?) {
@@ -44,8 +46,11 @@ class LoginScreenFragment : Fragment() {
         binding.txtSexProfile.text = user?.gender.toString()
     }
 
-    private fun showUserImage() {
-    }
+//    private fun showUserImage() {
+//        val userImage = preferencesUntil.getUserImage()
+//        val imageId = userImage?.image
+//        imageId?.let { binding.imageViewProfile.setImageResource(it) }
+//    }
 
     private fun changeImage() {
         binding.imageViewProfile.setOnClickListener {
@@ -63,13 +68,14 @@ class LoginScreenFragment : Fragment() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val data: Intent? = result.data
+                binding.imageViewProfile.setImageURI(data?.data)
                 val imageUri = data?.data
                 val image = getImageIdFromUri(imageUri)
                 val userImage = UserImage(image)
                 preferencesUntil.setUserImage(userImage)
-                binding.imageViewProfile.setImageURI(data?.data)
             }
         }
+
     private fun getImageIdFromUri(uri: Uri?): Int? {
         if (uri == null) {
             return null

@@ -14,6 +14,7 @@ import com.example.valorantapplication.data.PreferenceUntil
 import com.example.valorantapplication.data.User
 import com.example.valorantapplication.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_login_screen.view.*
 import kotlinx.android.synthetic.main.nav_header.view.*
 
 val bundle = Bundle()
@@ -81,6 +82,7 @@ class MainActivity : AppCompatActivity() {
     private fun setNavHeader(user: User?){
         navView.getHeaderView(0).nameHeader.text = user?.username
         navView.getHeaderView(0).emailHeader.text = user?.email
+//        navView.getHeaderView(0).imageHeader.setImageResource(R.id.imageViewProfile)
     }
 
 //    private fun setNavHeaderImage(){

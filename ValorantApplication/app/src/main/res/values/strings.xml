@@ -288,4 +288,7 @@
     //Media
     <string name="media_text">Our work is your play. Whether you\'re press, a content creator or something in between, if you see it here it\'s yours to use. \n\nDon’t forget, if you create something with these files, tag @PlayVALORANT on social media. We cannot wait to see what you make, just remember to keep in mind our Legal Jibber Jabber.</string>
 
+    //LeaderBoards
+    <string name="games_won">Games Won</string>
+
 </resources>
