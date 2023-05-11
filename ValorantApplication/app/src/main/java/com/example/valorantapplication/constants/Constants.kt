@@ -10,4 +10,9 @@ object Constants {
     var WEAPONS_QUIZ_POINTS = 0
     const val ARG_CORRECT_ANSWERS = "arg_correct_quest"
     const val ARG_QUESTION = "arg_question"
+    var nameArsenal = ""
+    var typeArsenal = ""
+    var arsenalInformation = ""
+    var imageArsenalURI = ""
+    const val ARG_ARSENAL = "arg_arsenal"
 }

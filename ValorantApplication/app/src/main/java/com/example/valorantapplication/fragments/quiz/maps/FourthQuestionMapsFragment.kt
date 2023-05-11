@@ -71,10 +71,4 @@ class FourthQuestionMapsFragment : Fragment() {
             ?.addToBackStack(null)
             ?.commit()
     }
-
-//    private fun goToNextQuestion(){
-//        val action =
-//            FourthQuestionMapsFragmentDirections.actionFourthQuestionMapsFragmentToFifthQuestionMapsFragment()
-//        findNavController().navigate(action)
-//    }
 }

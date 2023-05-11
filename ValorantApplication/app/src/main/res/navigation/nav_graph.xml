@@ -270,7 +270,11 @@
         android:id="@+id/weaponsFragment"
         android:name="com.example.valorantapplication.fragments.info.gameInfo.WeaponsFragment"
         android:label="@string/weapons"
-        tools:layout="@layout/fragment_weapons" />
+        tools:layout="@layout/fragment_weapons" >
+        <action
+            android:id="@+id/action_weaponsFragment_to_arsenalInformationFragment"
+            app:destination="@id/arsenalInformationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mediaFragment"
         android:name="com.example.valorantapplication.fragments.info.others.MediaFragment"
@@ -425,4 +429,12 @@
         android:name="com.example.valorantapplication.fragments.info.gameInfo.agents.YoruFragment"
         android:label="Yoru"
         tools:layout="@layout/fragment_yoru" />
+    <fragment
+        android:id="@+id/arsenalInformationFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.ArsenalInformationFragment"
+        android:label="Arsenal Information" >
+        <argument
+            android:name="argString"
+            app:argType="string"/>
+    </fragment>
 </navigation>

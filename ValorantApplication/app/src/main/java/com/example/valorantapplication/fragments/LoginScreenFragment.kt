@@ -2,7 +2,6 @@ package com.example.valorantapplication.fragments
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -37,7 +36,6 @@ class LoginScreenFragment : Fragment() {
         user?.let { printUserInfo(it) }
 
         changeImage()
-//        showUserImage()
     }
 
     private fun printUserInfo(user: User?) {
@@ -45,12 +43,6 @@ class LoginScreenFragment : Fragment() {
         binding.txtEmailProfile.text = user?.email
         binding.txtSexProfile.text = user?.gender.toString()
     }
-
-//    private fun showUserImage() {
-//        val userImage = preferencesUntil.getUserImage()
-//        val imageId = userImage?.image
-//        imageId?.let { binding.imageViewProfile.setImageResource(it) }
-//    }
 
     private fun changeImage() {
         binding.imageViewProfile.setOnClickListener {
