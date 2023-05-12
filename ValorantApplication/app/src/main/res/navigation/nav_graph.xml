@@ -265,7 +265,11 @@
         android:id="@+id/mapsFragment"
         android:name="com.example.valorantapplication.fragments.info.gameInfo.MapsFragment"
         android:label="@string/maps"
-        tools:layout="@layout/fragment_maps" />
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_mapGalleryFragment"
+            app:destination="@id/mapGalleryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/weaponsFragment"
         android:name="com.example.valorantapplication.fragments.info.gameInfo.WeaponsFragment"
@@ -435,6 +439,14 @@
         android:label="Arsenal Information" >
         <argument
             android:name="argString"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mapGalleryFragment"
+        android:name="com.example.valorantapplication.fragments.info.gameInfo.MapGalleryFragment"
+        android:label="Map Gallery" >
+        <argument
+            android:name="argStringMap"
             app:argType="string"/>
     </fragment>
 </navigation>
