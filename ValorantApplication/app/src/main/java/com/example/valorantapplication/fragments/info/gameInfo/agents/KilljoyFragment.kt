@@ -1,60 +1,93 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentKilljoyBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [KilljoyFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class KilljoyFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentKilljoyBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_killjoy, container, false)
+    ): View {
+        binding = FragmentKilljoyBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment KilljoyFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            KilljoyFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setAbilityImages()
+        clickAbility()
+    }
+
+    private fun setAbilityImages(){
+        val uriQ = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt143467a7379d4211/5f21feb94d73a00a2e1428d3/Copy_of_TX_KJ_Alarm.png")
+        val uriE = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt1a4926627b38cc1a/5f2201490e38240638cd81d2/Copy_of_tx_kj_turret.png")
+        val uriC = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4e53712407193852/5f22010d8ff50d070ad2d172/Copy_of_TX_KJ_Bees.png")
+        val uriX = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt1e4113a934e67fa3/5f22018d71ec397ef9bf089e/Copy_of_TX_KJ_Lockdown.png")
+        Glide.with(this)
+            .load(uriQ)
+            .into(binding.abilityQKill)
+        Glide.with(this)
+            .load(uriE)
+            .into(binding.abilityEKill)
+        Glide.with(this)
+            .load(uriC)
+            .into(binding.abilityCKill)
+        Glide.with(this)
+            .load(uriX)
+            .into(binding.abilityXKill)
+    }
+
+    private fun clickAbility(){
+        binding.abilityQKill.setOnClickListener {
+            setAbilityVideo("Q - ALARMBOT", getString(R.string.killjoy_ability_q), R.raw.agent_kill_q)
+        }
+        binding.abilityEKill.setOnClickListener {
+            setAbilityVideo("E - TURRET", getString(R.string.killjoy_ability_e), R.raw.agent_kill_e)
+        }
+        binding.abilityCKill.setOnClickListener {
+            setAbilityVideo("C - NANOSWARM", getString(R.string.killjoy_ability_c), R.raw.agent_kill_c)
+        }
+        binding.abilityXKill.setOnClickListener {
+            setAbilityVideo("X - LOCKDOWN", getString(R.string.killjoy_ability_x), R.raw.agent_kill_x)
+        }
+    }
+
+    private fun setAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilityKill.text = textName
+        binding.txtAbilityKill.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoKillAbilities.setVideoURI(uri)
+        binding.videoKillAbilities.start()
+
+        binding.videoKillAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoKillAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoKillAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoKillAbilities.stopPlayback()
+        super.onDestroy()
     }
 }

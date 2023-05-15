@@ -1,60 +1,94 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.valorantapplication.R
+import com.example.valorantapplication.constants.Constants
+import com.example.valorantapplication.databinding.FragmentGekkoBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [GekkoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class GekkoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentGekkoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gekko, container, false)
+    ): View {
+        binding = FragmentGekkoBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment GekkoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            GekkoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setAbilityImages()
+        clickAbility()
+    }
+
+    private fun setAbilityImages(){
+        val uriQ = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt84c8955357322ecd/64027318ec12cd34d0060449/Gekko_ability_Icon_Wingman_.png")
+        val uriE = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt09558f0cb6be03a3/6402737a27ccd11087ac6a70/Gekko_ability_Icon_3.png")
+        val uriC = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltb04bcc15680583e4/640273e5aa6c3f7f594bd1cf/Gekko_icon_mosh.png")
+        val uriX = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltb24321feccb0cb69/6402740fba95fe6a2554b0b5/Gekko_ability_icon_4.png")
+        Glide.with(this)
+            .load(uriQ)
+            .into(binding.abilityQGekko)
+        Glide.with(this)
+            .load(uriE)
+            .into(binding.abilityEGekko)
+        Glide.with(this)
+            .load(uriC)
+            .into(binding.abilityCGekko)
+        Glide.with(this)
+            .load(uriX)
+            .into(binding.abilityXGekko)
+    }
+
+    private fun clickAbility(){
+        binding.abilityQGekko.setOnClickListener {
+            setAbilityVideo("Q - WINGMAN", getString(R.string.gekko_ability_q), R.raw.agent_gekko_q)
+        }
+        binding.abilityEGekko.setOnClickListener {
+            setAbilityVideo("E - DIZZY", getString(R.string.gekko_ability_e), R.raw.agent_gekko_e)
+        }
+        binding.abilityCGekko.setOnClickListener {
+            setAbilityVideo("C - MOSH PIT", getString(R.string.gekko_ability_c), R.raw.agent_gekko_c)
+        }
+        binding.abilityXGekko.setOnClickListener {
+            setAbilityVideo("X - THRASH", getString(R.string.gekko_ability_x), R.raw.agent_gekko_x)
+        }
+    }
+
+    private fun setAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilityGekko.text = textName
+        binding.txtAbilityGekko.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoGekkoAbilities.setVideoURI(uri)
+        binding.videoGekkoAbilities.start()
+
+        binding.videoGekkoAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoGekkoAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoGekkoAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoGekkoAbilities.stopPlayback()
+        super.onDestroy()
     }
 }

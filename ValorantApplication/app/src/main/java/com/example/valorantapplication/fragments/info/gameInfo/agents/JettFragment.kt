@@ -1,60 +1,93 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentJettBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [JettFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class JettFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentJettBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_jett, container, false)
+    ): View {
+        binding = FragmentJettBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment JettFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            JettFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setAbilityImages()
+        clickAbility()
+    }
+
+    private fun setAbilityImages(){
+        val uriQ = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltce7928301a67a33a/5eaf861103f6e72ff388cc20/TX_Jett_Q.png")
+        val uriE = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta0beeaa4a7e1ed78/5eaf8611b8a6356e4ddc1013/TX_Jett_E.png")
+        val uriC = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf137993847c71770/5eaf8611d4b10d15d3e8db4e/TX_Jett_C.png")
+        val uriX = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltb3e956f9fb96318e/5eaf86112b79652f27c32a06/TX_Jett_X.png")
+        Glide.with(this)
+            .load(uriQ)
+            .into(binding.abilityQJett)
+        Glide.with(this)
+            .load(uriE)
+            .into(binding.abilityEJett)
+        Glide.with(this)
+            .load(uriC)
+            .into(binding.abilityCJett)
+        Glide.with(this)
+            .load(uriX)
+            .into(binding.abilityXJett)
+    }
+
+    private fun clickAbility(){
+        binding.abilityQJett.setOnClickListener {
+            setAbilityVideo("Q - UPDRAFT", getString(R.string.jett_ability_q), R.raw.agent_jett_q)
+        }
+        binding.abilityEJett.setOnClickListener {
+            setAbilityVideo("E - TAILWIND", getString(R.string.jett_ability_e), R.raw.agent_jett_e)
+        }
+        binding.abilityCJett.setOnClickListener {
+            setAbilityVideo("C - CLOUDBURST", getString(R.string.jett_ability_c), R.raw.agent_jett_c)
+        }
+        binding.abilityXJett.setOnClickListener {
+            setAbilityVideo("X - BLADE STORM", getString(R.string.jett_ability_x), R.raw.agent_jett_x)
+        }
+    }
+
+    private fun setAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilityJett.text = textName
+        binding.txtAbilityJett.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoJettAbilities.setVideoURI(uri)
+        binding.videoJettAbilities.start()
+
+        binding.videoJettAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoJettAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoJettAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoJettAbilities.stopPlayback()
+        super.onDestroy()
     }
 }

@@ -1,60 +1,93 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentKayoBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [KayoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class KayoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentKayoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kayo, container, false)
+    ): View {
+        binding = FragmentKayoBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment KayoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            KayoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setAbilityImages()
+        clickAbility()
+    }
+
+    private fun setAbilityImages(){
+        val uriQ = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt83e92ae578e66b8e/60d204231e0505677a882f38/Q_FlashDrive.png")
+        val uriE = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt496288e7ab899b47/60d2018db930a53616fa4882/E_ZeroPoint.png")
+        val uriC = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte671cefaedb07d26/60d2046483f9fe49a6fef713/C_FragMent.png")
+        val uriX = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltead1f4cb9ad32e19/60d20208bcec595109d831c2/X_NullCmd.png")
+        Glide.with(this)
+            .load(uriQ)
+            .into(binding.abilityQKayo)
+        Glide.with(this)
+            .load(uriE)
+            .into(binding.abilityEKayo)
+        Glide.with(this)
+            .load(uriC)
+            .into(binding.abilityCKayo)
+        Glide.with(this)
+            .load(uriX)
+            .into(binding.abilityXKayo)
+    }
+
+    private fun clickAbility(){
+        binding.abilityQKayo.setOnClickListener {
+            setAbilityVideo("Q - FLASH/DRIVE", getString(R.string.kayo_ability_q), R.raw.agent_kayo_q)
+        }
+        binding.abilityEKayo.setOnClickListener {
+            setAbilityVideo("E - ZERO/POINT", getString(R.string.kayo_ability_e), R.raw.agent_kayo_e)
+        }
+        binding.abilityCKayo.setOnClickListener {
+            setAbilityVideo("C - FRAG/MENT", getString(R.string.kayo_ability_c), R.raw.agent_kayo_c)
+        }
+        binding.abilityXKayo.setOnClickListener {
+            setAbilityVideo("X - NULL/CMD", getString(R.string.kayo_ability_x), R.raw.agent_kayo_x)
+        }
+    }
+
+    private fun setAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilityKayo.text = textName
+        binding.txtAbilityKayo.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoKayoAbilities.setVideoURI(uri)
+        binding.videoKayoAbilities.start()
+
+        binding.videoKayoAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoKayoAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoKayoAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoKayoAbilities.stopPlayback()
+        super.onDestroy()
     }
 }

@@ -1,60 +1,93 @@
 package com.example.valorantapplication.fragments.info.gameInfo.agents
 
+import android.media.MediaPlayer.OnPreparedListener
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.valorantapplication.R
+import com.example.valorantapplication.databinding.FragmentRazeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RazeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RazeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentRazeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_raze, container, false)
+    ): View {
+        binding = FragmentRazeBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RazeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RazeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setAbilityImages()
+        clickAbility()
+    }
+
+    private fun setAbilityImages(){
+        val uriQ = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltdb74f287eee9fe76/5eaf862a248a28605479c91f/TX_Raze_Q.png")
+        val uriE = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltb0eb89e122c1f4ea/5eaf862ad238e314f259fa8b/TX_Raze_E.png")
+        val uriC = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt44acc030d4d60182/5eaf862aa20afe612d82fb4e/TX_Raze_C.png")
+        val uriX = Uri.parse("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt60023b671f330740/5eaf862ae6f6795e530a2717/TX_Raze_X.png")
+        Glide.with(this)
+            .load(uriQ)
+            .into(binding.abilityQRaze)
+        Glide.with(this)
+            .load(uriE)
+            .into(binding.abilityERaze)
+        Glide.with(this)
+            .load(uriC)
+            .into(binding.abilityCRaze)
+        Glide.with(this)
+            .load(uriX)
+            .into(binding.abilityXRaze)
+    }
+
+    private fun clickAbility(){
+        binding.abilityQRaze.setOnClickListener {
+            setAbilityVideo("Q - BLAST PACK", getString(R.string.raze_ability_q), R.raw.agent_raze_q)
+        }
+        binding.abilityERaze.setOnClickListener {
+            setAbilityVideo("E - PAINT SHELLS", getString(R.string.raze_ability_e), R.raw.agent_raze_e)
+        }
+        binding.abilityCRaze.setOnClickListener {
+            setAbilityVideo("C - BOOM BOT", getString(R.string.raze_ability_c), R.raw.agent_raze_c)
+        }
+        binding.abilityXRaze.setOnClickListener {
+            setAbilityVideo("X - SHOWSTOPPER", getString(R.string.raze_ability_x), R.raw.agent_raze_x)
+        }
+    }
+
+    private fun setAbilityVideo(textName: String, textAbility: String, videoResource: Int) {
+        binding.txtNameAbilityRaze.text = textName
+        binding.txtAbilityRaze.text = textAbility
+        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + videoResource)
+
+        binding.videoRazeAbilities.setVideoURI(uri)
+        binding.videoRazeAbilities.start()
+
+        binding.videoRazeAbilities.setOnPreparedListener(OnPreparedListener { mp ->
+            mp.isLooping = true
+        })
+    }
+
+    override fun onResume() {
+        binding.videoRazeAbilities.resume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.videoRazeAbilities.suspend()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        binding.videoRazeAbilities.stopPlayback()
+        super.onDestroy()
     }
 }
