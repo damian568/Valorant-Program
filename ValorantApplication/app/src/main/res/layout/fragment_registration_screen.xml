@@ -142,7 +142,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/custom_edit_text"
                         android:drawableStart="@drawable/ic_baseline_verified_user"
-                        android:hint="@string/password"
+                        android:hint="@string/confirm_password"
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:paddingLeft="@dimen/large_padding_left"

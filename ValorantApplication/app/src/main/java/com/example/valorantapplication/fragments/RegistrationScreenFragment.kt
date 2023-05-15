@@ -13,7 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.valorantapplication.Constants
+import com.example.valorantapplication.constants.Constants
 import com.example.valorantapplication.R
 import com.example.valorantapplication.data.PreferenceUntil
 import com.example.valorantapplication.data.User

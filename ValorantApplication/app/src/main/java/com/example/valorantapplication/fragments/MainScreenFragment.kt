@@ -1,11 +1,10 @@
 package com.example.valorantapplication.fragments
 
-import android.media.MediaPlayer.OnPreparedListener
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.valorantapplication.R
 import com.example.valorantapplication.databinding.FragmentMainScreenBinding
 
 open class MainScreenFragment : Fragment() {
@@ -22,7 +21,6 @@ open class MainScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setBackgroundVideo()
         clickBtnInfo()
         clickBtnQuiz()
     }
@@ -49,29 +47,5 @@ open class MainScreenFragment : Fragment() {
         val action =
             MainScreenFragmentDirections.actionMainScreenFragmentToInfoFragment()
         findNavController().navigate(action)
-    }
-
-    private fun setBackgroundVideo(){
-        val uri: Uri = Uri.parse("android.resource://" + activity!!.packageName + "/" + com.example.valorantapplication.R.raw.valorant)
-
-        binding.video.setVideoURI(uri)
-        binding.video.start()
-
-        binding.video.setOnPreparedListener(OnPreparedListener { mp -> mp.isLooping = true })
-    }
-
-    override fun onResume() {
-        binding.video.resume()
-        super.onResume()
-    }
-
-    override fun onPause() {
-        binding.video.suspend()
-        super.onPause()
-    }
-
-    override fun onDestroy() {
-        binding.video.stopPlayback()
-        super.onDestroy()
     }
 }

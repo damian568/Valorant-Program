@@ -9,11 +9,11 @@
         android:fitsSystemWindows="true"
         tools:context=".fragments.MainScreenFragment">
 
-        <VideoView
-            android:id="@+id/video"
+        <ImageView
+            android:id="@+id/imageMainScreen"
+            android:background="@drawable/valorant_background_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true" />
+            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/btn_info"

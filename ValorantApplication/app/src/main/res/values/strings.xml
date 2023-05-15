@@ -9,6 +9,7 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="information">Information</string>
 
     <string name="return_text">Can\'t be empty!</string>
@@ -149,5 +150,410 @@
     <string name="txt_beginner5">Each map is a different stage to style on your enemies. Flex your creative skills and savvy gunplay for different encounters.\n \nBelow are the basics and you can plot your route using our detailed maps page.</string>
     <string name="txt_beginner6">Yeah, you might already know how to frag an enemy six ways from Sunday, but Brimstone will tell you, most of those ways are pretty noisy.</string>
     <string name="txt_beginner7">No more doubts, you’re ready. But like you, we’re just getting started.\n \nWe’ll keep you updated on the latest Agents, Maps, and more on our news page. You can always keep in touch with us on social for everything else.</string>
+
+    //Game Info Fragment - Agents
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    //Agent Roles
+    <string name="duelist">Duelist</string>
+    <string name="controller">Controller</string>
+    <string name="sentinel">Sentinel</string>
+    <string name="initiator">Initiator</string>
+
+    //Agent
+    <string name="special_abilities">SPECIAL ABILITIES</string>
+    <string name="role_controller">//Role: CONTROLLER</string>
+    <string name="role_duelist">//Role: DUELIST</string>
+    <string name="role_sentinel">//Role: SENTINEL</string>
+    <string name="role_initiator">//Role: INITIATOR</string>
+
+    //Brimstone
+    <string name="biography_brimstone">// BIOGRAPHY \n \nJoining from the USA, Brimstone\'s orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him an unmatched boots-on-the-ground commander.</string>
+    <string name="brim_ability_q">EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</string>
+    <string name="brim_ability_e">EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</string>
+    <string name="brim_ability_c">EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</string>
+    <string name="brim_ability_x">EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</string>
+
+    //Phoenix
+    <string name="biography_phoenix">// BIOGRAPHY \n \nHailing from the U.K., Phoenix\'s star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he\'s got backup or not, he\'ll rush into a fight on his own terms.</string>
+    <string name="phoenix_ability_q">EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.</string>
+    <string name="phoenix_ability_e">EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.</string>
+    <string name="phoenix_ability_c">EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.</string>
+    <string name="phoenix_ability_x">INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.</string>
+
+    //Sage
+    <string name="sage">Sage</string>
+    <string name="biography_sage">// BIOGRAPHY \n \nThe stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.</string>
+    <string name="sage_ability_q">EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it.</string>
+    <string name="sage_ability_e">EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.</string>
+    <string name="sage_ability_c">EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.</string>
+    <string name="sage_ability_x">EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.</string>
+
+    //Sova
+    <string name="biography_sova">// BIOGRAPHY \n \nBorn from the eternal winter of Russia\'s tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.</string>
+    <string name="sova_ability_q">EQUIP a bow with a shock bolt. FIRE to send the explosive forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.</string>
+    <string name="sova_ability_e">EQUIP a bow with a recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.</string>
+    <string name="sova_ability_c">EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.</string>
+    <string name="sova_ability_x">EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.</string>
+
+    //Viper
+    <string name="viper">Viper</string>
+    <string name="biography_viper">// BIOGRAPHY \n \nThe American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy\'s vision. If the toxins don\'t kill her prey, her mind games surely will.</string>
+    <string name="viper_ability_q">EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked up to be REDEPLOYED.</string>
+    <string name="viper_ability_e">EQUIP a gas emitter launcher. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once.</string>
+    <string name="viper_ability_c">EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.</string>
+    <string name="viper_ability_x">EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.</string>
+
+    //Cypher
+    <string name="biography_cypher">// BIOGRAPHY \n \nThe Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy\'s every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</string>
+    <string name="cypher_ability_q">INSTANTLY toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it.</string>
+    <string name="cypher_ability_e">EQUIP a spycam. FIRE to place the spycam at the targeted location. RE-USE this ability to take control of the camera’s view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.</string>
+    <string name="cypher_ability_c">EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.</string>
+    <string name="cypher_ability_x">INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.</string>
+
+    //Reyna
+    <string name="reyna">Reyna</string>
+    <string name="biography_reyna">// BIOGRAPHY \n \nForged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.</string>
+    <string name="reyna_ability_q">Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the orb.</string>
+    <string name="reyna_ability_e">INSTANTLY consume a nearby soul orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible.</string>
+    <string name="reyna_ability_c">EQUIP an ethereal destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it.</string>
+    <string name="reyna_ability_x">INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.</string>
+
+    //Killjoy
+    <string name="biography_killjoy">// BIOGRAPHY\n\n The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn\'t stop her enemies, her robots\' debuff will help make short work of them.</string>
+    <string name="killjoy_ability_q">EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range. After reaching its target, the bot explodes, applying Vulernable. HOLD EQUIP to recall a deployed bot.</string>
+    <string name="killjoy_ability_e">EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret.</string>
+    <string name="killjoy_ability_c">EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.</string>
+    <string name="killjoy_ability_x">EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.</string>
+
+    //Breach
+    <string name="breach">Breach</string>
+    <string name="biography_breach">// BIOGRAPHY\n\n Breach, the bionic Swede, fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.</string>
+    <string name="breach_ability_q">EQUIP a blinding charge. FIRE the charge to set fast-acting burst through the wall. The charge detonates to blind all players looking at it.</string>
+    <string name="breach_ability_e">EQUIP a seismic blast. HOLD FIRE to increase the distance. RELEASE to set off the quake, dazing all players in its zone and in a line up to the zone.</string>
+    <string name="breach_ability_c">EQUIP a fusion charge. FIRE the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area.</string>
+    <string name="breach_ability_x">EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.</string>
+
+    //Omen
+    <string name="omen">Omen</string>
+    <string name="biography_omen">// BIOGRAPHY\n\n A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.</string>
+    <string name="omen_ability_q">INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.</string>
+    <string name="omen_ability_e">EQUIP a shadow orb and see its range indicator. FIRE to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD ALTERNATE FIRE while targeting to move the marker further away. HOLD the ability key with targeting to move the marker closer.</string>
+    <string name="omen_ability_c">EQUIP a shadow walk ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.</string>
+    <string name="omen_ability_x">EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.</string>
+
+    //Jett
+    <string name="jett">Jett</string>
+    <string name="biography_jett">// BIOGRAPHY\n\n Representing her home country of South Korea, Jett\'s agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies before they even know what hit them.</string>
+    <string name="jett_ability_q">INSTANTLY propel Jett high into the air.</string>
+    <string name="jett_ability_e">ACTIVATE to prepare a gust of wind for a limited time. RE-USE the wind to propel Jett in the direction she is moving. If Jett is standing still, she propels forward.</string>
+    <string name="jett_ability_c">INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.</string>
+    <string name="jett_ability_x">EQUIP a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target. ALTERNATE FIRE to throw all remaining daggers at your target.</string>
+
+    //Raze
+    <string name="raze">Raze</string>
+    <string name="biography_raze">// BIOGRAPHY\n\n Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma playstyle, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of “boom.”</string>
+    <string name="raze_ability_q">INSTANTLY throw a Blast Pack that will stick to surfaces. RE-USE the ability after deployment to detonate, damaging and moving anything hit. Raze isn\'t damaged by this ability, but will still take fall damage if launched up far enough.</string>
+    <string name="raze_ability_e">EQUIP a cluster grenade. FIRE to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range.</string>
+    <string name="raze_ability_c">EQUIP a Boom Bot. FIRE will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them.</string>
+    <string name="raze_ability_x">EQUIP a rocket launcher. FIRE shoots a rocket that does massive area damage on contact with anything.</string>
+
+    //Skye
+    <string name="skye">Skye</string>
+    <string name="biography_skye">// BIOGRAPHY\n\n Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye\’s side.</string>
+    <string name="skye_ability_q">EQUIP a Tasmanian tiger trinket. FIRE to send out and take control of the predator. While in control, FIRE to leap forward, exploding in a concussive blast and damaging directly hit enemies.</string>
+    <string name="skye_ability_e">EQUIP a hawk trinket. FIRE to send it forward. HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash that plays a hit confirm if an enemy was within range and line of sight.</string>
+    <string name="skye_ability_c">EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself.</string>
+    <string name="skye_ability_x">EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it nearsights them.</string>
+
+    //Yoru
+    <string name="yoru">Yoru</string>
+    <string name="biography_yoru">// BIOGRAPHY\n\n Japanese native, Yoru, rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.</string>
+    <string name="yoru_ability_q">EQUIP to rip an unstable dimensional fragment from reality. FIRE to throw the fragment, activating a flash that winds up once it collides with a hard surface in world.</string>
+    <string name="yoru_ability_e">EQUIP a rift tether FIRE to send the tether forward ALT FIRE to place a stationary tether ACTIVATE to teleport to the tether\'s location USE to trigger a fake teleport.</string>
+    <string name="yoru_ability_c">EQUIP an echo that transforms into a mirror image of Yoru when activated FIRE to instantly activate the mirror image and send it forward ALT FIRE to place an inactive echo USE to transform an inactive echo into a mirror image and send it forward. Mirror images explode in a blinding flash when destroyed by enemies.</string>
+    <string name="yoru_ability_x">EQUIP a mask that can see between dimensions. FIRE to drift into Yoru\'s dimension, unable to be affected or seen by enemies from the outside</string>
+
+    //Astra
+    <string name="astra">Astra</string>
+    <string name="biography_astra">// BIOGRAPHY\n\n Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields to her whim. With full command of her astral form and a talent for deep strategic foresight, she\'s always eons ahead of her enemy\'s next move.</string>
+    <string name="astra_ability_q">Place Stars in Astral Form (X) ACTIVATE a Star to detonate a Nova Pulse. The Nova Pulse charges briefly then strikes, concussing all players in its area.</string>
+    <string name="astra_ability_e">Place Stars in Astral Form (X) ACTIVATE a Star to transform it into a Nebula (smoke). Use (F) on a Star to Dissipate it, returning the star to be placed in a new location after a delay. Dissipate briefly forms a fake Nebula at the Star’s location before returning.</string>
+    <string name="astra_ability_c">Place Stars in Astral Form (X) ACTIVATE a Star to form a Gravity Well. Players in the area are pulled toward the center before it explodes, making all players still trapped inside fragile.</string>
+    <string name="astra_ability_x">ACTIVATE (X) to enter Astral Form where you can place Stars with PRIMARY FIRE. Stars can be reactivated later, transforming them into a Nova Pulse, Nebula, or Gravity Well. When Cosmic Divide is charged, use SECONDARY FIRE in Astral Form to begin aiming it, then PRIMARY FIRE to select two locations. An infinite Cosmic Divide connects the two points you select. Cosmic Divide blocks bullets and heavily dampens audio.</string>
+
+    //Kay/o
+    <string name="kayo">Kay/o</string>
+    <string name="biography_kayo">// BIOGRAPHY\n\n KAY/O is a machine of war built for a single purpose: neutralizing radiants. His power to suppress enemy abilities cripples his opponents\' capacity to fight back, securing him and his allies the ultimate edge.</string>
+    <string name="kayo_ability_q">EQUIP a flash grenade. FIRE to throw. The flash grenade explodes after a short fuse, blinding anyone in line of sight.</string>
+    <string name="kayo_ability_e">EQUIP a suppression blade. FIRE to throw. The blade sticks to the first surface it hits, winds up, and suppresses anyone in the radius of the explosion.</string>
+    <string name="kayo_ability_c">EQUIP an explosive fragment. FIRE to throw. The fragment sticks to the floor and explodes multiple times, dealing near lethal damage at the center with each explosion.</string>
+    <string name="kayo_ability_x">INSTANTLY overload with polarized radianite energy that empowers KAY/O and causes large energy pulses to emit from his location. Enemies hit with these pulses are suppressed for a short duration.</string>
+
+    //Chamber
+    <string name="biography_chamber">// BIOGRAPHY\n\n Well dressed and well armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.</string>
+    <string name="chamber_ability_q">ACTIVATE to equip a heavy pistol. ALT FIRE with the pistol equipped to aim down sights.</string>
+    <string name="chamber_ability_e">PLACE a teleport anchor. While on the ground and in range of the anchor, REACTIVATE to quickly teleport to the anchor. The anchor can be picked up to be REDEPLOYED.</string>
+    <string name="chamber_ability_c">PLACE a trap that scans for enemies. When a visible enemy comes in range, the trap counts down and then destabilizes the terrain around them, creating a lingering field that slows players caught inside of it. The trap can be picked up to be REDEPLOYED.</string>
+    <string name="chamber_ability_x">ACTIVATE to summon a powerful, custom sniper rifle that will kill an enemy with any direct hit. Killing an enemy creates a lingering field that slows players caught inside of it.</string>
+
+    //Neon
+    <string name="neon">Neon</string>
+    <string name="biography_neon">// BIOGRAPHY\n\n Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance as fast as her body generates it. She races ahead to catch enemies off guard, then strikes them down quicker than lightning.</string>
+    <string name="neon_ability_q">INSTANTLY throw an energy bolt that bounces once. Upon hitting each surface, the bolt electrifies the ground below with a concussive blast.</string>
+    <string name="neon_ability_e">INSTANTLY channel Neon\’s power for increased speed. When charged, ALT FIRE to trigger an electric slide. Slide charge resets every two kills.</string>
+    <string name="neon_ability_c">FIRE two energy lines forward on the ground that extend a short distance or until they hit a surface. The lines rise into walls of static electricity that block vision and damage enemies passing through them.</string>
+    <string name="neon_ability_x">Unleash Neon\’s full power and speed for a short duration. FIRE to channel the power into a deadly lightning beam with high movement accuracy. The duration resets on each kill.</string>
+
+    //Fade
+    <string name="fade">Fade</string>
+    <string name="biography_fade">// BIOGRAPHY\n\n Turkish bounty hunter, Fade, unleashes the power of raw nightmares to seize enemy secrets. Attuned with terror itself, she hunts targets and reveals their deepest fears—before crushing them in the dark.</string>
+    <string name="fade_ability_q">Equip an orb of nightmare ink. FIRE to throw the orb which will plummet to the ground after a set amount of time. Upon hitting the ground, the ink will explode and create a zone in which enemies who are caught in it cannot escape the zone by normal means. RE-USE the ability to drop the projectile early in-flight</string>
+    <string name="fade_ability_e">Equip a nightmarish entity. FIRE to throw the orb which will plummet to the ground after a set amount of time. Upon hitting the ground, the orb will turn into a nightmarish entity that will reveal the location of enemies caught in its line of sight. Enemies can destroy this entity. RE-USE the ability to drop the projectile early in-flight.</string>
+    <string name="fade_ability_c">EQUIP a Prowler. FIRE will send the Prowler out, causing it to travel in a straight line. The Prowler will lock onto any enemies or trails in their frontal vision cone and chase them, nearsighting them if it reaches them. HOLD the FIRE button to steer the Prowler in the direction of your crosshair.</string>
+    <string name="fade_ability_x">EQUIP the power of Fear. FIRE to send out a wave of nightmare energy that can traverse through walls. The energy creates a trail to the opponent as well as deafens and decays them.</string>
+
+    //Harbor
+    <string name="biography_harbor">// BIOGRAPHY\n\n Hailing from India\’s coast, Harbor storms the field wielding ancient technology with dominion over water. He unleashes frothing rapids and crushing waves to shield his allies and pummel those that oppose him.</string>
+    <string name="harbor_ability_q">EQUIP a sphere of shielding water. FIRE to throw. ALT FIRE to underhand throw. Upon impacting the ground, spawn a destructible water shield that blocks bullets.</string>
+    <string name="harbor_ability_e">EQUIP a wall of water. FIRE to send the water forward along the ground. HOLD FIRE to guide the water in the direction of your crosshair, passing through the world, spawning a wall along the water\’s path. ALT FIRE while bending to stop the water early. Players hit are SLOWED</string>
+    <string name="harbor_ability_c">EQUIP a wave of water. FIRE to send the wave rolling forward and through walls. RE- USE to stop the wave. Players hit are SLOWED.</string>
+    <string name="harbor_ability_x">EQUIP the full power of your Artifact. FIRE to summon a geyser pool on the ground. Enemy players in the area are targeted by successive geyser strikes. Players caught within a strike are CONCUSSED.</string>
+
+    //Gekko
+    <string name="gekko">Gekko</string>
+    <string name="biography_gekko">// BIOGRAPHY\n\n Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again.</string>
+    <string name="gekko_ability_q">EQUIP Wingman FIRE to send Wingman forward seeking enemies. Wingman unleashes a concussive blast toward the first enemy he sees ALT FIRE when targeting a Spike site or planted Spike to have Wingman defuse or plant the Spike. To plant, Gekko must have the Spike in his inventory. When Wingman expires he reverts into a dormant globule INTERACT to reclaim the globule and gain another Wingman charge after a short cooldown.</string>
+    <string name="gekko_ability_e">EQUIP Dizzy FIRE to send Dizzy soaring forward through the air. Dizzy charges then unleashes plasma blasts at enemies in line of sight. Enemies hit by her plasma are blinded. When Dizzy expires she reverts into a dormant globule INTERACT to reclaim the globule and gain another Dizzy charge after a short cooldown.</string>
+    <string name="gekko_ability_c">EQUIP Mosh FIRE to throw Mosh like a grenade ALT FIRE to throw underhand. Upon landing Mosh duplicates across a large area then after a short delay explodes.</string>
+    <string name="gekko_ability_x">EQUIP Thrash FIRE to link with Thrash’s mind and steer her through enemy territory ACTIVATE to lunge forward and explode, detaining any enemies in a small radius. When Thrash expires she reverts into a dormant globule INTERACT to reclaim the globule and gain another Thrash charge after a short cooldown. Thrash can be reclaimed once.</string>
+
+    //Game Info - Maps
+    <string name="view_gallery">ViewGallery</string>
+
+    //Lotus
+    <string name="name_lotus">Lotus</string>
+    <string name="image_lotus">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltaae67d0ec5006ef5/63b8a78d28c9fb7a1880a9e2/Lotus_MapWebsite_Web.png</string>
+    <string name="txt_lotus">A mysterious structure housing an astral conduit radiates with ancient power. Great stone doors provide a variety of movement opportunities and unlock the paths to three mysterious sites.</string>
+
+    //Pearl
+    <string name="name_pearl">Pearl</string>
+    <string name="image_pearl">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd0a2437fb09ebde4/62a2805b58931557ed9f7c9e/PearlLoadingScreen_MapFeaturedImage_930x522.png</string>
+    <string name="txt_pearl">Attackers push down into the Defenders on this two-site map set in a vibrant, underwater city. Pearl is a geo-driven map with no mechanics. Take the fight through a compact mid or the longer range wings in our first map set in Omega Earth.</string>
+
+    //Fracture
+    <string name="name_fracture">Fracture</string>
+    <string name="image_fracture">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf4485163c8c5873c/6131b23e9db95e7ff74b6393/Valorant_FRACTURE_Minimap_Alpha_web.png</string>
+    <string name="txt_fracture">A top secret research facility split apart by a failed radianite experiment. With defender options as divided as the map, the choice is yours: meet the attackers on their own turf or batten down the hatches to weather the assault.</string>
+
+    //Breeze
+    <string name="name_breeze">Breeze</string>
+    <string name="image_breeze">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltb03d2e4867f2e324/607f995892f0063e5c0711bd/breeze-featured_v1.png</string>
+    <string name="txt_breeze">Take in the sights of historic ruins or seaside caves on this tropical paradise. But bring some cover. You\'ll need them for the wide open spaces and long range engagements. Watch your flanks and this will be a Breeze.</string>
+
+    //Icebox
+    <string name="name_icebox">Icebox</string>
+    <string name="image_icebox">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltde02911a015d7ef9/5f80d2851f5f6d4173b4e49d/Icebox_transparentbg_for_Web.png</string>
+    <string name="txt_icebox">Your next battleground is a secret Kingdom excavation site overtaken by the arctic. The two plant sites protected by snow and metal require some horizontal finesse. Take advantage of the ziplines and they\’ll never see you coming.</string>
+
+    //Bind
+    <string name="name_bind">Bind</string>
+    <string name="image_bind">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8538036a309525ae/5ebc470bfd85ad7411ce6b50/bind-featured.png</string>
+    <string name="txt_bind">Two sites. No middle. Gotta pick left or right. What\’s it going to be then? Both offer direct paths for attackers and a pair of one-way teleporters make it easier to flank.</string>
+
+    //Haven
+    <string name="name_haven">Haven</string>
+    <string name="image_haven">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8afb5b8145f5e9b2/5ebc46f7b8c49976b71c0bc5/haven-featured.png</string>
+    <string name="txt_haven">Beneath a forgotten monastery, a clamour emerges from rival Agents clashing to control three sites. There’s more territory to control, but defenders can use the extra real estate for aggressive pushes.</string>
+
+    //Split
+    <string name="name_split">Split</string>
+    <string name="image_split">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd188c023f88f7d91/5ebc46db20f7727335261fcd/split-featured.png</string>
+    <string name="txt_split">If you want to go far, you\’ll have to go up. A pair of sites split by an elevated center allows for rapid movement using two rope ascenders. Each site is built with a looming tower vital for control. Remember to watch above before it all blows sky-high.</string>
+
+    //Ascent
+    <string name="name_ascent">Ascent</string>
+    <string name="image_ascent">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta9b912e1a1b59aa4/5ebc471cfa550001f72bcb13/ascent-featured.png</string>
+    <string name="txt_ascent">An open playground for small wars of position and attrition divide two sites on Ascent. Each site can be fortified by irreversible bomb doors; once they\’re down, you\’ll have to destroy them or find another way. Yield as little territory as possible.</string>
+
+    //Game Info - Weapons
+    <string-array name="category_arsenal">
+        <item>All WEAPONS</item>
+        <item>SIDEARMS</item>
+        <item>SMGS</item>
+        <item>SHOTGUNS</item>
+        <item>RIFLES</item>
+        <item>SNIPERS</item>
+        <item>HEAVIES</item>
+        <item>MELEE</item>
+    </string-array>
+
+    //Type Arsenal
+    <string name="type_sidearm">Type // SIDEARMS</string>
+    <string name="type_smg">Type // SMGS</string>
+    <string name="type_shotgun">Type // SHOTGUNS</string>
+    <string name="type_rifle">Type // RIFLES</string>
+    <string name="type_sniper">Type // SNIPERS</string>
+    <string name="type_heavy">Type // HEAVIES</string>
+    <string name="type_melee">Type // MELEE</string>
+
+    //Classic
+    <string name="classic">Classic</string>
+    <string name="txt_classic">Lightweight and versatile, the default weapon for all is an instant classic.</string>
+    <string name="txt_classic_info">Primary fire lands precise shots when still, and is equipped with an alternate burst-firing mode for close encounters.</string>
+    <string name="image_classic">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt25bf56ede3e3c57c/5eb281c42278aa3e8d0ba7fa/classic.png</string>
+
+    //Shorty
+    <string name="shorty">Shorty</string>
+    <string name="txt_shorty">Surprise your enemy up close for max effectiveness.</string>
+    <string name="txt_shorty_info">A nimble, short barrel shotgun that is deadly at close range but can only fire twice before needing to reload. Pairs well with long range weapons.</string>
+    <string name="image_shorty">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt7b13117b3a4912a7/5eb281ca5e05b51483afd6bc/shorty.png</string>
+
+    //Frenzy
+    <string name="frenzy">Frenzy</string>
+    <string name="txt_frenzy">Up close, hold the trigger. From afar...try something else.</string>
+    <string name="txt_frenzy_info">Lightweight machine pistol that excels at firing on the move. Its high rate-of-fire can be difficult to control, so try short bursts at medium ranges.</string>
+    <string name="image_frenzy">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt97e5c377459c2f3b/5eb281c43b09c042ddca13a1/frenzy.png</string>
+
+    //Ghost
+    <string name="ghost">Ghost</string>
+    <string name="txt_ghost">Sleek, silenced, and proficient at any range.</string>
+    <string name="txt_ghost_info">The Ghost is accurate and carries a large magazine if you miss. Distant targets require a controlled fire rate. Quickly tap the trigger when you can see the whites of their eyes.</string>
+    <string name="image_ghost">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltc4788d390015fb7c/5eb281c4105ab84c3815e164/ghost.png</string>
+
+    //Sheriff
+    <string name="sheriff">Sheriff</string>
+    <string name="txt_sheriff">A modern six-shooter for the headshot searcher.</string>
+    <string name="txt_sheriff_info">Its high-impact rounds pack a ton of recoil and require true grit to master.\n\n Wield the Sheriff right, and your enemies will know they were expendable.</string>
+    <string name="image_sheriff">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3bbed29a5475c7d4/5eb281ca2278aa3e8d0ba7fe/sheriff.png</string>
+
+    //Stinger
+    <string name="stinger">Stinger</string>
+    <string name="txt_stinger">They\’ll know it\'s over when the Stinger splash hits</string>
+    <string name="txt_stinger_info">This SMG is more potent at medium to long range than its counterparts, but at the cost of firing rate and mobility.\n\n The 20-round mag gets wasted in recoil-filled sprays, but lands lethal blows at medium distances with ADS and controlled fire.</string>
+    <string name="image_stinger">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt55951cb43513b87d/5eb7c2209c5d3e37e05f27b6/stinger.png</string>
+
+    //Spectre
+    <string name="spectre">Spectre</string>
+    <string name="txt_spectre">When in doubt, the Spectre is your number one.</string>
+    <string name="txt_spectre_info">A jack-of-all-trades weapon with a great balance of damage, fire rate, and accuracy—at both short and mid range.\n\n It haunts the corners of every map and requires only steady aim to drop foes at long distance.</string>
+    <string name="image_spectre">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8a6f9eb97f755412/5eb281cae11e6a13a6f613ed/spectre.png</string>
+
+    //Bucky
+    <string name="bucky">Bucky</string>
+    <string name="txt_bucky">Attacker. Defender. You\’re the one with the pump-action shotgun.</string>
+    <string name="txt_bucky_info">Heavy but stable, Bucky\’s primary fire is for holding tight corners or charging close quarters. Alternate fire strikes targets at medium range.</string>
+    <string name="image_bucky">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt2cd5308e8bdfcc8c/5eb281c334a9963e8f9599de/bucky.png</string>
+
+    //Judge
+    <string name="judge">Judge</string>
+    <string name="txt_judge">Automatic, rapid fire shotgun that provides sustained high damage.</string>
+    <string name="txt_judge_info">The Judge is stable at the stand but volatile when fired rapidly.\n\n Primary fire hammers short range targets and you\’ll need to be steady to nail anything beyond an arm\'s-length.</string>
+    <string name="image_judge">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt82404f7b88f8c612/5eb281c45050514d1a507146/judge.png</string>
+
+    //Bulldog
+    <string name="bulldog">Bulldog</string>
+    <string name="txt_bulldog">Some kind of happiness is measured out in taking down enemies with the Bulldog</string>
+    <string name="txt_bulldog_info">A surefire beast when you can pick your shots. Alt. fire lets you ADS and spew accurate, short bursts at anyone who tries you from medium to long-range.</string>
+    <string name="image_bulldog">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd4a396bf5a06e6b4/5eb281c4edfeb076e2050387/bulldog.png</string>
+
+    //Guardian
+    <string name="guardian">Guardian</string>
+    <string name="txt_guardian">Shines in the hands of a patient shooter.</string>
+    <string name="txt_guardian_info">The designated marksman rifle. Heavier and less mobile relative to other rifles but precise and powerful. Headhunt when enemies appear at medium to long distances.</string>
+    <string name="image_guardian">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd78ee0533f30e0a8/5eb281c4402b8b4d13a566dc/guardian.png</string>
+
+    //Phantom
+    <string name="phantom">Phantom</string>
+    <string name="txt_phantom">A balanced weapon built for stable, extended shots.</string>
+    <string name="txt_phantom_info">Go full auto for anyone who tests you up close and short controlled bursts scramble enemies from anywhere. Best when fired while stationary.</string>
+    <string name="image_phantom">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt04ac3b5158b8466a/5eb281caa44a154c3ef84a82/phantom.png</string>
+
+    //Vandal
+    <string name="vandal">Vandal</string>
+    <string name="txt_vandal">This accurate powerhouse is ferocious in small bursts.</string>
+    <string name="txt_vandal_info">The Vandal retains high damage over distance and rewards those who focus single shots at a target\’s head. Extended fire results in less stability, however.</string>
+    <string name="image_vandal">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt323df4a0d8210605/5eb281cb3b09c042ddca13a5/vandal.png</string>
+
+    //Marshal
+    <string name="marshal">Marshal</string>
+    <string name="txt_marshal">Hold an angle, breathe, and they\’ll regret turning that corner.</string>
+    <string name="txt_marshal_info">A nimble lever-action sniper rifle with a single zoom that can keep bullish enemies at bay. A slow rate of fire means you have to either hit the mark or leave yourself open to attacks.</string>
+    <string name="image_marshal">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt545be89167b88e87/5eb281c4c7007e13a0530dd7/marshal.png</string>
+
+    //Operator
+    <string name="operator">Operator</string>
+    <string name="txt_operator">Get cozy and you can control important ground.</string>
+    <string name="txt_operator_info">A fierce bolt-action sniper rifle with high-powered dual zoom. Extremely immobile but fires an incredibly powerful round that can devastate a team with one shot.</string>
+    <string name="image_operator">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3e6bf41bd01ca11e/5eb281ca24400043b65016ba/operator.png</string>
+
+    //Ares
+    <string name="ares">Ares</string>
+    <string name="txt_ares">Don\’t mistake its size for clunk.</string>
+    <string name="txt_ares_info">The Ares\’ large magazine means it excels at suppressive fire or dealing heavy damage to clustered groups.</string>
+    <string name="image_ares">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt371bee690082f494/5eb281c3e11e6a13a6f613e9/ares.png</string>
+
+    //Odin
+    <string name="odin">Odin</string>
+    <string name="txt_odin">Wielding this hammer of a machine threatens glory for the holder and ruin for the foe.</string>
+    <string name="txt_odin_info">Suppressive, high damage fire with surprising stability. Spray enemies at short range and use alt. fire to make yourself a living turret.</string>
+    <string name="image_odin">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt0884ed7405d3646c/5eb281c38f7a7c3f6ec725e1/odin.png</string>
+
+    //Tactical Knife
+    <string name="knife">Tactical Knife</string>
+    <string name="txt_knife">An intimate solution.</string>
+    <string name="txt_knife_info">When in doubt or out of bullets, hit them with this. Lets you run fast, destroy objects faster, or one-shot enemies in the back with alt. fire.</string>
+    <string name="image_knife">https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt133c8372261f21a9/5eb281cbedfeb076e205038b/tactical-knife.png</string>
+
+    //Specs
+    <string name="text_specs_h1">PC HARDWARE REQUIREMENTS</string>
+    <string name="text_windows_specs">Windows // 10(Build 17134+)/11 64-bit</string>
+    <string name="text_ram_specs">RAM // 4GB</string>
+    <string name="text_vram_specs">VRAM // 1GB</string>
+    <string name="min_speed_specs">MINIMUM SPECS /\n 30 FPS</string>
+    <string name="average_speed_specs">RECOMMENDED \n SPECS / 60 FPS</string>
+    <string name="max_speed_specs">HIGH-END SPECS /\n 144+ FPS</string>
+    <string name="gpu">GPU</string>
+    <string name="intel2">Intel Core 2 Duo E8400 (Intel), Athlon \n200GE (AMD)</string>
+    <string name="intel3">Intel i3-4150 (Intel), Ryzen 3 1200 \n (AMD)</string>
+    <string name="intel5">Intel i5-9400F 2.90GHz (Intel), Ryzen\n 5 2600X (AMD)</string>
+    <string name="intel_hd">Intel HD 4000, Radeon R5 200</string>
+    <string name="geforce_gt">Geforce GT 730, Radeon R7 240</string>
+    <string name="gtx">GTX 1050 Ti, Radeon R7 370</string>
+    <string name="windows11">On Windows 11 we also require \"TPM 2.0 and UEFI Secure Boot.\"</string>
+
+    //Community Code
+    <string name="txt_community_code">VALORANT COMMUNITY CODE</string>
+    <string name="txt_community_code1">Before queueing up for your first match, we ask players to agree to the expectations outlined here. We encourage everyone to give the full document a read, and we hope this helps you calibrate on the community we look forward to building together in VALORANT. Please be aware that this Code of Conduct for VALORANT is supplemental to the Riot Games Terms of Service, which you must agree to before being allowed into any of our games.</string>
+    <string name="txt_community_code2">VALUES</string>
+    <string name="txt_community_code3">TRIUMPHANT THROUGH TEAMWORK</string>
+    <string name="txt_community_code4">The best experiences in VALORANT come from teamwork. We believe that coordination with teammates is part of an individual’s expression of skill, and that everyone plays their best when they’re playing together. \n \nWe celebrate the teammate who clutches the round, but we recognize that these moments have the greatest impact when you’re working together to set each other up every round. We intend to deliver experiences, tools and content that enable teams to play cohesively, whether they’ve had five or five hundred rounds to get to know one another.</string>
+    <string name="txt_community_code5">FAIRNESS IN EVERY MATCH</string>
+    <string name="txt_community_code6">To have meaningful stakes in every match, the conditions for that match must be fair for all players. We believe that fairness means games are free from cheating, misuse of game systems, and all forms of harassment. \n \nWe aim to uphold competitive integrity, and to ensure that all players are treated with respect in our ecosystem. When addressing disruptive behavior, we believe that penalties should reflect the standards and needs of the community, and that they should address the specifics of the disruptive behaviour rather than being overly punitive.</string>
+    <string name="txt_community_code7">A GAME WHERE PLAYERS THRIVE</string>
+    <string name="txt_community_code8">It’s up to us to set the conditions for VALORANT that enable every player to play their best. That means ensuring safety, fairness, and agency over experiences on our platform. We strive to give players the tools they need to protect themselves and their account, and we trust them to use them to curate their experience. \n \nWe believe in giving players control over how they interact with their peers, and in providing meaningful options for exercising that control - options that don’t compromise their ability to compete and coordinate with their team. Even with many options, we intend to protect every player’s right to choose how they coordinate and to prevent players from being forced out of channels due to fear or abuse.</string>
+    <string name="txt_community_code9">EXPECTATIONS</string>
+    <string name="txt_community_code10">Every VALORANT player deserves an opportunity to be themselves and play their best. You deserve to be able to play each match free from harassment, hatred, and abuse; so do your teammates and your opponents. \n \nTo create a game that lives up to our values above, we need your help. When you play VALORANT, we both ask and expect you to commit to the following:</string>
+    <string name="txt_community_code11">COMPETE TO WIN, TOGETHER</string>
+    <string name="txt_community_code12">Teamwork wins games. Recognize that you can only win WITH teammates, not in spite of them.</string>
+    <string name="txt_community_code13">For example, we expect and encourage you to: \n \n✓ Stay focused on strategy. If you can’t agree, pick something and commit. You’re better off working together on a questionable plan than not working together at all.\n✓ Leverage your team’s strengths and help cover their weaknesses. They’ll cover yours too!\n✓ Celebrate the plays of your teammates. You set them up, help them shine in the moment!\n✓ Bring your best self to every match. Everyone has bad games - we understand! But don’t queue up if you’re not in it to win.\n \n✗ Don’t give up on teammates, even if they’re having a bad game.\n✗ Never sabotage your team or try to ruin the game, even if you’re not having fun.\n✗ Please don’t tell teammates how they should be playing. If they’re open to it, constructive feedback is great! But don’t order people around, even if you’re frustrated.\n✗ Avoid spending more time arguing than collaborating. If you’re out for the round, focus on helping your team finish strong rather than arguing with them while they close it out.</string>
+    <string name="txt_community_code14">COMMIT TO RESPECT AND EMPATHY</string>
+    <string name="txt_community_code15">We ask that you treat others with dignity and respect. Exercise empathy and seek to build trust with teammates so that they can perform their best.</string>
+    <string name="txt_community_code16">For example, we expect and encourage you to:\n\n✓ Obey the platinum rule - Treat others as they wish to be treated. If you don’t know, ask.\n✓ Respect individual differences and experiences. VALORANT is a global community.\n✓ Treat everyone like they can teach you something - they might just broaden your worldview.\n✓ Use spicy language with caution. If you’ve just met, don’t assume everyone will understand your meaning or intent. If someone asks you not to use a term, stop - even if you don’t think it’s offensive.\n✓ Communication channels are a shared space! Keep comms focused on coordination, even if you’re waiting to respawn.\n\n✗ Never use hateful or abusive language. We do not tolerate derogatory comments on any player\'s gender, race, sexual orientation, age, mental or physical abilities, religious affiliations, or country of origin.\n✗ Don’t make jokes about people. People aren’t punchlines.\n✗ Threats of any kind are unacceptable in VALORANT. Intent doesn’t matter here, and it’s on you to know your audience if you think it’s “just a joke.”\n✗ Don’t expect someone to “toughen up” over your language. If you upset someone, own it and do better next time. Respect people’s boundaries.\n✗ Avoid blasting comms channels with background noise, music, or spam.</string>
+    <string name="txt_community_code17">PROTECT YOUR TEAM AND YOUR COMMUNITY</string>
+    <string name="txt_community_code18">Build the community you want to play in, one match at a time. Use tools and good judgement to protect yourself and your peers, and support others when they need your help.</string>
+    <string name="txt_community_code19">For example, we expect and encourage you to:\n\n✓ Use settings and systems to manage the experience you want to have. Opt out of communication channels you don’t want to be in. Turn on language filters, use mutes, and report behavior that isn’t okay.\n✓ If someone is harassing a teammate, speak up if you’re able. Take care not to make the situation worse, but sometimes a little support can mean a lot to your teammate.\n✓ Help keep games free from cheating or glitch abuse; if you think someone else is doing it, report it so we can take care of it.\n\n✗ Don’t call for mass reports or pull teammates into an argument. One report is enough to let us know something’s happening.\n✗ Don’t let someone bring you down to their level. If a player is harassing you, often it’s better to disengage than to “fire back.” It takes two to keep a fight going.</string>
+    <string name="txt_community_code20">BE YOUR OWN LAST LINE OF DEFENSE</string>
+    <string name="txt_community_code21">Help Riot keep you safe. Be responsible with your account, devices, personal information, and conduct.</string>
+    <string name="txt_community_code22">For example, we expect and encourage you to:\n\n✓ Use strong passwords and keep all your devices secure.\n✓ Let us know as soon as possible if you think your account has been hacked.\n✓ Accounts have a one-person maximum. We expect you to keep your account secure and not to let anyone else use it. If you want to rank up, play with your friends; Don’t ask your friends to play for you.\n✓ Play responsibly. Practice self care so you can bring your best to every game you play.\n\n✗ Never run third-party programs that interfere with gameplay. We expect you to exercise caution and good judgment here.\n✗ Don’t share personal information with strangers. Also, don’t share anyone else’s information. We have a zero tolerance policy for doxxing on our platform.\n✗ Do not impersonate anyone. In particular, don’t impersonate Rioters or highly visible players.\n✗ Avoid queueing up for one more when you know you’re tilted. Take breaks, and recognize when you’re getting frustrated.</string>
+    <string name="txt_community_code23">CONSEQUENCES</string>
+    <string name="txt_community_code24">If you violate the expectations described here, we may restrict your privileges or access to features in our games. Restrictions serve to shield the community from future disruption, and provide an opportunity to reflect on the behavior that led to the restriction. We strive to provide a path to reform, but not at the expense protecting the rest of the community. We also strive to restrict based on the disruption caused, and to avoid action that is needlessly punitive or harsh.\n\n Restrictions for violating the expectations above can include (but are not limited to):\n\n./ Loss of the ability to use in-game communication systems.\n./ Restrictions or additional requirements to access experiences such as Ranked queues.\n./ Restricted access to social systems and features in any of Riot’s games.\n./ Removal of content found to be obtained inappropriately.\n./ Temporary or indefinite suspension from VALORANT, or all of Riot’s games.</string>
+
+    //Media
+    <string name="media_text">Our work is your play. Whether you\'re press, a content creator or something in between, if you see it here it\'s yours to use. \n\nDon’t forget, if you create something with these files, tag @PlayVALORANT on social media. We cannot wait to see what you make, just remember to keep in mind our Legal Jibber Jabber.</string>
+
+    //LeaderBoards
+    <string name="games_won">Games Won</string>
 
 </resources>

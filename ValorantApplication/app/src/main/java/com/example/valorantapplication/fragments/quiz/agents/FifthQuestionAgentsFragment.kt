@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.valorantapplication.Constants
+import com.example.valorantapplication.constants.Constants
 import com.example.valorantapplication.R
 import com.example.valorantapplication.bundle
 import com.example.valorantapplication.databinding.FragmentFifthQuestionAgentsBinding
