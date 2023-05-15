@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/xxbig_margin"
+        android:background="#ece8e1"
+        tools:context=".fragments.info.gameInfo.agents.YoruFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/imageYoru"
+                    android:layout_width="150dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/agent_yoru"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/agentYoru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@id/imageYoru"
+                    android:text="@string/yoru"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/imageYoru"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/roleYoru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentYoru"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/imageYoru"
+                    android:text="@string/role_duelist"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageYoru"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agentYoru" />
+
+                <TextView
+                    android:id="@+id/biographyYoru"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/roleYoru"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/imageYoru"
+                    android:text="@string/biography_yoru"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageYoru"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/roleYoru" />
+
+                <TextView
+                    android:id="@+id/specialAbility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/special_abilities"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imageYoru" />
+
+                <ImageView
+                    android:id="@+id/abilityQYoru"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_q"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <ImageView
+                    android:id="@+id/abilityEYoru"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_e"
+                    app:layout_constraintLeft_toRightOf="@id/abilityQYoru"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <ImageView
+                    android:id="@+id/abilityCYoru"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_c"
+                    app:layout_constraintLeft_toRightOf="@id/abilityEYoru"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <ImageView
+                    android:id="@+id/abilityXYoru"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_x"
+                    app:layout_constraintLeft_toRightOf="@id/abilityCYoru"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <TextView
+                    android:id="@+id/txtNameAbilityYoru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/abilityEYoru" />
+
+                <TextView
+                    android:id="@+id/txtAbilityYoru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtNameAbilityYoru" />
+
+                <VideoView
+                    android:id="@+id/videoYoruAbilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtAbilityYoru" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/videoYoruAbilities" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient android:startColor="@color/btn_game_start_color"
+        android:endColor="@color/btn_game_end_color"
+        android:angle="@integer/angle"/>
+    <corners android:bottomLeftRadius="@dimen/top_bot_radius"
+        android:topRightRadius="@dimen/top_bot_radius"/>
+
+</shape>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/infoFragment"
+        android:icon="@drawable/ic_baseline_info"
+        android:title="@string/info" />
+
+
+    <item android:title="@string/game_info">
+        <menu>
+            <item
+                android:id="@+id/agentsFragment"
+                android:icon="@drawable/ic_baseline_agent"
+                android:title="@string/agents" />
+
+            <item
+                android:id="@+id/mapsFragment"
+                android:icon="@drawable/ic_baseline_map"
+                android:title="@string/maps" />
+
+            <item
+                android:id="@+id/weaponsFragment"
+                android:icon="@drawable/ic_baseline_weapon"
+                android:title="@string/weapons" />
+        </menu>
+    </item>
+
+    <item android:title="@string/profile">
+        <menu>
+            <item
+                android:id="@+id/loginScreenFragment"
+                android:icon="@drawable/ic_baseline_profile"
+                android:title="@string/profile" />
+
+            <item
+                android:id="@+id/logOut"
+                android:icon="@drawable/ic_baseline_logout"
+                android:title="@string/log_out" />
+        </menu>
+    </item>
+
+    <item android:title="@string/others">
+        <menu>
+            <item
+                android:id="@+id/mediaFragment"
+                android:icon="@drawable/ic_baseline_perm_media"
+                android:title="@string/media" />
+
+            <item
+                android:id="@+id/leaderBoardsFragment"
+                android:icon="@drawable/ic_baseline_leaderboard"
+                android:title="@string/leaderboards" />
+        </menu>
+    </item>
+
+    <item android:title="@string/support">
+        <menu>
+            <item
+                android:id="@+id/specsFragment"
+                android:icon="@drawable/ic_baseline_specs"
+                android:title="@string/specs" />
+            <item
+                android:id="@+id/communityCodeFragment"
+                android:icon="@drawable/ic_baseline_community_code"
+                android:title="@string/community_code" />
+        </menu>
+    </item>
+
+    <item android:title="@string/social">
+        <menu>
+            <item
+                android:id="@+id/twitterFragment"
+                android:icon="@drawable/ic_baseline_twitter"
+                android:title="@string/twitter" />
+            <item
+                android:id="@+id/youTubeFragment"
+                android:icon="@drawable/ic_baseline_youtube"
+                android:title="@string/youtube" />
+            <item
+                android:id="@+id/instagramFragment"
+                android:icon="@drawable/ic_baseline_instagram"
+                android:title="@string/instagram" />
+            <item
+                android:id="@+id/facebookFragment"
+                android:icon="@drawable/ic_baseline_facebook"
+                android:title="@string/facebook" />
+            <item
+                android:id="@+id/discordFragment"
+                android:icon="@drawable/ic_baseline_discord"
+                android:title="@string/discord" />
+        </menu>
+    </item>
+</menu>

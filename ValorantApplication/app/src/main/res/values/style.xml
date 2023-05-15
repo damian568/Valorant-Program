@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Circular">
+
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+    <style name="ChipStyle">
+
+        <item name="chipBackgroundColor">@color/btn_reg_background</item>
+        <item name="chipCornerRadius">@dimen/radius</item>
+
+    </style>
+
+    <style name="custom_image_phoenix">
+
+        <item name="cornerSizeBottomLeft">60dp</item>
+        <item name="cornerSizeTopRight">60dp</item>
+
+    </style>
+
+    <style name="custom_image_killjoy">
+
+        <item name="cornerSize">60dp</item>
+
+    </style>
+
+    <style name="custom_image_cypher">
+
+        <item name="cornerSizeBottomRight">60dp</item>
+        <item name="cornerSizeTopLeft">60dp</item>
+
+    </style>
+
+    <style name="custom_image_sova_viper">
+
+        <item name="cornerSize">60dp</item>
+
+    </style>
+
+</resources>

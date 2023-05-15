@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/xxbig_margin"
+        android:background="#ece8e1"
+        tools:context=".fragments.info.gameInfo.agents.AstraFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/imageAstraInfo"
+                    android:layout_width="150dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/agent_astra"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/agentAstra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@id/imageAstraInfo"
+                    android:text="@string/astra"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/imageAstraInfo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/roleAstra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/agentAstra"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/imageAstraInfo"
+                    android:text="@string/role_controller"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageAstraInfo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agentAstra" />
+
+                <TextView
+                    android:id="@+id/biographyAstra"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/roleAstra"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/imageAstraInfo"
+                    android:text="@string/biography_astra"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/imageAstraInfo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/roleAstra" />
+
+                <TextView
+                    android:id="@+id/specialAbility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/special_abilities"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imageAstraInfo" />
+
+                <ImageView
+                    android:id="@+id/abilityQAstra"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_q"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <ImageView
+                    android:id="@+id/abilityEAstra"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_e"
+                    app:layout_constraintLeft_toRightOf="@id/abilityQAstra"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <ImageView
+                    android:id="@+id/abilityCAstra"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_c"
+                    app:layout_constraintLeft_toRightOf="@id/abilityEAstra"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <ImageView
+                    android:id="@+id/abilityXAstra"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/brimstone_x"
+                    app:layout_constraintLeft_toRightOf="@id/abilityCAstra"
+                    app:layout_constraintTop_toBottomOf="@id/specialAbility" />
+
+                <TextView
+                    android:id="@+id/txtNameAbilityAstra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/abilityEAstra" />
+
+                <TextView
+                    android:id="@+id/txtAbilityAstra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtNameAbilityAstra" />
+
+                <VideoView
+                    android:id="@+id/videoAstraAbilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtAbilityAstra" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/videoAstraAbilities" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

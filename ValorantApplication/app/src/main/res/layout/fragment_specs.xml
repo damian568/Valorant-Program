@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/xxbig_margin"
+        android:background="#ece8e1"
+        tools:context=".fragments.info.support.SpecsFragment">
+
+        <ScrollView
+            android:id="@+id/scrollSpecs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/txtSpecsH1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_specs_h1"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollHorizonWindowsSpecs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtSpecsH1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@color/light_black">
+
+                        <ImageView
+                            android:id="@+id/imageWindowsSpecs"
+                            android:layout_width="110dp"
+                            android:layout_height="100dp"
+                            android:background="@color/background_windows_icon_specs"
+                            android:paddingLeft="8dp"
+                            android:src="@drawable/ic_baseline_specs"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtWindowsSpecs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="@string/text_windows_specs"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/imageWindowsSpecs"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtRAMSpecs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center"
+                            android:text="@string/text_ram_specs"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/txtWindowsSpecs"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtVRAMSpecs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center"
+                            android:text="@string/text_vram_specs"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/txtRAMSpecs"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Space
+                            android:id="@+id/spaceHorizonWindowsSpecs"
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/txtVRAMSpecs"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollHorizonGPUSpecs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/scrollHorizonWindowsSpecs">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="280dp"
+                        android:background="@color/light_black">
+
+                        <LinearLayout
+                            android:id="@+id/container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:background="@color/background_gpu_icon_specs"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageSpaceSpecs"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:paddingLeft="8dp" />
+
+                            <ImageView
+                                android:id="@+id/imageLowFPSSpecs"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:paddingLeft="8dp"
+                                android:src="@drawable/ic_low_speed_specs" />
+
+                            <TextView
+                                android:id="@+id/minimumSpecs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:gravity="center"
+                                android:text="@string/min_speed_specs"
+                                android:textAllCaps="true"
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageAverageFPSSpecs"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:layout_marginLeft="50dp"
+                                android:src="@drawable/ic_average_speed_specs" />
+
+                            <TextView
+                                android:id="@+id/averageSpecs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:gravity="center"
+                                android:text="@string/average_speed_specs"
+                                android:textAllCaps="true"
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageMaxFPSSpecs"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:layout_marginLeft="50dp"
+                                android:paddingLeft="8dp"
+                                android:src="@drawable/ic_max_speed_specs" />
+
+                            <TextView
+                                android:id="@+id/maxSpecs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/background_gpu_icon_specs"
+                                android:gravity="center"
+                                android:text="@string/max_speed_specs"
+                                android:textAllCaps="true"
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                            <Space
+                                android:id="@+id/spaceGPU1"
+                                android:layout_width="25dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/container2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/container1">
+
+                            <TextView
+                                android:id="@+id/txtGPU1Specs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:gravity="center"
+                                android:text="@string/gpu"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtIntel2Specs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:gravity="center"
+                                android:text="@string/intel2"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtIntel3Specs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="90dp"
+                                android:gravity="center"
+                                android:text="@string/intel3"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtIntel5Specs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="100dp"
+                                android:gravity="center"
+                                android:text="@string/intel5"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/container3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/container2">
+
+                            <TextView
+                                android:id="@+id/txtGPU2Specs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:gravity="center"
+                                android:text="@string/gpu"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtIntelHDSpecs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="100dp"
+                                android:gravity="center"
+                                android:text="@string/intel_hd"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtGeForceGTSpecs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="120dp"
+                                android:gravity="center"
+                                android:text="@string/geforce_gt"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtGTXSpecs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="150dp"
+                                android:gravity="center"
+                                android:text="@string/gtx"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/txtFinishEffectSpecs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/windows11"
+                    app:layout_constraintTop_toBottomOf="@id/scrollHorizonGPUSpecs"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
